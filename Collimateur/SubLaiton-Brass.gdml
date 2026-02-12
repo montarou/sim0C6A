@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<gdml xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="P:\PC@LPC\PROFESSIONNEL\_MES_CODES\_C++\Geant4\Solutions-de-Test\Import-GDML\_Solutions-MSVS2019\gdml_schema_standalone\gdml.xsd">
+
+
+    <materials>
+
+        <!--*********************************-->
+        <!--* Elements - Naturally occuring *-->
+        <!--*********************************-->
+        <!-- see: https://geant4.in2p3.fr/2007/prog/GiovanniSantin/GSantin_Geant4_Paris07_Materials_v08.pdf -->
+
+        <!-- Copper -->
+        <element name="copper"     formula="Cu"  Z="29">
+            <atom value="63.55"/>
+        </element>
+
+        <!--************************************-->
+        <!--* Elements - By isotope abundances *-->
+        <!--************************************-->
+
+        <!-- Zinc -->
+        <isotope name="Zn64" N="34" Z="30">
+            <atom value="63.9291422" unit="g/mole"/>
+        </isotope>
+        <isotope name="Zn66" N="36" Z="30">
+            <atom value="65.9260334" unit="g/mole"/>
+        </isotope>
+        <isotope name="Zn67" N="37" Z="30">
+            <atom value="66.9271273" unit="g/mole"/>
+        </isotope>
+        <isotope name="Zn68" N="38" Z="30">
+            <atom value="67.9248442"  unit="g/mole"/>
+        </isotope>
+        <isotope name="Zn70" N="40" Z="30">
+            <atom value="69.9253193" unit="g/mole"/>
+        </isotope>
+        <element name="zinc">
+            <!-- see: https://en.wikipedia.org/wiki/Isotopes_of_zinc -->
+            <fraction ref="Zn64" n="0.492"/>
+            <fraction ref="Zn66" n="0.277"/>
+            <fraction ref="Zn67" n="0.040"/>
+            <fraction ref="Zn68" n="0.185"/>
+            <fraction ref="Zn70" n="0.006"/>
+        </element>
+
+        <!--**********************************-->
+        <!--* Materials - Molecular/Compound *-->
+        <!--**********************************-->
+
+        <!-- Brass -->
+        <material name="Brass" state="solid">
+            <!-- brass: http://www.aatongdiao.com/en/new/new-73-571.html -->
+            <D value="8.73" unit="g/cm3"/>
+            <fraction n="0.61" ref="copper"/>
+            <fraction n="0.39" ref="zinc"/>
+        </material>
+
+    </materials>
+

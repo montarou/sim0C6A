@@ -1,0 +1,1009 @@
+    <materials>
+    
+        <!--*********************************-->
+        <!--* Elements - Naturally occuring *-->
+        <!--*********************************-->
+        <!-- see: https://geant4.in2p3.fr/2007/prog/GiovanniSantin/GSantin_Geant4_Paris07_Materials_v08.pdf -->
+        
+        <!-- Hydrogen -->
+        <element name="hydrogen"   formula="H"   Z="1">
+            <atom value="1.0079"/>
+        </element>
+        
+        <!-- Helium -->
+        <element name="helium"     formula="He"  Z="2">
+            <atom value="4.003"/>
+        </element>
+
+        <!-- Beryllium -->
+        <element name="beryllium"     formula="Be"  Z="4">
+            <atom value="9.01218"/>
+        </element>
+        
+        <!-- Carbon -->
+        <element name="carbon"     formula="C"   Z="6">
+            <atom value="12.0107"/>
+        </element>
+        
+        <!-- Nitrogen -->
+        <element name="nitrogen"   formula="N"   Z="7">
+            <atom value="14.0067"/>
+        </element>
+        
+        <!-- Oxygen -->
+        <element name="oxygen"     formula="O"   Z="8">
+            <atom value="15.999"/>
+        </element>
+        
+        <!-- Neon -->
+        <element name="neon"       formula="Ne"  Z="10">
+            <atom value="20.180"/>
+        </element>
+        
+        <!-- Sodium -->
+        <element name="sodium"     formula="Na"  Z="11">
+            <atom value="22.99"/>
+        </element>
+        
+        <!-- Magnesium -->
+        <element name="magnesium"  formula="Mg"  Z="12">
+            <atom value="24.305"/>
+        </element>
+        
+        <!-- Aluminium -->
+        <element name="aluminium"  formula="Al"  Z="13">
+            <atom value="26.9815"/>
+        </element>
+        
+        <!-- Silicon -->
+        <element name="silicon"    formula="Si"  Z="14">
+            <atom value="28.0855"/>
+        </element>
+        
+        <!-- Phosphorus -->
+        <element name="phosphorus" formula="P"   Z="15">
+            <atom value="30.973"/>
+        </element>
+        
+        <!-- Sulphur -->
+        <element name="sulphur"    formula="S"   Z="16">
+            <atom value="32.065"/>
+        </element>
+        
+        <!-- Argon -->
+        <element name="argon"      formula="Ar"  Z="18">
+            <atom value="39.9480"/>
+        </element>
+        
+        <!-- Potassium -->
+        <element name="potassium"  formula="K"   Z="19">
+            <atom value="39.0983"/>
+        </element>
+        
+        <!-- Calcium -->
+        <element name="calcium"    formula="Ca"  Z="20">
+            <atom value="40.078"/>
+        </element>
+        
+        <!-- Titanium -->
+        <element name="titanium"   formula="Ti"  Z="22">
+            <atom value="47.867"/>
+        </element>
+        
+        <!-- Chromium -->
+        <element name="chromium"   formula="Cr"  Z="24">
+            <atom value="51.9961"/>
+        </element>
+        
+        <!-- Manganese -->
+        <element name="manganese"  formula="Mn"  Z="25">
+            <atom value="54.9380"/>
+        </element>
+        
+        <!-- Iron -->
+        <element name="iron"       formula="Fe"  Z="26">
+            <atom value="55.8450"/>
+        </element>
+        
+        <!-- Nickel -->
+        <element name="nickel"     formula="Ni"  Z="28">
+            <atom value="58.6934"/>
+        </element>
+        
+        <!-- Copper -->
+        <element name="copper"     formula="Cu"  Z="29">
+            <atom value="63.55"/>
+        </element>
+        
+        <!-- Germanium -->
+        <element name="germanium"  formula="Ge"  Z="32">
+            <atom value="72.63"/>
+        </element>
+        
+        <!-- Bromine -->
+        <element name="bromine"    formula="Br"  Z="35">
+            <atom value="79.904"/>
+        </element>
+        
+        <!-- Krypton -->
+        <element name="krypton"    formula="Kr"  Z="36">
+            <atom value="83.798"/>
+        </element>
+        
+        <!-- Molybdenum -->
+        <element name="molybdenum" formula="Mo"  Z="42">
+            <atom value="95.95"/>
+        </element>
+        
+        <!-- Palladium -->
+        <element name="palladium"  formula="Pd"  Z="46">
+            <atom value="106.42"/>
+        </element>
+        
+        <!-- Tin -->
+        <element name="tin"        formula="Sn"  Z="50">
+            <atom value="118.71"/>
+        </element>
+        
+        <!-- Iodine -->
+        <element name="iodine"     formula="I"   Z="53">
+            <atom value="126.904"/>
+        </element>   
+        
+        <!-- Xenon -->
+        <element name="xenon"      formula="Xe"  Z="54">
+            <atom value="131.293"/>
+        </element>
+        
+        <!-- Platinum -->
+        <element name="platinum"   formula="Pt"  Z="78">
+            <atom value="195.084"/>
+        </element>
+        
+        <!-- Gold -->
+        <element name="gold"       formula="Au"  Z="79">
+            <atom value="196.97"/>
+        </element>
+        
+        <!-- Tungsten -->
+        <element name="tungsten"   formula="W"   Z="74">
+            <atom value="183.84"/>
+        </element>
+        
+        <!-- Bismuth -->
+        <element name="bismuth"    formula="Bi"  Z="83">
+            <atom value="208.980"/>
+        </element>
+
+        <!-- Europium -->
+        <element name="europium"    formula="Eu"  Z="63">
+            <atom value="151.964"/>
+        </element>
+
+        <!-- Americium -->
+        <element name="americium"    formula="Am"  Z="95">
+            <atom value="241.0568"/>
+        </element>
+
+        
+        <!--************************************-->
+        <!--* Elements - By isotope abundances *-->
+        <!--************************************-->
+        
+        <!-- Boron -->
+        <isotope name="B10" N="5" Z="5">
+            <atom value="10.0129369" unit="g/mole"/>
+        </isotope>
+        <isotope name="B11" N="6" Z="5">
+        <atom value="11.0093054" unit="g/mole"/>
+        </isotope>
+        <element name="boron">
+            <!-- see: https://en.wikipedia.org/wiki/Boron#Isotopes -->
+            <fraction ref="B10" n="0.199"/>
+            <fraction ref="B11" n="0.801"/>
+        </element>
+
+        <!-- Zinc -->
+        <isotope name="Zn64" N="34" Z="30">
+            <atom value="63.9291422" unit="g/mole"/>
+        </isotope>
+        <isotope name="Zn66" N="36" Z="30">
+            <atom value="65.9260334" unit="g/mole"/>
+        </isotope>
+        <isotope name="Zn67" N="37" Z="30">
+            <atom value="66.9271273" unit="g/mole"/>
+        </isotope>
+        <isotope name="Zn68" N="38" Z="30">
+            <atom value="67.9248442"  unit="g/mole"/>
+        </isotope>
+        <isotope name="Zn70" N="40" Z="30">
+            <atom value="69.9253193" unit="g/mole"/>
+        </isotope>
+        <element name="zinc">
+            <!-- see: https://en.wikipedia.org/wiki/Isotopes_of_zinc -->
+            <fraction ref="Zn64" n="0.492"/>
+            <fraction ref="Zn66" n="0.277"/>
+            <fraction ref="Zn67" n="0.040"/>
+            <fraction ref="Zn68" n="0.185"/>
+            <fraction ref="Zn70" n="0.006"/>
+        </element>
+
+        <!-- Silver -->
+        <isotope name="Ag107" N="60" Z="47">
+            <atom value="106.905092" unit="g/mole"/>
+        </isotope>
+        <isotope name="Ag109" N="62" Z="47">
+            <atom value="108.904756" unit="g/mole"/>
+        </isotope>
+        <element name="silver">
+                <!-- see: https://www.webelements.com/silver/isotopes.html -->
+                <fraction ref="Ag107" n="0.51839"/>
+                <fraction ref="Ag109" n="0.48161"/>
+        </element>
+
+        <!-- Cadmium -->
+        <isotope name="Cd106" N="58" Z="48">
+            <atom value="105.906461"  unit="g/mole"/>
+        </isotope>
+        <isotope name="Cd108" N="60" Z="48">
+            <atom value="107.904176" unit="g/mole"/>
+        </isotope>
+        <isotope name="Cd110" N="62" Z="48">
+            <atom value="109.903005" unit="g/mole"/>
+        </isotope>
+        <isotope name="Cd111" N="63" Z="48">
+            <atom value="110.904182"  unit="g/mole"/>
+        </isotope>
+        <isotope name="Cd112" N="64" Z="48">
+            <atom value="111.902757" unit="g/mole"/>
+        </isotope>
+        <isotope name="Cd113" N="65" Z="48">
+            <atom value="112.904400" unit="g/mole"/>
+        </isotope>
+        <isotope name="Cd114" N="66" Z="48">
+            <atom value="113.903357" unit="g/mole"/>
+        </isotope>
+        <isotope name="Cd116" N="68" Z="48">
+            <atom value="115.904755" unit="g/mole"/>
+        </isotope>
+        <element name="cadmium">
+                <!-- see: https://www.webelements.com/cadmium/isotopes.html -->
+                <fraction ref="Cd106" n="0.0125"/>
+                <fraction ref="Cd108" n="0.0089"/>
+                <fraction ref="Cd110" n="0.1249"/>
+                <fraction ref="Cd111" n="0.1280"/>
+                <fraction ref="Cd112" n="0.2413"/>
+                <fraction ref="Cd113" n="0.1222"/>
+                <fraction ref="Cd114" n="0.2873"/>
+                <fraction ref="Cd116" n="0.0749"/>
+        </element>
+
+        <!-- Antimony -->
+        <isotope name="Sb121" N="70" Z="51">
+            <atom value="120.9038157" unit="g/mole"/>
+        </isotope>
+        <isotope name="Sb122" N="71" Z="51">
+            <atom value="121.9051737" unit="g/mole"/>
+        </isotope>
+        <element name="antimony">
+                <!-- see: https://en.wikipedia.org/wiki/Isotopes_of_antimony -->
+                <fraction ref="Sb121" n="0.572"/>
+                <fraction ref="Sb122" n="0.428"/>
+        </element>
+
+        <!-- Tellurium -->
+        <isotope name="Te120" N="68" Z="52">
+            <atom value="119.9040480" unit="g/mole"/>
+        </isotope>
+        <isotope name="Te122" N="70" Z="52">
+            <atom value="121.9030500" unit="g/mole"/>
+        </isotope>
+        <isotope name="Te123" N="71" Z="52">
+            <atom value="122.9042710" unit="g/mole"/>
+        </isotope>
+        <isotope name="Te124" N="72" Z="52">
+            <atom value="123.9028180" unit="g/mole"/>
+        </isotope>
+        <isotope name="Te125" N="73" Z="52">
+            <atom value="124.9044285" unit="g/mole"/>
+        </isotope>
+        <isotope name="Te126" N="74" Z="52">
+            <atom value="125.9033095" unit="g/mole"/>
+        </isotope>
+        <isotope name="Te128" N="76" Z="52">
+            <atom value="127.9044630" unit="g/mole"/>
+        </isotope>
+        <isotope name="Te130" N="78" Z="52">
+            <atom value="129.9062290" unit="g/mole"/>
+        </isotope>
+        <element name="tellurium">
+                <!-- see: https://www.webelements.com/tellurium/isotopes.html -->
+                <fraction ref="Te120" n="0.0009"/>
+                <fraction ref="Te122" n="0.0255"/>
+                <fraction ref="Te123" n="0.0089"/>
+                <fraction ref="Te124" n="0.0474"/>
+                <fraction ref="Te125" n="0.0707"/>
+                <fraction ref="Te126" n="0.1884"/>
+                <fraction ref="Te128" n="0.3174"/>
+                <fraction ref="Te130" n="0.3408"/>
+        </element>
+
+        <!-- Lead -->
+        <isotope name="Pb204" N="122" Z="82">
+            <atom value="203.9730430" unit="g/mole"/>
+        </isotope>
+        <isotope name="Pb206" N="124" Z="82">
+            <atom value="205.9744653" unit="g/mole"/>
+        </isotope>
+        <isotope name="Pb207" N="125" Z="82">
+            <atom value="206.9758969" unit="g/mole"/>
+        </isotope>
+        <isotope name="Pb208" N="126" Z="82">
+            <atom value="207.9766521" unit="g/mole"/>
+        </isotope>
+        <element name="lead">
+                <!-- see: https://en.wikipedia.org/wiki/Isotopes_of_lead -->
+                <fraction ref="Pb204" n="0.014"/>
+                <fraction ref="Pb206" n="0.241"/>
+                <fraction ref="Pb207" n="0.221"/>
+                <fraction ref="Pb208" n="0.524"/>
+        </element>
+
+
+        <!--*****************************-->
+        <!--* Materials - Non-molecular *-->
+        <!--*****************************-->
+        
+        <!-- Helium -->
+        <material name="Helium" state="gas">
+            <!-- see: https://fr.airliquide.com/statics/2021-10/catalogue_gaz_speciaux_2017.pdf -->
+            <D value="0.169e-3" unit="g/cm3"/>
+            <fraction n="1." ref="helium"/>
+        </material>
+
+        <!-- Beryllium -->
+        <material name="Beryllium" state="solid">
+            <!-- see: https://lelementarium.fr/element-fiche/beryllium/ -->
+            <!-- see: https://en.wikipedia.org/wiki/Beryllium -->
+            <D value="1.848" unit="g/cm3"/>
+            <fraction n="1." ref="beryllium"/>
+        </material>
+
+        <!-- Neon -->
+        <material name="Neon" state="gas">
+            <!-- see: https://lelementarium.fr/element-fiche/neon/ -->
+            <D value="0.853e-3" unit="g/cm3"/>
+            <fraction n="1." ref="neon"/>
+        </material>
+
+        <!-- Argon -->
+        <material name="Argon" state="gas">
+            <!-- see: https://lelementarium.fr/element-fiche/argon/ -->
+            <D value="1.784e-3" unit="g/cm3"/>
+            <fraction n="1." ref="argon"/>
+        </material>
+
+        <!-- Krypton -->
+        <material name="Krypton" state="gas">
+            <!-- see: https://fr.airliquide.com/statics/2021-10/catalogue_gaz_speciaux_2017.pdf -->
+            <D value="3.550e-3" unit="g/cm3"/>
+            <fraction n="1." ref="krypton"/>
+        </material>
+
+        <!-- Xenon -->
+        <material name="Xenon" state="gas">
+            <!-- see: https://encyclopedia.airliquide.com/fr/xenon#properties -->
+            <D value="5.8965e-3" unit="g/cm3"/>
+            <fraction n="1." ref="xenon"/>
+        </material>
+
+        <!-- Aluminium -->
+        <material name="Aluminium" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/13/aluminium -->
+            <D value="2.700" unit="g/cm3"/>
+            <fraction n="1." ref="aluminium"/>
+        </material>
+
+        <!-- Silicon -->
+        <material name="Silicon" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/14/silicon -->
+            <D value="2.3296" unit="g/cm3"/>
+            <fraction n="1." ref="silicon"/>
+        </material>
+
+        <!-- Titanium -->
+        <material name="Titanium" state="solid">
+            <!-- see: http://www.rsc.org/periodic-table/element/22/titanium -->
+            <D value="4.506" unit="g/cm3"/>
+            <fraction n="1." ref="titanium"/>
+        </material>
+
+        <!-- Germanium -->
+        <material name="Germanium" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/32/germanium -->
+            <D value="5.3234" unit="g/cm3"/>
+            <fraction n="1." ref="germanium"/>
+        </material>
+
+        <!-- Nickel -->
+        <material name="Nickel" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/28/nickel -->
+            <D value="8.900" unit="g/cm3"/>
+            <fraction n="1." ref="nickel"/>
+        </material>
+
+        <!-- Copper -->
+        <material name="Copper" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/29/copper -->
+            <D value="8.960" unit="g/cm3"/>
+            <fraction n="1." ref="copper"/>
+        </material>
+
+        <!-- Palladium -->
+        <material name="Palladium" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/46/palladium -->
+            <D value="12.000" unit="g/cm3"/>
+            <fraction n="1." ref="palladium"/>
+        </material>
+
+        <!-- Silver -->
+        <material name="Silver" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/47/silver -->
+            <D value="10.500" unit="g/cm3"/>
+            <fraction n="1." ref="silver"/>
+        </material>
+
+        <!-- Cadmium -->
+        <material name="Cadmium" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/48/cadmium -->
+            <D value="8.690" unit="g/cm3"/>
+            <fraction n="1." ref="cadmium"/>
+        </material>
+
+        <!-- Tin -->
+        <material name="Tin" state="solid">
+            <!-- see: http://www.rsc.org/periodic-table/element/50/tin -->
+            <D value="7.287" unit="g/cm3"/>
+            <fraction n="1." ref="tin"/>
+        </material>
+
+        <!-- Tellurium -->
+        <material name="Tellurium" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/52/tellurium -->
+            <D value="6.232" unit="g/cm3"/>
+            <fraction n="1." ref="tellurium"/>
+        </material>
+
+        <!-- Tungsten -->
+        <material name="Tungsten" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/74/tungsten -->
+            <D value="19.350" unit="g/cm3"/>
+            <fraction n="1." ref="tungsten"/>
+        </material>
+
+        <!-- Platinum -->
+        <material name="Platinum" state="solid">
+            <!-- see http://www.rsc.org/periodic-table/element/78/platinum -->
+            <D value="21.450" unit="g/cm3"/>
+            <fraction n="1." ref="platinum"/>
+        </material>
+
+        <!-- Gold -->
+        <material name="Gold" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/79/gold -->
+            <D value="19.300" unit="g/cm3"/>
+            <fraction n="1." ref="gold"/>
+        </material>
+
+        <!-- Lead -->
+        <material name="Lead" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/82/lead -->
+            <D value="11.343" unit="g/cm3"/>
+            <fraction n="1." ref="lead"/>
+        </material>
+
+        <!-- Europium -->
+        <material name="Europium" state="solid">
+            <!-- see: https://fr.wikipedia.org/wiki/Europium -->
+            <!-- see: https://lelementarium.fr/element-fiche/europium -->
+            <D value="5.243" unit="g/cm3"/>
+            <fraction n="1." ref="europium"/>
+        </material>
+
+        <!-- Americium -->
+        <material name="Americium" state="solid">
+            <!-- see: https://fr.wikipedia.org/wiki/Americium -->
+            <!-- see: https://lelementarium.fr/element-fiche/americium -->
+            <D value="12.000" unit="g/cm3"/>
+            <fraction n="1." ref="americium"/>
+        </material>
+
+                        
+        <!--**********************************-->
+        <!--* Materials - Molecular/Compound *-->
+        <!--**********************************-->
+        
+        <!-- Dihydrogen -->
+        <material name="Dihydrogen" formula="H2" state="gas">
+            <!-- https://fr.airliquide.com/statics/2021-10/catalogue_gaz_speciaux_2017.pdf -->
+            <D value="0.085e-3" unit="g/cm3"/>                             
+            <composite n="2" ref="hydrogen"/>                                
+        </material> 
+
+        <!-- Dioxygen -->
+        <material name="Dioxygen" formula="O2" state="gas">
+            <!-- see: https://lelementarium.fr/product/dioxygene/ -->
+            <D value="1.354e-3" unit="g/cm3"/>                             
+            <composite n="2" ref="oxygen"/>                                
+        </material> 
+
+        <!-- Ozone -->
+        <material name="Ozone" formula="O3" state="gas">
+            <!-- see: https://en.wikipedia.org/wiki/Ozone -->
+            <D value="2.018e-3" unit="g/cm3"/>                             
+            <composite n="3" ref="oxygen"/>                                
+        </material>
+
+        <!-- Water -->
+        <material name="Water" formula="H2O" state="liquid">
+            <!-- see: https://www.thermexcel.com/french/tables/eau_atm.htm -->
+            <D value="999.19e-3" unit="g/cm3"/>                             
+            <composite n="2" ref="hydrogen"/>
+            <composite n="1" ref="oxygen"/>                                                     
+        </material>
+
+        <!-- Carbon Monoxide -->
+        <material name="CarbonMonoxide" formula="CO" state="gas">
+            <!-- see: https://encyclopedia.airliquide.com/fr/monoxyde-carbone#properties -->
+            <D value="1.2502e-3" unit="g/cm3"/>                             
+            <composite n="1" ref="carbon"/>
+            <composite n="1" ref="oxygen"/>                                                     
+        </material>
+
+        <!-- Carbon Dioxide -->
+        <material name="CarbonDioxide" formula="CO2" state="gas">
+            <!-- see: https://en.wikipedia.org/wiki/Carbon_dioxide -->
+            <D value="1.87e-3" unit="g/cm3"/>                             
+            <composite n="1" ref="carbon"/>
+            <composite n="2" ref="oxygen"/>                                                     
+        </material>
+
+        <!-- Dinitrogen -->
+        <material name="Dinitrogen" formula="N2" state="gas">
+            <!-- see: https://en.wikipedia.org/wiki/Nitrogen -->
+            <!-- see: https://lelementarium.fr/product/diazote/ -->
+            <D value="1.1848e-3" unit="g/cm3" />                             
+            <composite n="2" ref="nitrogen" />                                
+        </material> 
+
+        <!-- Nitric Oxide -->
+        <material name="NitricOxide" formula="NO" state="gas">
+            <!-- https://encyclopedia.airliquide.com/fr/monoxyde-azote#properties -->
+            <D value="1.274e-3" unit="g/cm3"/>                             
+            <composite n="1" ref="nitrogen"/> 
+            <composite n="1" ref="oxygen"/>                               
+        </material>
+
+        <!-- Nitrogen Dioxide -->
+        <material name="NitrogenDioxide" formula="NO2" state="gas">
+            <!-- https://encyclopedia.airliquide.com/fr/dioxyde-azote#properties -->
+            <D value="3.2095e-3" unit="g/cm3"/>                             
+            <composite n="1" ref="nitrogen"/> 
+            <composite n="2" ref="oxygen"/>                               
+        </material>
+
+        <!-- Nitrous Oxide -->
+        <material name="NitrousOxide" formula="N2O" state="gas">
+            <!-- https://encyclopedia.airliquide.com/fr/protoxyde-azote#properties -->
+            <D value="1.8724e-3" unit="g/cm3"/>                             
+            <composite n="2" ref="nitrogen"/> 
+            <composite n="1" ref="oxygen"/>                               
+        </material>
+
+        <!-- Methane -->
+        <material name="Methane" formula="CH4" state="gas">
+            <!-- see: https://lelementarium.fr/product/methane/ -->
+            <D value="0.6709e-3" unit="g/cm3"/>                             
+            <composite n="1" ref="carbon"/>
+            <composite n="4" ref="hydrogen"/>                                                      
+        </material>
+
+        <!-- Diiodine -->
+        <material name="Diiodine" formula="I2" state="gas">
+            <!-- https://fr.wikipedia.org/wiki/Iode -->
+            <!-- https://fr.wikipedia.org/wiki/Diiode -->
+            <!-- https://fr.wikipedia.org/wiki/iode?variant=zh-cn -->
+            <D value="11.27e-3" unit="g/cm3"/>                             
+            <composite n="2" ref="iodine"/>                                
+        </material>
+
+        <!-- Air -->
+        <material name="Air" state="gas">
+            <!-- see: https://fr.wikipedia.org/wiki/Air -->
+            <D value="1.225e-3" unit="g/cm3"/>                             
+            <fraction n="0.78084" ref="Dinitrogen"/>
+            <fraction n="0.20946" ref="Dioxygen"/>
+            <fraction n="0.00934" ref="Argon"/>
+            <fraction n="0.000417" ref="CarbonDioxide"/>
+            <fraction n="0.00001818" ref="Neon"/>
+            <fraction n="0.00000524" ref="Helium"/>
+            <fraction n="0.0000001745" ref="Methane"/>
+            <fraction n="0.000000114" ref="Krypton"/>
+            <fraction n="0.000000055" ref="Dihydrogen"/>
+            <fraction n="0.00000005" ref="NitricOxide"/>
+            <fraction n="0.00000003" ref="NitrousOxide"/>    
+            <fraction n="0.00000002" ref="CarbonMonoxide"/>
+            <fraction n="0.000000009" ref="Xenon"/>
+            <fraction n="0.000000007" ref="Ozone"/>
+            <fraction n="0.000000002" ref="NitrogenDioxide"/>
+            <fraction n="0.000000001" ref="Diiodine"/>
+            <fraction n="0.00040837357" ref="Water"/>
+        </material>
+
+        <!-- Vacuum -->
+        <material name="Vacuum" state="gas">
+            <!-- see: https://fr.wikipedia.org/wiki/Ultravide -->
+            <!-- see: https://forums.futura-sciences.com/physique/232869-composition-de-lair-fonction-vide.html -->
+            <!-- Ultra High Vacuum = 10-6 mmHg ; Standard pressure 1.013e5 Pa = 760 mmHg /760/1e6 = 1.31579e-9 -->
+            <!-- Density becomes: 1.225e-3 x 1.31579e-9 = 1.616e-12 -->
+            <D value="1.612e-12" unit="g/cm3"/>                             
+            <fraction n="0.78084" ref="Dinitrogen"/>
+            <fraction n="0.20946" ref="Dioxygen"/>
+            <fraction n="0.00934" ref="Argon"/>
+            <fraction n="0.000417" ref="CarbonDioxide"/>
+            <fraction n="0.00001818" ref="Neon"/>
+            <fraction n="0.00000524" ref="Helium"/>
+            <fraction n="0.0000001745" ref="Methane"/>
+            <fraction n="0.000000114" ref="Krypton"/>
+            <fraction n="0.000000055" ref="Dihydrogen"/>
+            <fraction n="0.00000005" ref="NitricOxide"/>
+            <fraction n="0.00000003" ref="NitrousOxide"/>    
+            <fraction n="0.00000002" ref="CarbonMonoxide"/>
+            <fraction n="0.000000009" ref="Xenon"/>
+            <fraction n="0.000000007" ref="Ozone"/>
+            <fraction n="0.000000002" ref="NitrogenDioxide"/>
+            <fraction n="0.000000001" ref="Diiodine"/>
+            <fraction n="0.00040837357" ref="Water"/>
+        </material>
+
+        <!-- Kapton -->
+        <material name="Kapton" state="solid">
+           <D value="1.42" unit="g/cm3"/>
+           <fraction n="0.0273" ref="hydrogen"/>
+           <fraction n="0.7213" ref="carbon"/>
+           <fraction n="0.0765" ref="nitrogen"/>
+           <fraction n="0.1749" ref="oxygen"/>
+        </material>
+                
+        <!-- Silicon Oxide -->
+        <material name="SiliconOxide" formula="SiO2">
+            <D value="2.196" unit="g/cm3"/>
+            <composite n="1" ref="silicon"/>
+            <composite n="2" ref="oxygen"/>
+        </material>
+
+        <!-- Dialuminium Trioxide - Alumina -->
+        <material name="DialuminiumTrioxide" formula="Al2O3">
+            <D value="3.97" unit="g/cm3"/>
+            <composite n="2" ref="aluminium"/>
+            <composite n="3" ref="oxygen"/>
+        </material>
+
+        <!-- Iron Oxide -->
+        <material name="IronOxide" formula="Fe2O3">
+            <D value="5.24" unit="g/cm3"/>
+            <composite n="2" ref="iron"/>
+            <composite n="3" ref="oxygen"/>
+        </material>
+
+        <!-- Calcium Oxide -->
+        <material name="CalciumOxide" formula="CaO">
+            <D value="3.35" unit="g/cm3"/>
+            <composite n="1" ref="calcium"/>
+            <composite n="1" ref="oxygen"/>
+        </material>
+
+        <!-- Magnesium Oxide -->
+        <material name="MagnesiumOxide" formula="MgO">
+            <D value="3.58" unit="g/cm3"/>
+            <composite n="1" ref="magnesium"/>
+            <composite n="1" ref="oxygen"/>
+        </material>
+
+        <!-- Sodium Oxide -->
+            <material name="SodiumOxide" formula="Na2O">
+            <D value="2.27" unit="g/cm3"/>
+            <composite n="2" ref="sodium"/>
+            <composite n="1" ref="oxygen"/>
+        </material>
+
+        <!-- Titanium Oxide -->
+        <material name="TitaniumOxide" formula="TiO2">
+            <D value="4.23" unit="g/cm3"/>
+            <composite n="1" ref="titanium"/>
+            <composite n="2" ref="oxygen"/>
+        </material>
+
+        <!-- Glass Fibre -->
+        <material name="GlassFibre" state="solid">
+            <D value="2.74351" unit="g/cm3"/>
+            <fraction n="0.600" ref="SiliconOxide"/>
+            <fraction n="0.118" ref="DialuminiumTrioxide"/>
+            <fraction n="0.001" ref="IronOxide"/>
+            <fraction n="0.224" ref="CalciumOxide"/>
+            <fraction n="0.034" ref="MagnesiumOxide"/>
+            <fraction n="0.010" ref="SodiumOxide"/>
+            <fraction n="0.013" ref="TitaniumOxide"/>
+        </material>
+        
+        <!-- Carbon Fibre -->
+        <material name="CarbonFibre" state="solid">      
+            <D value="1.55" unit="g/cm3"/>
+            <fraction n="0.85" ref="carbon"/>  
+            <fraction n="0.08" ref="oxygen"/>    
+            <fraction n="0.04" ref="nitrogen"/>
+            <fraction n="0.03" ref="hydrogen"/>      
+        </material>     
+
+        <!-- Epoxy Resin -->
+        <material name="EpoxyResin" formula="C38H40O6Br4">
+            <D value="1.125" unit="g/cm3"/>
+            <composite n="40" ref="hydrogen"/>
+            <composite n="38" ref="carbon"/>
+            <composite n="6" ref="oxygen"/>
+            <composite n="4" ref="bromine"/>
+        </material>
+
+        <!-- Epoxy Glass -->
+        <material name="EpoxyGlass">
+            <!-- see: https://www.matweb.com/search/DataSheet.aspx?MatGUID=035d2130b7f34d918e8d590659b85cb7&ckck=1 -->
+            <D value="1.983" unit="g/cm3"/>
+            <fraction n="0.53" ref="GlassFibre"/>
+            <fraction n="0.47" ref="EpoxyResin"/>
+        </material>  
+
+        <!-- Epoxy Carbon -->
+        <material name="EpoxyCarbon">
+            <!-- see: https://www.matweb.com/search/datasheet_print.aspx?matguid=39e40851fc164b6c9bda29d798bf3726 -->
+            <D value="1.36" unit="g/cm3"/>
+            <fraction n="0.54" ref="CarbonFibre"/>
+            <fraction n="0.46" ref="EpoxyResin"/>
+        </material> 
+ 
+        <!-- Dimethylsiloxane Hydroxy Terminated -->
+        <material name="DimethylsiloxaneHydroxyTerminated" formula="HOSiCH3CH3OH">
+            <D value="0.98" unit="g/cm3"/>
+            <composite n="8" ref="hydrogen"/>
+            <composite n="2" ref="oxygen"/>
+            <composite n="2" ref="carbon"/>
+            <composite n="1" ref="silicon"/>
+        </material>  
+       
+        <!-- Trimethylated Silica -->
+        <material name="TrimethylatedSilica" formula="O2Si">
+            <D value="2.6" unit="g/cm3"/>
+            <composite n="2" ref="oxygen"/>    
+            <composite n="1" ref="silicon"/>
+        </material>  
+       
+        <!-- Methyl Trimethoxysilane -->
+        <material name="MethylTrimethoxysilane" formula="C4H12O3Si">
+            <D value="0.955" unit="g/cm3"/>
+            <composite n="12" ref="hydrogen"/>
+            <composite n="4"  ref="carbon"/>
+            <composite n="3"  ref="oxygen"/>
+            <composite n="1"  ref="silicon"/>
+        </material>
+        
+        <!-- DowCorning3140 -->
+        <material name="DowCorning3140">
+            <D value="1.2" unit="g/cm3"/>
+            <fraction n="0.60" ref="DimethylsiloxaneHydroxyTerminated"/>
+            <fraction n="0.30" ref="TrimethylatedSilica"/>
+            <fraction n="0.10" ref="MethylTrimethoxysilane"/>    
+        </material> 
+
+        <!-- Soft Steel [Q235] -->
+        <material name="SteelQ235" state="solid"> 
+            <!-- density, see: https://www.chinesesteelgrades.com/q235-steel/ -->
+            <D value="7.85" unit="g/cm3"/>
+            <fraction n="0.980" ref="iron"/>
+            <fraction n="0.014" ref="manganese"/>
+            <fraction n="0.004" ref="silicon"/>
+            <fraction n="0.002" ref="carbon"/>
+        </material>
+
+        <!-- Stainless Steel [304 - X5CrNi19-10] -->
+        <material name="StainlessSteel304" state="solid">
+            <!-- see: https://www.upmet.com/products/stainless-steel/304 -->
+            <D value="8.03" unit="g/cm3"/>
+            <fraction n="0.67995" ref="iron"/>
+            <fraction n="0.19000" ref="chromium"/>
+            <fraction n="0.10000" ref="nickel"/>
+            <fraction n="0.02000" ref="manganese"/>
+            <fraction n="0.00750" ref="silicon"/>
+            <fraction n="0.00100" ref="nitrogen"/>
+            <fraction n="0.00080" ref="carbon"/>
+            <fraction n="0.00045" ref="phosphorus"/>
+            <fraction n="0.00030" ref="sulphur"/>
+        </material>
+
+        <!-- Stainless Steel [304L - X2CrNi19-10] -->
+        <material name="StainlessSteel304L" state="solid"> 
+            <!-- see: https://www.euralliage.com/5052.htm -->
+            <D value="8.03" unit="g/cm3"/>
+            <fraction n="0.68045" ref="iron"/>
+            <fraction n="0.19000" ref="chromium"/>
+            <fraction n="0.10000" ref="nickel"/>
+            <fraction n="0.02000" ref="manganese"/>
+            <fraction n="0.00750" ref="silicon"/>
+            <fraction n="0.00100" ref="nitrogen"/>
+            <fraction n="0.00045" ref="phosphorus"/>
+            <fraction n="0.00030" ref="carbon"/>
+            <fraction n="0.00030" ref="sulphur"/>
+        </material>
+
+        <!-- Stainless Steel [316 - X5CrNiMo17-12-2] -->
+        <material name="StainlessSteel316" state="solid">
+            <!-- see: https://www.upmet.com/products/stainless-steel/316316l -->
+            <D value="8.027" unit="g/cm3"/>
+            <fraction n="0.65495" ref="iron"/>
+            <fraction n="0.17000" ref="chromium"/>
+            <fraction n="0.12000" ref="nickel"/>
+            <fraction n="0.02500" ref="molybdenum"/>
+            <fraction n="0.02000" ref="manganese"/>
+            <fraction n="0.00750" ref="silicon"/>
+            <fraction n="0.00100" ref="nitrogen"/>
+            <fraction n="0.00080" ref="carbon"/>
+            <fraction n="0.00045" ref="phosphorus"/>
+            <fraction n="0.00030" ref="sulphur"/>
+        </material>
+        
+        <!-- Stainless Steel [316L - X2CrNiMo17-12-2] -->
+        <material name="StainlessSteel316L" state="solid">
+            <!-- see: https://www.upmet.com/products/stainless-steel/316316l -->
+            <D value="8.027" unit="g/cm3"/>
+            <fraction n="0.65545" ref="iron"/>
+            <fraction n="0.17000" ref="chromium"/>
+            <fraction n="0.12000" ref="nickel"/>
+            <fraction n="0.02500" ref="molybdenum"/>
+            <fraction n="0.02000" ref="manganese"/>
+            <fraction n="0.00750" ref="silicon"/>
+            <fraction n="0.00100" ref="nitrogen"/>
+            <fraction n="0.00045" ref="phosphorus"/>
+            <fraction n="0.00030" ref="carbon"/>
+            <fraction n="0.00030" ref="sulphur"/>
+        </material>
+
+        <!-- Aluminium [5052 - AlMg2,5 - AG2,5C] -->
+        <material name="Aluminium5052" state="solid">  
+            <!-- see: https://www.euralliage.com/5052.htm -->
+            <D value="2.68" unit="g/cm3"/>
+            <fraction n="0.9630" ref="aluminium"/>               
+            <fraction n="0.0250" ref="magnesium"/>
+            <fraction n="0.0040" ref="iron"/>
+            <fraction n="0.0025" ref="silicon"/>            
+            <fraction n="0.0025" ref="chromium"/>
+            <fraction n="0.0010" ref="manganese"/>
+            <fraction n="0.0010" ref="copper"/>
+            <fraction n="0.0010" ref="zinc"/>
+        </material>
+
+        <!-- Aluminium [6060 - AlMgSi - AGS] -->
+        <material name="Aluminium6060" state="solid">  
+            <!-- see: https://www.euralliage.com/6060.htm -->
+            <D value="2.71" unit="g/cm3"/>
+            <fraction n="0.98375" ref="aluminium"/>               
+            <fraction n="0.00475" ref="magnesium"/>
+            <fraction n="0.00450" ref="silicon"/>
+            <fraction n="0.00200" ref="iron"/>
+            <fraction n="0.00150" ref="zinc"/>
+            <fraction n="0.00100" ref="titanium"/>
+            <fraction n="0.00100" ref="manganese"/>
+            <fraction n="0.00100" ref="copper"/>
+            <fraction n="0.00050" ref="chromium"/>
+        </material>
+
+        <!-- Aluminium [6061 - AlMg1SiCu - AGSUC] -->
+        <material name="Aluminium6061" state="solid">  
+            <!-- see: https://www.euralliage.com/6061.htm -->
+            <D value="2.71" unit="g/cm3"/>
+            <fraction n="0.96680" ref="aluminium"/>               
+            <fraction n="0.01000" ref="magnesium"/>                      
+            <fraction n="0.00700" ref="iron"/>
+            <fraction n="0.00600" ref="silicon"/> 
+            <fraction n="0.00275" ref="copper"/>
+            <fraction n="0.00250" ref="zinc"/>           
+            <fraction n="0.00195" ref="chromium"/>
+            <fraction n="0.00150" ref="titanium"/>
+            <fraction n="0.00150" ref="manganese"/>
+        </material>
+
+        <!-- Aluminium [6082 - AlSi1MgMn - AGSM0,7] -->
+        <material name="Aluminium6082" state="solid">  
+            <!-- see: https://www.euralliage.com/6082.htm -->
+            <D value="2.71" unit="g/cm3"/>
+            <fraction n="0.9625" ref="aluminium"/>               
+            <fraction n="0.0100" ref="silicon"/>
+            <fraction n="0.0090" ref="magnesium"/>               
+            <fraction n="0.0070" ref="manganese"/>
+            <fraction n="0.0050" ref="iron"/>
+            <fraction n="0.0025" ref="chromium"/>
+            <fraction n="0.0020" ref="zinc"/>
+            <fraction n="0.0010" ref="titanium"/>
+            <fraction n="0.0010" ref="copper"/>
+        </material>
+
+        <!-- Aluminium [7075 - AlZn5,5MgCu - AZ5GU] -->
+        <material name="Aluminium7075" state="solid">  
+            <!-- see: https://www.euralliage.com/7075.htm -->
+            <D value="2.81" unit="g/cm3"/>
+            <fraction n="0.8867" ref="aluminium"/>               
+            <fraction n="0.0560" ref="zinc"/>
+            <fraction n="0.0250" ref="magnesium"/>
+            <fraction n="0.0160" ref="copper"/>
+            <fraction n="0.0050" ref="iron"/>
+            <fraction n="0.0040" ref="silicon"/>
+            <fraction n="0.0030" ref="manganese"/>
+            <fraction n="0.0023" ref="chromium"/>
+            <fraction n="0.0020" ref="titanium"/>
+        </material>
+
+        <!-- Aluminium [7175 - AlZn5,5MgCu] -->
+        <material name="Aluminium7175" state="solid">  
+            <!-- see: https://www.euralliage.com/7175.htm -->
+            <D value="2.81" unit="g/cm3"/>
+            <fraction n="0.8942" ref="aluminium"/>               
+            <fraction n="0.0560" ref="zinc"/>
+            <fraction n="0.0250" ref="magnesium"/>
+            <fraction n="0.0170" ref="copper"/>
+            <fraction n="0.0023" ref="chromium"/>
+            <fraction n="0.0020" ref="iron"/>
+            <fraction n="0.0015" ref="silicon"/>
+            <fraction n="0.0010" ref="titanium"/>
+            <fraction n="0.0010" ref="manganese"/>
+        </material>
+
+        <!-- Brass -->
+        <material name="Brass" state="solid">
+            <!-- brass: http://www.aatongdiao.com/en/new/new-73-571.html -->
+            <D value="8.73" unit="g/cm3"/>
+            <fraction n="0.61" ref="copper"/>
+            <fraction n="0.39" ref="zinc"/>
+        </material>
+
+        <!-- Cadmium Telluride -->
+        <material name="CadmiumTelluride" formula="CdTe" state="solid">
+            <!-- see: https://www.azom.com/article.aspx?ArticleID=8408 -->
+            <D value="5.85" unit="g/cm3"/>
+            <composite n="1" ref="cadmium"/>
+            <composite n="1" ref="tellurium"/>
+        </material>
+
+        <!-- Polystyrene -->
+        <material name="Polystyrene" formula="(C8H8)n" state="solid">
+            <!-- see: https://lelementarium.fr/product/polystyrene/ -->
+            <D value="1.06" unit="g/cm3"/>
+            <composite n="8" ref="carbon"/>
+            <composite n="8" ref="hydrogen"/>
+        </material>
+
+        <!-- Polyethylene Terephthalate [PET] - Polyester... -->
+        <material name="PET" formula="(C10H8O4)n" state="solid">
+            <!-- see: https://en.wikipedia.org/wiki/Polyethylene_terephthalate -->
+            <D value="1.370" unit="g/cm3"/>
+            <composite n="10" ref="carbon"/>
+            <composite n="8" ref="hydrogen"/>
+            <composite n="4" ref="oxygen"/>
+        </material> 
+
+        <!-- Polymethyl Methacrylate [PMMA] - Plexiglass - Perspex... -->
+        <material name="PMMA" formula="(C5H8O2)n" state="solid">
+            <!-- see: https://www.britannica.com/science/polymethyl-methacrylate -->
+            <D value="1.188" unit="g/cm3"/>
+            <composite n="8" ref="hydrogen"/>
+            <composite n="5" ref="carbon"/>
+            <composite n="2" ref="oxygen"/>
+        </material>
+        
+    </materials>

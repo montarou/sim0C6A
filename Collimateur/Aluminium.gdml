@@ -1,0 +1,27 @@
+
+    <materials>
+
+        <!--*********************************-->
+        <!--* Elements - Naturally occuring *-->
+        <!--*********************************-->
+        <!-- see: https://geant4.in2p3.fr/2007/prog/GiovanniSantin/GSantin_Geant4_Paris07_Materials_v08.pdf -->
+
+        <!-- Aluminium -->
+        <element name="aluminium"  formula="Al"  Z="13">
+            <atom value="26.9815"/>
+        </element>
+
+        <!--*****************************-->
+        <!--* Materials - Non-molecular *-->
+        <!--*****************************-->
+
+        <!-- Aluminium -->
+        <material name="Aluminium" state="solid">
+            <!-- see: https://www.rsc.org/periodic-table/element/13/aluminium -->
+            <D value="2.700" unit="g/cm3"/>
+            <fraction n="1." ref="aluminium"/>
+        </material>
+
+    </materials>
+
+

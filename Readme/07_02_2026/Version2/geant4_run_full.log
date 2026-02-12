@@ -1,0 +1,1966 @@
+
+**************************************************************
+ Geant4 version Name: geant4-11-03-patch-01 [MT]   (21-March-2025)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+[MATERIAL] PVC loaded: G4_POLYVINYL_CHLORIDE, density = 1.3 g/cm3
+<<< Geant4 Physics List simulation engine: FTFP_BERT
+
+Accumulable registered as "accumulable_0"
+Accumulable registered as "accumulable_1"
+Accumulable registered as "accumulable_2"
+Accumulable registered as "accumulable_3"
+Accumulable registered as "accumulable_4"
+Accumulable registered as "accumulable_5"
+Accumulable registered as "accumulable_6"
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Registered graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRepFile (HepRepFile)
+  RayTracer (RayTracer)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+  TOOLSSG_OFFSCREEN (TSG_OFFSCREEN, TSG_FILE)
+  OpenGLImmediateQt (OGLIQt, OGLI)
+  OpenGLStoredQt (OGLSQt, OGL, OGLS)
+  OpenGLImmediateX (OGLIX, OGLIQt_FALLBACK)
+  OpenGLStoredX (OGLSX, OGLSQt_FALLBACK)
+  TOOLSSG_X11_GLES (TSG_X11_GLES, TSGX11, TSG_QT_GLES_FALLBACK)
+  TOOLSSG_X11_ZB (TSG_X11_ZB, TSGX11ZB)
+  TOOLSSG_QT_GLES (TSG_QT_GLES, TSGQt, TSG)
+  TOOLSSG_QT_ZB (TSG_QT_ZB, TSGQtZB)
+You may choose a graphics system (driver) with a parameter of
+the command "/vis/open" or "/vis/sceneHandler/create",
+or you may omit the driver parameter and choose at run time:
+- by argument in the construction of G4VisExecutive;
+- by environment variable "G4VIS_DEFAULT_DRIVER";
+- by entry in "~/.g4session";
+- by build flags.
+- Note: This feature is not allowed in batch mode.
+For further information see "examples/basic/B1/exampleB1.cc"
+and "vis.mac".
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered models:
+  None
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+Registered filters:
+  None
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+*** /run/numberOfThreads command is issued in sequential mode.
+Command is ignored.
+Checking overlaps for volume physEnveloppeGDML:0 (G4Box) ... OK! 
+Checking overlaps for volume physScorePlane:0 (G4Box) ... OK! 
+Checking overlaps for volume physScorePlane2:0 (G4Box) ... OK! 
+Checking overlaps for volume physScorePlane3:0 (G4Box) ... OK! 
+
+[GEOM] === Water Rings System ===
+[GEOM] Water front surface z = 65 mm (côté source)
+[GEOM] Water center z = 66.5 mm
+[GEOM] Water back surface z = 68 mm (fond)
+[GEOM] PVC bottom center z = 68.5 mm
+Checking overlaps for volume physPVCBottom:0 (G4Tubs) ... OK! 
+Checking overlaps for volume physPVCWall:0 (G4Tubs) ... OK! 
+Checking overlaps for volume physWaterRing0:0 (G4Tubs) ... OK! 
+[GEOM] Water Ring 0: r = [0, 2] mm
+Checking overlaps for volume physWaterRing1:0 (G4Tubs) ... OK! 
+[GEOM] Water Ring 1: r = [2, 4] mm
+Checking overlaps for volume physWaterRing2:0 (G4Tubs) ... OK! 
+[GEOM] Water Ring 2: r = [4, 6] mm
+Checking overlaps for volume physWaterRing3:0 (G4Tubs) ... OK! 
+[GEOM] Water Ring 3: r = [6, 8] mm
+Checking overlaps for volume physWaterRing4:0 (G4Tubs) ... OK! 
+[GEOM] Water Ring 4: r = [8, 10] mm
+[GEOM] === End Water Rings System ===
+Checking overlaps for volume physScorePlane5:0 (G4Box) ... OK! 
+G4GDML: Reading 'MiniX-EnveloppeTubeX-StainlessSteel304.gdml'...
+G4GDML: Reading materials...
+G4GDML: Reading definitions...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading 'MiniX-EnveloppeTubeX-StainlessSteel304.gdml' done!
+Stripping off GDML names of materials, solids and volumes ...
+Checking overlaps for volume MiniX-EnveloppeTubeX-StainlessSteel304:0 (G4TessellatedSolid) ... OK! 
+G4GDML: Reading 'MiniX-CollimateurSubAluminium-Aluminium_3mm_rotX180.gdml'...
+G4GDML: Reading materials...
+G4GDML: Reading definitions...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading 'MiniX-CollimateurSubAluminium-Aluminium_3mm_rotX180.gdml' done!
+Stripping off GDML names of materials, solids and volumes ...
+Checking overlaps for volume MiniX-Assembly-Collimation_3.0mm-CollimatorSubAluminium-Aluminium:0 (G4TessellatedSolid) ... OK! 
+G4GDML: Reading 'MiniX-CollimateurSubLaiton-Brass_3mm_rotX180.gdml'...
+G4GDML: Reading materials...
+G4GDML: Reading definitions...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading 'MiniX-CollimateurSubLaiton-Brass_3mm_rotX180.gdml' done!
+Stripping off GDML names of materials, solids and volumes ...
+Checking overlaps for volume MiniX-Assembly-Collimation_3.0mm-CollimatorSubBrass-Brass:0 (G4TessellatedSolid) ... OK! 
+G4GDML: Reading 'MiniX-PorteCollimateur-StainlessSteel304.gdml'...
+G4GDML: Reading materials...
+G4Material WARNING: duplicate name of material StainlessSteel304
+G4GDML: Reading definitions...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading 'MiniX-PorteCollimateur-StainlessSteel304.gdml' done!
+Stripping off GDML names of materials, solids and volumes ...
+Checking overlaps for volume MiniX-PorteCollimateur-StainlessSteel304:0 (G4TessellatedSolid) ... OK! 
+G4GDML: Reading 'MiniX-TubeXAlumine-DialuminiumTrioxide.gdml'...
+G4GDML: Reading materials...
+G4GDML: Reading definitions...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading 'MiniX-TubeXAlumine-DialuminiumTrioxide.gdml' done!
+Stripping off GDML names of materials, solids and volumes ...
+Checking overlaps for volume MiniX-TubeXAlumine-DialuminiumTrioxide:0 (G4TessellatedSolid) ... OK! 
+G4GDML: Reading 'MiniX-TubeXAnodeTungsten-Tungsten.gdml'...
+G4GDML: Reading materials...
+G4GDML: Reading definitions...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading 'MiniX-TubeXAnodeTungsten-Tungsten.gdml' done!
+Stripping off GDML names of materials, solids and volumes ...
+Checking overlaps for volume MiniX-TubeXAnodeTungsten-Tungsten:0 (G4TessellatedSolid) ... OK! 
+
+========== SOURCE VOLUMIQUE : ANODE TUNGSTÈNE ==========
+Volume logique : MiniX-TubeXAnodeTungsten-Tungsten
+Matériau       : Tungsten
+Bounding box   :
+  X : [-3.5, 3.5] mm
+  Y : [-3.5, 3.5] mm
+  Z : [-0.001, 0] mm
+========================================================
+
+G4GDML: Reading 'MiniX-TubeXContenuVideAnode_FenetreSortie-Vacuum.gdml'...
+G4GDML: Reading materials...
+G4GDML: Reading definitions...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading 'MiniX-TubeXContenuVideAnode_FenetreSortie-Vacuum.gdml' done!
+Stripping off GDML names of materials, solids and volumes ...
+Checking overlaps for volume MiniX-TubeXContenuVideAnode_FenetreSortie-Vacuum:0 (G4TessellatedSolid) ... OK! 
+G4GDML: Reading 'MiniX-TubeXContenuVideCathode_Anode-Vacuum.gdml'...
+G4GDML: Reading materials...
+G4Material WARNING: duplicate name of material Helium
+G4Material WARNING: duplicate name of material Neon
+G4Material WARNING: duplicate name of material Argon
+G4Material WARNING: duplicate name of material Krypton
+G4Material WARNING: duplicate name of material Xenon
+G4Material WARNING: duplicate name of material Dihydrogen
+G4Material WARNING: duplicate name of material Water
+G4Material WARNING: duplicate name of material Vacuum
+G4GDML: Reading definitions...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading 'MiniX-TubeXContenuVideCathode_Anode-Vacuum.gdml' done!
+Stripping off GDML names of materials, solids and volumes ...
+Checking overlaps for volume MiniX-TubeXContenuVideCathode_Anode-Vacuum:0 (G4TessellatedSolid) ... OK! 
+G4GDML: Reading 'MiniX-TubeXFenetreBeryllium-Beryllium.gdml'...
+G4GDML: Reading materials...
+G4GDML: Reading definitions...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading 'MiniX-TubeXFenetreBeryllium-Beryllium.gdml' done!
+Stripping off GDML names of materials, solids and volumes ...
+Checking overlaps for volume MiniX-TubeXFenetreBeryllium-Beryllium:0 (G4TessellatedSolid) ... OK! 
+[DetectorConstruction] Cuts appliqués : 1 µm pour gamma, e-, e+, proton
+Construction GDML
+
+=== Volumes logiques et matériaux associés ===
+ - logicWorld : MyAir
+ - logicEnveloppeGDML : MyAir
+ - logicScorePlane : MyAir
+ - logicScorePlane2 : MyAir
+ - logicScorePlane3 : MyAir
+ - logicPVCBottom : G4_POLYVINYL_CHLORIDE
+ - logicPVCWall : G4_POLYVINYL_CHLORIDE
+ - logicWaterRing0 : H2O
+ - logicWaterRing1 : H2O
+ - logicWaterRing2 : H2O
+ - logicWaterRing3 : H2O
+ - logicWaterRing4 : H2O
+ - logicScorePlane5 : MyAir
+ - MiniX-EnveloppeTubeX-StainlessSteel304 : StainlessSteel304
+ - MiniX-Assembly-Collimation_3.0mm-CollimatorSubAluminium-Aluminium : Aluminium
+ - MiniX-Assembly-Collimation_3.0mm-CollimatorSubBrass-Brass : Brass
+ - MiniX-PorteCollimateur-StainlessSteel304 : StainlessSteel304
+ - MiniX-TubeXAlumine-DialuminiumTrioxide : DialuminiumTrioxide
+ - MiniX-TubeXAnodeTungsten-Tungsten : Tungsten
+ - MiniX-TubeXContenuVideAnode_FenetreSortie-Vacuum : Vacuum
+ - MiniX-TubeXContenuVideCathode_Anode-Vacuum : Vacuum
+ - MiniX-TubeXFenetreBeryllium-Beryllium : Beryllium
+
+=== Matériaux utilisés dans la géométrie ===
+ • H2O | densité = 1 g/cm3 | N composants = 2
+    → H (0.111898)
+    → O (0.888102)
+ • MyAir | densité = 0.001225 g/cm3 | N composants = 10
+    → N (0.780458)
+    → O (0.210023)
+    → Ar (0.00933543)
+    → C (0.000113888)
+    → Ne (1.81711e-05)
+    → He (5.23744e-06)
+    → H (4.57728e-05)
+    → Kr (1.13944e-07)
+    → Xe (8.9956e-09)
+    → I (9.99511e-10)
+ • G4_POLYVINYL_CHLORIDE | densité = 1.3 g/cm3 | N composants = 3
+    → C (0.384357)
+    → H (0.0483828)
+    → Cl (0.567261)
+ • StainlessSteel304 | densité = 8.03 g/cm3 | N composants = 9
+    → iron (0.67995)
+    → chromium (0.19)
+    → nickel (0.1)
+    → manganese (0.02)
+    → silicon (0.0075)
+    → nitrogen (0.001)
+    → carbon (0.0008)
+    → phosphorus (0.00045)
+    → sulphur (0.0003)
+ • Aluminium | densité = 2.7 g/cm3 | N composants = 1
+    → aluminium (1)
+ • Vacuum | densité = 1.612e-12 g/cm3 | N composants = 12
+    → N (0.780458)
+    → O (0.209661)
+    → argon (0.00933543)
+    → C (0.000113888)
+    → neon (1.81711e-05)
+    → helium (5.23744e-06)
+    → H (4.38335e-08)
+    → krypton (1.13944e-07)
+    → hydrogen (4.57284e-05)
+    → xenon (8.9956e-09)
+    → I (9.99511e-10)
+    → oxygen (0.0003625)
+ • Brass | densité = 8.73 g/cm3 | N composants = 2
+    → copper (0.61)
+    → zinc (0.39)
+ • Tungsten | densité = 19.35 g/cm3 | N composants = 1
+    → tungsten (1)
+ • Beryllium | densité = 1.848 g/cm3 | N composants = 1
+    → beryllium (1)
+ • DialuminiumTrioxide | densité = 3.97 g/cm3 | N composants = 2
+    → aluminium (0.529257)
+    → oxygen (0.470743)
+=============================================
+
+
+=== Liste des volumes logiques et leurs matériaux ===
+ - logicWorld : MyAir
+ - logicEnveloppeGDML : MyAir
+ - logicScorePlane : MyAir
+ - logicScorePlane2 : MyAir
+ - logicScorePlane3 : MyAir
+ - logicPVCBottom : G4_POLYVINYL_CHLORIDE
+ - logicPVCWall : G4_POLYVINYL_CHLORIDE
+ - logicWaterRing0 : H2O
+ - logicWaterRing1 : H2O
+ - logicWaterRing2 : H2O
+ - logicWaterRing3 : H2O
+ - logicWaterRing4 : H2O
+ - logicScorePlane5 : MyAir
+ - MiniX-EnveloppeTubeX-StainlessSteel304 : StainlessSteel304
+ - MiniX-Assembly-Collimation_3.0mm-CollimatorSubAluminium-Aluminium : Aluminium
+ - MiniX-Assembly-Collimation_3.0mm-CollimatorSubBrass-Brass : Brass
+ - MiniX-PorteCollimateur-StainlessSteel304 : StainlessSteel304
+ - MiniX-TubeXAlumine-DialuminiumTrioxide : DialuminiumTrioxide
+ - MiniX-TubeXAnodeTungsten-Tungsten : Tungsten
+ - MiniX-TubeXContenuVideAnode_FenetreSortie-Vacuum : Vacuum
+ - MiniX-TubeXContenuVideCathode_Anode-Vacuum : Vacuum
+ - MiniX-TubeXFenetreBeryllium-Beryllium : Beryllium
+=====================================================
+
+[DetectorConstruction] Limite de step appliquée à Béryllium : 
+
+[GEOM][ECHO]
+[GEOM] logicScorePlane center z = 6 mm, thickness = 1 µm
+[GEOM] Envelope: z ∈ [-60, +60] mm
+ ************************************* GDML Sensible ***************************************
+[MT-MASTER] [SpecSD] ctor: E=[0,60] keV, nBins=120 onlyOutward=true
+[ANALYSIS] SpecSD ntupleId preset at construction: 0
+[FIX] Attached SpecSD to logicScorePlane  LV@0x59e43ef95b70
+[DEBUG] logicScorePlane SD = SpecSD
+[MT-MASTER] [ScorePlane2SD] Constructeur: ScorePlane2SD
+[ANALYSIS] ScorePlane2SD ntupleId preset at construction: 1
+[SD] Attached ScorePlane2SD to logicScorePlane2
+[MT-MASTER] [ScorePlane3SD] Constructeur: ScorePlane3SD
+[ANALYSIS] ScorePlane3SD ntupleId preset at construction: 2
+[SD] Attached ScorePlane3SD to logicScorePlane3
+[MT-MASTER] [ScorePlane4SD] Constructeur: ScorePlane4SD
+[ANALYSIS] ScorePlane4SD (WaterRings) ntupleId preset at construction: 3
+[SD] Attached ScorePlane4SD to logicWaterRing0
+[SD] Attached ScorePlane4SD to logicWaterRing1
+[SD] Attached ScorePlane4SD to logicWaterRing2
+[SD] Attached ScorePlane4SD to logicWaterRing3
+[SD] Attached ScorePlane4SD to logicWaterRing4
+[SD] Total water rings with ScorePlane4SD attached: 5/5
+[MT-MASTER] [ScorePlane5SD] Constructeur: ScorePlane5SD
+[ANALYSIS] ScorePlane5SD ntupleId preset at construction: 4
+[SD] Attached ScorePlane5SD to logicScorePlane5
+[WARN] LV 'logicScorePlane4' not found - step limit not applied
+[STEP] Max step in logicScorePlane5 = 0.1 mm
+
+ hInelastic FTFP_BERT : threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 6 GeV
+ for kaons :   3 to 6 GeV
+ for proton :  3 to 6 GeV
+ for neutron : 3 to 6 GeV
+
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+=======================================================================
+======                 Electromagnetic Physics Parameters      ========
+=======================================================================
+LPM effect enabled                                 1
+Enable creation and use of sampling tables         0
+Apply cuts on all EM processes                     0
+Use combined TransportationWithMsc                 Disabled
+Use general process                                1
+Enable linear polarisation for gamma               0
+Enable photoeffect sampling below K-shell          1
+Enable sampling of quantum entanglement            0
+X-section factor for integral approach             0.8
+Min kinetic energy for tables                      100 eV 
+Max kinetic energy for tables                      100 TeV
+Number of bins per decade of a table               7
+Verbose level                                      1
+Verbose level for worker thread                    0
+Bremsstrahlung energy threshold above which 
+  primary e+- is added to the list of secondary    100 TeV
+Bremsstrahlung energy threshold above which primary
+  muon/hadron is added to the list of secondary    100 TeV
+Positron annihilation at rest model                SimplePositronium
+Enable 3 gamma annihilation on fly                 0
+Lowest triplet kinetic energy                      1 MeV
+Enable sampling of gamma linear polarisation       0
+5D gamma conversion model type                     0
+5D gamma conversion model on isolated ion          0
+Use Ricardo-Gerardo pair production model          0
+Livermore data directory                           epics_2017
+=======================================================================
+======                 Ionisation Parameters                   ========
+=======================================================================
+Step function for e+-                              (0.2, 1 mm)
+Step function for muons/hadrons                    (0.2, 0.1 mm)
+Step function for light ions                       (0.2, 0.1 mm)
+Step function for general ions                     (0.2, 0.1 mm)
+Lowest e+e- kinetic energy                         1 keV
+Lowest muon/hadron kinetic energy                  1 keV
+Use ICRU90 data                                    0
+Fluctuations of dE/dx are enabled                  1
+Type of fluctuation model for leptons and hadrons  Urban
+Use built-in Birks satuaration                     0
+Build CSDA range enabled                           0
+Use cut as a final range enabled                   0
+Enable angular generator interface                 0
+Max kinetic energy for CSDA tables                 1 GeV
+Max kinetic energy for NIEL computation            0 eV 
+Linear loss limit                                  0.01
+Read data from file for e+e- pair production by mu 0
+=======================================================================
+======                 Multiple Scattering Parameters          ========
+=======================================================================
+Type of msc step limit algorithm for e+-           1
+Type of msc step limit algorithm for muons/hadrons 0
+Msc lateral displacement for e+- enabled           1
+Msc lateral displacement for muons and hadrons     0
+Urban msc model lateral displacement alg96         1
+Range factor for msc step limit for e+-            0.04
+Range factor for msc step limit for muons/hadrons  0.2
+Geometry factor for msc step limitation of e+-     2.5
+Safety factor for msc step limit for e+-           0.6
+Skin parameter for msc step limitation of e+-      1
+Lambda limit for msc step limit for e+-            1 mm
+Use Mott correction for e- scattering              0
+Factor used for dynamic computation of angular 
+  limit between single and multiple scattering     1
+Fixed angular limit between single 
+  and multiple scattering                          3.1416 rad
+Upper energy limit for e+- multiple scattering     100 MeV
+Type of electron single scattering model           0
+Type of nuclear form-factor                        1
+Screening factor                                   1
+=======================================================================
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina : Emin=    0 eV  Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 150 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 150 keV to 100 TeV in 62 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e-  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+CoulombScat:  for e- XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for e+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+annihil:  for e+ XStype:2 SubType=5 AtRestModel:Simple BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for e+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for proton  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for GenericIon  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for GenericIon  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+msc:  for alpha  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for alpha  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=7.9452 MeV
+          BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
+
+msc:  for anti_proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for anti_proton  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for anti_proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for anti_proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for anti_proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=  200 keV
+        MuBetheBloch : Emin=  200 keV Emax=  100 TeV
+
+muBrems:  for mu+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001; from 0.85 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=  200 keV
+        MuBetheBloch : Emin=  200 keV Emax=  100 TeV
+
+muBrems:  for mu-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001; from 0.85 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+-----------------------------------------------------------------------
+                           Hadronic Processes for neutron
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronElasticXS: 0 eV  ---> 100 TeV
+  Process: neutronInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
+  Process: nCapture
+        Model:               nRadCapture: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 eV  ---> 100 TeV
+  Process: nKiller
+-----------------------------------------------------------------------
+                           Hadronic Processes for B-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: B-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for D-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: D-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for GenericIon
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for He3
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for alpha
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_He3
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_alpha
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-------------------------------------------------------------------------
+                           Hadronic Processes for anti_hypertriton
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_lambda
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: anti_lambdaInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_neutron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_proton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_triton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for deuteron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for e+
+  Process: positronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for e-
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for gamma
+  Process: photonNuclear
+        Model:               GammaNPreco: 0 eV  ---> 200 MeV
+        Model:            BertiniCascade: 199 MeV ---> 6 GeV
+        Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
+     Cr_sctns:            GammaNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for kaon+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: kaon+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for kaon-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: kaon-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for lambda
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: lambdaInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for mu+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for mu-
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+  Process: muMinusCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for pi+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: pi+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for pi-
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: pi-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for proton
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: protonInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for sigma-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: sigma-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for triton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+=======================================================================
+======       Geant4 Native Pre-compound Model Parameters       ========
+=======================================================================
+Type of pre-compound inverse x-section              1
+Pre-compound model active                           1
+Pre-compound excitation low energy                  100 keV
+Pre-compound excitation high energy                 30 MeV
+Angular generator for pre-compound model            1
+Use NeverGoBack option for pre-compound model       0
+Use SoftCutOff option for pre-compound model        0
+Use CEM transitions for pre-compound model          1
+Use GNASH transitions for pre-compound model        0
+Use HETC submodel for pre-compound model            0
+=======================================================================
+======       Nuclear De-excitation Module Parameters           ========
+=======================================================================
+Type of de-excitation inverse x-section             3
+Type of de-excitation factory                       Evaporation+GEM
+Number of de-excitation channels                    68
+Min excitation energy                               10 eV 
+Min energy per nucleon for multifragmentation       200 GeV
+Limit excitation energy for Fermi BreakUp           20 MeV
+Level density (1/MeV)                               0.075
+Use simple level density model                      1
+Use discrete excitation energy of the residual      0
+Time limit for long lived isomeres                  1 ns 
+Isomer production flag                              1
+Internal e- conversion flag                         1
+Store e- internal conversion data                   1
+Correlated gamma emission flag                      0
+Max 2J for sampling of angular correlations         10
+=======================================================================
+
+========================================================================================================
+                         SUIVI STEP PAR STEP DES 10 PREMIERS EVENEMENTS
+========================================================================================================
+ Evt  Trk Stp    Part Sec Ekin(keV)  PreVolume                             PrePos(mm)  PostVolume                           PostPos(mm)
+------------------------------------------------------------------------------------------------------------------------------------------
+... set ntuple merging row mode : row-wise - done
+... create file : output.root - done
+... open analysis file : output.root - done
+... open analysis file : output.root - done
+[RUN] SpecSD wired to plane_passages ntuple id = 0
+[MT-MASTER] [ScorePlane2SD] Initialize event 0
+[MT-MASTER] [ScorePlane3SD] Initialize event 0
+[MT-MASTER] [ScorePlane4SD] Initialize event 0
+[MT-MASTER] [ScorePlane5SD] Initialize event 0
+
+>>> Evenement #0 (total suivi: 1/10) <<<
+
+   0    1   1   gamma   0     3.948  MiniX-TubeXContenu..          (0.00,0.00,0.00)  MiniX-TubeXFenetre..         (0.07,-0.03,0.05)
+   0    1   2   gamma   0     3.948  MiniX-TubeXFenetre..         (0.07,-0.03,0.05)  MiniX-TubeXFenetre..         (0.11,-0.05,0.07)
+   0    2   1      e-   1     3.833  MiniX-TubeXFenetre..         (0.11,-0.05,0.07)  MiniX-TubeXFenetre..         (0.11,-0.05,0.07)
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 0: 0 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 0: 0 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 0: 0 particules enregistrées
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 0: 0 particules enregistrées
+[MT-MASTER] [ScorePlane2SD] Initialize event 1
+[MT-MASTER] [ScorePlane3SD] Initialize event 1
+[MT-MASTER] [ScorePlane4SD] Initialize event 1
+[MT-MASTER] [ScorePlane5SD] Initialize event 1
+
+>>> Evenement #1 (total suivi: 2/10) <<<
+
+   1    1   1   gamma   0    19.002  MiniX-TubeXContenu..          (0.00,0.00,0.00)  MiniX-TubeXFenetre..          (0.01,0.07,0.05)
+   1    1   2   gamma   0    19.002  MiniX-TubeXFenetre..          (0.01,0.07,0.05)  physEnveloppeGDML             (0.05,0.26,0.17)
+   1    1   3   gamma   0    19.002  physEnveloppeGDML             (0.05,0.26,0.17)  MiniX-Assembly-Col..          (0.29,1.47,0.99)
+   1    1   4   gamma   0    19.002  MiniX-Assembly-Col..          (0.29,1.47,0.99)  MiniX-Assembly-Col..          (0.29,1.50,1.01)
+   1    1   5   gamma   0    19.002  MiniX-Assembly-Col..          (0.29,1.50,1.01)  MiniX-Assembly-Col..          (0.30,1.52,1.02)
+   1    2   1      e-   1    10.016  MiniX-Assembly-Col..          (0.30,1.52,1.02)  MiniX-Assembly-Col..          (0.30,1.52,1.02)
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 1: 0 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 1: 0 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 1: 0 particules enregistrées
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 1: 0 particules enregistrées
+[MT-MASTER] [ScorePlane2SD] Initialize event 2
+[MT-MASTER] [ScorePlane3SD] Initialize event 2
+[MT-MASTER] [ScorePlane4SD] Initialize event 2
+[MT-MASTER] [ScorePlane5SD] Initialize event 2
+
+>>> Evenement #2 (total suivi: 3/10) <<<
+
+   2    1   1   gamma   0     5.567  MiniX-TubeXContenu..          (0.00,0.00,0.00)  MiniX-TubeXFenetre..        (-0.03,-0.05,0.05)
+   2    1   2   gamma   0     5.567  MiniX-TubeXFenetre..        (-0.03,-0.05,0.05)  physEnveloppeGDML           (-0.09,-0.19,0.17)
+   2    1   3   gamma   0     5.567  physEnveloppeGDML           (-0.09,-0.19,0.17)  MiniX-Assembly-Col..        (-0.62,-1.36,1.22)
+   2    1   4   gamma   0     5.567  MiniX-Assembly-Col..        (-0.62,-1.36,1.22)  MiniX-Assembly-Col..        (-0.63,-1.39,1.24)
+   2    1   5   gamma   0     5.567  MiniX-Assembly-Col..        (-0.63,-1.39,1.24)  MiniX-Assembly-Col..        (-0.63,-1.39,1.24)
+   2    2   1      e-   1     4.464  MiniX-Assembly-Col..        (-0.63,-1.39,1.24)  MiniX-Assembly-Col..        (-0.63,-1.39,1.24)
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 2: 0 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 2: 0 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 2: 0 particules enregistrées
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 2: 0 particules enregistrées
+[MT-MASTER] [ScorePlane2SD] Initialize event 3
+[MT-MASTER] [ScorePlane3SD] Initialize event 3
+[MT-MASTER] [ScorePlane4SD] Initialize event 3
+[MT-MASTER] [ScorePlane5SD] Initialize event 3
+
+>>> Evenement #3 (total suivi: 4/10) <<<
+
+   3    1   1   gamma   0    10.837  MiniX-TubeXContenu..          (0.00,0.00,0.00)  MiniX-TubeXFenetre..         (0.08,-0.02,0.05)
+   3    1   2   gamma   0    10.837  MiniX-TubeXFenetre..         (0.08,-0.02,0.05)  physEnveloppeGDML            (0.28,-0.08,0.17)
+   3    1   3   gamma   0    10.837  physEnveloppeGDML            (0.28,-0.08,0.17)  MiniX-Assembly-Col..         (1.53,-0.46,0.95)
+   3    1   4   gamma   0    10.837  MiniX-Assembly-Col..         (1.53,-0.46,0.95)  MiniX-Assembly-Col..         (1.53,-0.46,0.95)
+   3    2   1      e-   1     1.851  MiniX-Assembly-Col..         (1.53,-0.46,0.95)  MiniX-Assembly-Col..         (1.53,-0.46,0.95)
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 3: 0 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 3: 0 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 3: 0 particules enregistrées
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 3: 0 particules enregistrées
+[MT-MASTER] [ScorePlane2SD] Initialize event 4
+[MT-MASTER] [ScorePlane3SD] Initialize event 4
+[MT-MASTER] [ScorePlane4SD] Initialize event 4
+[MT-MASTER] [ScorePlane5SD] Initialize event 4
+
+>>> Evenement #4 (total suivi: 5/10) <<<
+
+   4    1   1   gamma   0    12.038  MiniX-TubeXContenu..          (0.00,0.00,0.00)  MiniX-TubeXFenetre..         (0.04,-0.03,0.05)
+   4    1   2   gamma   0    12.038  MiniX-TubeXFenetre..         (0.04,-0.03,0.05)  physEnveloppeGDML            (0.13,-0.11,0.17)
+   4    1   3   gamma   0    12.038  physEnveloppeGDML            (0.13,-0.11,0.17)  MiniX-Assembly-Col..         (1.16,-0.94,1.56)
+   4    1   4   gamma   0    12.038  MiniX-Assembly-Col..         (1.16,-0.94,1.56)  MiniX-Assembly-Col..         (1.18,-0.96,1.58)
+   4    1   5   gamma   0    12.038  MiniX-Assembly-Col..         (1.18,-0.96,1.58)  MiniX-Assembly-Col..         (1.18,-0.96,1.58)
+   4    2   1      e-   1     3.052  MiniX-Assembly-Col..         (1.18,-0.96,1.58)  MiniX-Assembly-Col..         (1.18,-0.96,1.58)
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 4: 0 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 4: 0 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 4: 0 particules enregistrées
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 4: 0 particules enregistrées
+
+>>> Evenement #5 (total suivi: 6/10) <<<
+
+   5    1   1   gamma   0    10.594  MiniX-TubeXContenu..          (0.00,0.00,0.00)  MiniX-TubeXFenetre..         (0.02,-0.01,0.05)
+   5    1   2   gamma   0    10.594  MiniX-TubeXFenetre..         (0.02,-0.01,0.05)  physEnveloppeGDML            (0.09,-0.04,0.17)
+   5    1   3   gamma   0    10.594  physEnveloppeGDML            (0.09,-0.04,0.17)  MiniX-Assembly-Col..         (1.36,-0.63,2.72)
+   5    1   4   gamma   0    10.594  MiniX-Assembly-Col..         (1.36,-0.63,2.72)  MiniX-Assembly-Col..         (1.38,-0.64,2.77)
+   5    1   5   gamma   0    10.594  MiniX-Assembly-Col..         (1.38,-0.64,2.77)  MiniX-Assembly-Col..         (1.38,-0.64,2.77)
+   5    2   1      e-   1     0.931  MiniX-Assembly-Col..         (1.38,-0.64,2.77)  MiniX-Assembly-Col..         (1.38,-0.64,2.77)
+
+>>> Evenement #6 (total suivi: 7/10) <<<
+
+   6    1   1   gamma   0    26.139  MiniX-TubeXContenu..          (0.00,0.00,0.00)  MiniX-TubeXFenetre..        (-0.07,-0.03,0.05)
+   6    1   2   gamma   0    26.139  MiniX-TubeXFenetre..        (-0.07,-0.03,0.05)  physEnveloppeGDML           (-0.24,-0.11,0.17)
+   6    1   3   gamma   0    26.139  physEnveloppeGDML           (-0.24,-0.11,0.17)  MiniX-Assembly-Col..        (-1.38,-0.60,0.98)
+   6    1   4   gamma   0    26.139  MiniX-Assembly-Col..        (-1.38,-0.60,0.98)  MiniX-Assembly-Col..        (-1.40,-0.61,1.00)
+   6    1   5   gamma   0    26.139  MiniX-Assembly-Col..        (-1.40,-0.61,1.00)  MiniX-Assembly-Col..        (-1.41,-0.61,1.01)
+   6    2   1      e-   1    17.153  MiniX-Assembly-Col..        (-1.41,-0.61,1.01)  MiniX-Assembly-Col..        (-1.41,-0.61,1.01)
+
+>>> Evenement #7 (total suivi: 8/10) <<<
+
+   7    1   1   gamma   0     3.917  MiniX-TubeXContenu..          (0.00,0.00,0.00)  MiniX-TubeXFenetre..          (0.05,0.03,0.05)
+   7    1   2   gamma   0     3.917  MiniX-TubeXFenetre..          (0.05,0.03,0.05)  physEnveloppeGDML             (0.17,0.10,0.17)
+   7    1   3   gamma   0     3.917  physEnveloppeGDML             (0.17,0.10,0.17)  MiniX-Assembly-Col..          (1.31,0.74,1.33)
+   7    1   4   gamma   0     3.917  MiniX-Assembly-Col..          (1.31,0.74,1.33)  MiniX-Assembly-Col..          (1.32,0.74,1.34)
+   7    2   1      e-   1     2.353  MiniX-Assembly-Col..          (1.32,0.74,1.34)  MiniX-Assembly-Col..          (1.32,0.74,1.34)
+
+>>> Evenement #8 (total suivi: 9/10) <<<
+
+   8    1   1   gamma   0     5.760  MiniX-TubeXContenu..          (0.00,0.00,0.00)  MiniX-TubeXFenetre..         (0.07,-0.04,0.05)
+   8    1   2   gamma   0     5.760  MiniX-TubeXFenetre..         (0.07,-0.04,0.05)  physEnveloppeGDML            (0.25,-0.15,0.17)
+   8    1   3   gamma   0     5.760  physEnveloppeGDML            (0.25,-0.15,0.17)  MiniX-Assembly-Col..         (1.37,-0.83,0.95)
+   8    1   4   gamma   0     5.760  MiniX-Assembly-Col..         (1.37,-0.83,0.95)  MiniX-Assembly-Col..         (1.37,-0.83,0.95)
+   8    2   1      e-   1     4.562  MiniX-Assembly-Col..         (1.37,-0.83,0.95)  MiniX-Assembly-Col..         (1.37,-0.83,0.95)
+
+>>> Evenement #9 (total suivi: 10/10) <<<
+
+   9    1   1   gamma   0     6.675  MiniX-TubeXContenu..          (0.00,0.00,0.00)  MiniX-TubeXFenetre..         (-0.05,0.03,0.05)
+   9    1   2   gamma   0     6.675  MiniX-TubeXFenetre..         (-0.05,0.03,0.05)  physEnveloppeGDML            (-0.19,0.10,0.17)
+   9    1   3   gamma   0     6.675  physEnveloppeGDML            (-0.19,0.10,0.17)  MiniX-Assembly-Col..         (-1.34,0.67,1.22)
+   9    1   4   gamma   0     6.675  MiniX-Assembly-Col..         (-1.34,0.67,1.22)  MiniX-Assembly-Col..         (-1.36,0.68,1.24)
+   9    2   1      e-   1     5.111  MiniX-Assembly-Col..         (-1.36,0.68,1.24)  MiniX-Assembly-Col..         (-1.36,0.68,1.24)
+[TRACE][PLANE ENTER] evt=23 zPre=0.175 zPost=18.000 mm
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-0.133,-0.272,18.000) mm postPos=(-0.133,-0.272,18.000) mm dirZ=1.000 onlyOutward=true ntupleId=0
+[plane_passages][fill#1] pdg=22 x=-0.133 y=-0.272 E=4.020 keV
+[TRACE][PLANE LEAVE] evt=23 zPre=18.000 zPost=18.000 mm
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.203 mm y=-0.416 mm Ekin=4.020 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.277 mm y=-0.568 mm Ekin=4.020 keV trackID=1 parentID=0 creator=primary
+[TRACE][Z=60] evt=23 preZ=38.500 postZ=60.000 mm
+[TRACE][Z=60] evt=23 preZ=60.000 postZ=65.000 mm
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.479 mm y=-0.984 mm Ekin=4.020 keV volume=physWaterRing0
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 23: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 23: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 23: 1 particules enregistrées
+[TRACE][PLANE ENTER] evt=291 zPre=0.175 zPost=17.999 mm
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-0.953,-0.839,17.999) mm postPos=(-0.953,-0.839,18.000) mm dirZ=0.998 onlyOutward=true ntupleId=0
+[plane_passages][fill#2] pdg=22 x=-0.953 y=-0.839 E=39.998 keV
+[TRACE][PLANE LEAVE] evt=291 zPre=17.999 zPost=18.000 mm
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-1.456 mm y=-1.282 mm Ekin=39.998 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-1.986 mm y=-1.748 mm Ekin=39.998 keV trackID=1 parentID=0 creator=primary
+[TRACE][Z=60] evt=291 preZ=38.500 postZ=60.000 mm
+[TRACE][Z=60] evt=291 preZ=60.000 postZ=65.000 mm
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-3.442 mm y=-3.030 mm Ekin=39.998 keV volume=physWaterRing2
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-3.681 mm y=-3.239 mm Ekin=39.998 keV
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 291: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 291: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 291: 1 particules enregistrées
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 291: 1 particules enregistrées
+[TRACE][PLANE ENTER] evt=604 zPre=16.450 zPost=18.000 mm
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(1.632,-0.276,18.000) mm postPos=(1.632,-0.276,18.000) mm dirZ=0.996 onlyOutward=true ntupleId=0
+[plane_passages][fill#3] pdg=22 x=1.632 y=-0.276 E=15.899 keV
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=2.493 mm y=-0.422 mm Ekin=15.899 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=3.400 mm y=-0.575 mm Ekin=15.899 keV trackID=1 parentID=0 creator=primary
+[TRACE][Z=60] evt=604 preZ=38.500 postZ=60.000 mm
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=5.893 mm y=-0.997 mm Ekin=15.899 keV volume=physWaterRing2
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 604: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 604: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 604: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(0.505,0.041,18.000) mm postPos=(0.505,0.041,18.000) mm dirZ=1.000 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=0.771 mm y=0.062 mm Ekin=9.889 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.051 mm y=0.085 mm Ekin=9.889 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.822 mm y=0.147 mm Ekin=9.889 keV volume=physWaterRing0
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 692: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 692: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 692: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-0.587,-0.462,18.000) mm postPos=(-0.587,-0.462,18.000) mm dirZ=0.999 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.897 mm y=-0.706 mm Ekin=5.751 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-1.223 mm y=-0.962 mm Ekin=5.751 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-2.120 mm y=-1.668 mm Ekin=5.751 keV volume=physWaterRing1
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 806: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 806: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 806: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-1.151,0.385,18.000) mm postPos=(-1.151,0.385,18.000) mm dirZ=0.998 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-1.758 mm y=0.589 mm Ekin=4.671 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-2.398 mm y=0.803 mm Ekin=4.671 keV trackID=1 parentID=0 creator=primary
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 830: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 830: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-0.357,0.833,18.000) mm postPos=(-0.357,0.833,18.000) mm dirZ=0.999 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.545 mm y=1.272 mm Ekin=12.089 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.743 mm y=1.735 mm Ekin=12.089 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-1.288 mm y=3.007 mm Ekin=12.089 keV volume=physWaterRing1
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 954: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 954: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 954: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-0.103,1.534,18.000) mm postPos=(-0.103,1.535,18.000) mm dirZ=0.996 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.157 mm y=2.344 mm Ekin=5.368 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.214 mm y=3.197 mm Ekin=5.368 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.370 mm y=5.542 mm Ekin=5.368 keV volume=physWaterRing2
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 1130: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 1130: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 1130: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-0.315,0.170,18.000) mm postPos=(-0.315,0.170,18.000) mm dirZ=1.000 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.481 mm y=0.259 mm Ekin=3.545 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.656 mm y=0.354 mm Ekin=3.545 keV trackID=1 parentID=0 creator=primary
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 1293: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 1293: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(0.967,-1.060,18.000) mm postPos=(0.967,-1.060,18.000) mm dirZ=0.997 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.477 mm y=-1.619 mm Ekin=13.756 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=2.014 mm y=-2.208 mm Ekin=13.756 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=3.491 mm y=-3.828 mm Ekin=13.756 keV volume=physWaterRing2
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 1301: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 1301: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 1301: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-1.473,0.021,18.000) mm postPos=(-1.473,0.021,18.000) mm dirZ=0.997 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-2.251 mm y=0.032 mm Ekin=30.827 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-3.069 mm y=0.043 mm Ekin=30.827 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-5.320 mm y=0.075 mm Ekin=30.827 keV volume=physWaterRing2
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-5.688 mm y=0.080 mm Ekin=30.827 keV
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 1468: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 1468: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 1468: 1 particules enregistrées
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 1468: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(0.465,1.343,18.000) mm postPos=(0.465,1.343,18.000) mm dirZ=0.997 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=0.711 mm y=2.051 mm Ekin=22.505 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=0.969 mm y=2.797 mm Ekin=22.505 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.679 mm y=4.848 mm Ekin=22.505 keV volume=physWaterRing2
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 1503: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 1503: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 1503: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(0.280,-0.298,18.000) mm postPos=(0.280,-0.298,18.000) mm dirZ=1.000 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=0.428 mm y=-0.455 mm Ekin=7.567 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=0.584 mm y=-0.620 mm Ekin=7.567 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.012 mm y=-1.075 mm Ekin=7.567 keV volume=physWaterRing0
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 1660: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 1660: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 1660: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-1.358,0.447,18.000) mm postPos=(-1.358,0.447,18.000) mm dirZ=0.997 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-2.074 mm y=0.683 mm Ekin=10.728 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-2.828 mm y=0.931 mm Ekin=10.728 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-4.902 mm y=1.614 mm Ekin=10.728 keV volume=physWaterRing2
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 1825: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 1825: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 1825: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-1.354,0.694,17.999) mm postPos=(-1.354,0.694,18.000) mm dirZ=0.996 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-2.069 mm y=1.060 mm Ekin=16.758 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-2.821 mm y=1.445 mm Ekin=16.758 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-4.889 mm y=2.505 mm Ekin=16.758 keV volume=physWaterRing2
+[MT-MASTER] [ScorePlane2SD] EndOfEvent 1845: 1 particules enregistrées
+[MT-MASTER] [ScorePlane3SD] EndOfEvent 1845: 1 particules enregistrées
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 1845: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(0.740,-0.877,18.000) mm postPos=(0.740,-0.877,18.000) mm dirZ=0.998 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.131 mm y=-1.339 mm Ekin=15.513 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.542 mm y=-1.826 mm Ekin=15.513 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=2.673 mm y=-3.166 mm Ekin=15.513 keV volume=physWaterRing2
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 2107: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(0.861,-1.082,18.000) mm postPos=(0.861,-1.082,18.000) mm dirZ=0.997 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.316 mm y=-1.653 mm Ekin=21.254 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.794 mm y=-2.254 mm Ekin=21.254 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=3.110 mm y=-3.907 mm Ekin=21.254 keV volume=physWaterRing2
+[MT-MASTER] [ScorePlane4SD] EndOfEvent 2212: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(0.975,-0.604,18.000) mm postPos=(0.975,-0.604,18.000) mm dirZ=0.998 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.489 mm y=-0.922 mm Ekin=8.507 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=2.030 mm y=-1.258 mm Ekin=8.507 keV trackID=1 parentID=0 creator=primary
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-1.247,-0.521,18.000) mm postPos=(-1.247,-0.521,18.000) mm dirZ=0.997 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-1.906 mm y=-0.796 mm Ekin=14.590 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-2.599 mm y=-1.085 mm Ekin=14.590 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-4.505 mm y=-1.880 mm Ekin=14.590 keV volume=physWaterRing2
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(0.451,1.513,18.000) mm postPos=(0.451,1.513,18.000) mm dirZ=0.996 onlyOutward=true ntupleId=0
+[ScorePlane2SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=0.690 mm y=2.312 mm Ekin=7.478 keV trackID=1 parentID=0 creator=primary
+[ScorePlane3SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=0.940 mm y=3.153 mm Ekin=7.478 keV trackID=1 parentID=0 creator=primary
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.630 mm y=5.465 mm Ekin=7.478 keV volume=physWaterRing2
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-1.608,-0.185,17.999) mm postPos=(-1.608,-0.185,18.000) mm dirZ=0.996 onlyOutward=true ntupleId=0
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-5.808 mm y=-0.667 mm Ekin=33.400 keV volume=physWaterRing2
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-6.210 mm y=-0.713 mm Ekin=33.400 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 2540: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(1.520,0.577,18.000) mm postPos=(1.520,0.577,18.000) mm dirZ=0.996 onlyOutward=true ntupleId=0
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=5.488 mm y=2.085 mm Ekin=15.187 keV volume=physWaterRing2
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-1.221,-0.910,18.000) mm postPos=(-1.221,-0.910,18.000) mm dirZ=0.996 onlyOutward=true ntupleId=0
+[ScorePlane4SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-4.409 mm y=-3.287 mm Ekin=26.524 keV volume=physWaterRing2
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-4.715 mm y=-3.515 mm Ekin=26.524 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 2897: 1 particules enregistrées
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-0.524,-0.023,17.999) mm postPos=(-0.524,-0.023,18.000) mm dirZ=1.000 onlyOutward=true ntupleId=0
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-0.035,1.594,18.000) mm postPos=(-0.035,1.594,18.000) mm dirZ=0.996 onlyOutward=true ntupleId=0
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-0.035,-0.219,18.000) mm postPos=(-0.035,-0.219,18.000) mm dirZ=1.000 onlyOutward=true ntupleId=0
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-1.003,1.228,18.000) mm postPos=(-1.003,1.229,18.000) mm dirZ=0.996 onlyOutward=true ntupleId=0
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-0.613,1.514,18.000) mm postPos=(-0.613,1.514,18.000) mm dirZ=0.996 onlyOutward=true ntupleId=0
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(0.044,1.274,18.000) mm postPos=(0.044,1.274,18.000) mm dirZ=0.998 onlyOutward=true ntupleId=0
+[SpecSD::ProcessHits] pre=physScorePlane -> post=physEnveloppeGDML prePos=(-1.204,0.236,18.000) mm postPos=(-1.205,0.236,18.000) mm dirZ=0.998 onlyOutward=true ntupleId=0
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=4.001 mm y=0.353 mm Ekin=45.874 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 4484: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-5.912 mm y=0.736 mm Ekin=14.152 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 5255: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.340 mm y=4.989 mm Ekin=17.929 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 5296: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=0.331 mm y=-0.527 mm Ekin=29.517 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 6625: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-5.435 mm y=2.087 mm Ekin=30.765 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 6684: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.034 mm y=1.093 mm Ekin=36.658 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 6962: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-0.697 mm y=0.570 mm Ekin=21.630 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 7365: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-3.810 mm y=-2.463 mm Ekin=27.805 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 7924: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=5.148 mm y=3.660 mm Ekin=19.189 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 7980: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=5.554 mm y=22.339 mm Ekin=28.435 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 8338: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=4.755 mm y=1.314 mm Ekin=28.588 keV
+[MT-MASTER] [ScorePlane5SD] EndOfEvent 9053: 1 particules enregistrées
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.708 mm y=-5.491 mm Ekin=28.383 keV
+[PROGRESS] Event 10000 | Transmitted: 88 | Edep(keV): Tot=452.125 R0=43.734 R1=120.320 R2=234.501 R3=40.918 R4=12.651 | Dose(pGy): Tot=76.851 R0=185.843 R1=170.426 R2=199.295 R3=24.840 R4=5.973
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=-3.800 mm y=1.476 mm Ekin=19.318 keV
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=3.263 mm y=1.044 mm Ekin=29.279 keV
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=3.362 mm y=-1.929 mm Ekin=19.978 keV
+[ScorePlane5SD] WROTE row: pdg=22 name=gamma is_secondary=0 x=1.078 mm y=4.195 mm Ekin=40.529 keV
+[PROGRESS] Event 20000 | Transmitted: 74 | Edep(keV): Tot=271.859 R0=20.739 R1=111.191 R2=139.929 R3=0.000 R4=0.000 | Dose(pGy): Tot=46.210 R0=88.126 R1=157.496 R2=118.921 R3=0.000 R4=0.000
+[PROGRESS] Event 30000 | Transmitted: 60 | Edep(keV): Tot=261.474 R0=30.117 R1=82.631 R2=136.652 R3=12.073 R4=0.000 | Dose(pGy): Tot=44.445 R0=127.979 R1=117.042 R2=116.136 R3=7.329 R4=0.000
+[PROGRESS] Event 40000 | Transmitted: 79 | Edep(keV): Tot=344.461 R0=19.102 R1=96.654 R2=228.705 R3=0.000 R4=0.000 | Dose(pGy): Tot=58.550 R0=81.171 R1=136.906 R2=194.369 R3=0.000 R4=0.000
+[PROGRESS] Event 50000 | Transmitted: 72 | Edep(keV): Tot=350.265 R0=30.634 R1=127.654 R2=170.545 R3=21.433 R4=0.000 | Dose(pGy): Tot=59.537 R0=130.174 R1=180.815 R2=144.940 R3=13.011 R4=0.000
+[ScorePlane3SD] REJECT (dir.z <= 0): dir.z=-0.780
+[ScorePlane2SD] REJECT (dir.z <= 0): dir.z=-0.780
+[SpecSD] REJECT (inward/side) dirZ=-0.780
+[PROGRESS] Event 60000 | Transmitted: 67 | Edep(keV): Tot=327.787 R0=22.262 R1=80.768 R2=210.131 R3=0.000 R4=14.625 | Dose(pGy): Tot=55.716 R0=94.599 R1=114.404 R2=178.584 R3=0.000 R4=6.905
+[PROGRESS] Event 70000 | Transmitted: 59 | Edep(keV): Tot=279.811 R0=0.000 R1=131.567 R2=148.244 R3=0.000 R4=0.000 | Dose(pGy): Tot=47.561 R0=0.000 R1=186.357 R2=125.988 R3=0.000 R4=0.000
+[PROGRESS] Event 80000 | Transmitted: 69 | Edep(keV): Tot=370.919 R0=73.657 R1=132.078 R2=155.383 R3=9.801 R4=0.000 | Dose(pGy): Tot=63.048 R0=312.993 R1=187.081 R2=132.055 R3=5.950 R4=0.000
+[ScorePlane3SD] REJECT (dir.z <= 0): dir.z=-0.827
+[ScorePlane2SD] REJECT (dir.z <= 0): dir.z=-0.827
+[SpecSD] REJECT (inward/side) dirZ=-0.827
+[PROGRESS] Event 90000 | Transmitted: 83 | Edep(keV): Tot=335.772 R0=37.635 R1=122.487 R2=175.649 R3=0.000 R4=0.000 | Dose(pGy): Tot=57.073 R0=159.925 R1=173.497 R2=149.278 R3=0.000 R4=0.000
+[ScorePlane3SD] REJECT (dir.z <= 0): dir.z=-0.581
+[PROGRESS] Event 100000 | Transmitted: 79 | Edep(keV): Tot=394.386 R0=33.792 R1=123.792 R2=236.802 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.037 R0=143.594 R1=175.344 R2=201.251 R3=0.000 R4=0.000
+[ScorePlane3SD] REJECT (dir.z <= 0): dir.z=-0.946
+[ScorePlane2SD] REJECT (dir.z <= 0): dir.z=-0.946
+[SpecSD] REJECT (inward/side) dirZ=-0.946
+[PROGRESS] Event 110000 | Transmitted: 76 | Edep(keV): Tot=377.120 R0=34.734 R1=92.720 R2=249.667 R3=0.000 R4=0.000 | Dose(pGy): Tot=64.102 R0=147.596 R1=131.332 R2=212.183 R3=0.000 R4=0.000
+[ScorePlane3SD] REJECT (dir.z <= 0): dir.z=-0.771
+[ScorePlane2SD] REJECT (dir.z <= 0): dir.z=-0.771
+[SpecSD] REJECT (inward/side) dirZ=-0.771
+[ScorePlane3SD] REJECT (dir.z <= 0): dir.z=-0.526
+[ScorePlane3SD] REJECT (dir.z <= 0): dir.z=-0.861
+[ScorePlane2SD] REJECT (dir.z <= 0): dir.z=-0.861
+[SpecSD] REJECT (inward/side) dirZ=-0.861
+[PROGRESS] Event 120000 | Transmitted: 80 | Edep(keV): Tot=390.842 R0=19.026 R1=110.988 R2=248.535 R3=12.292 R4=0.000 | Dose(pGy): Tot=66.434 R0=80.850 R1=157.208 R2=211.222 R3=7.462 R4=0.000
+[PROGRESS] Event 130000 | Transmitted: 96 | Edep(keV): Tot=445.794 R0=63.228 R1=128.868 R2=232.472 R3=21.227 R4=0.000 | Dose(pGy): Tot=75.775 R0=268.677 R1=182.534 R2=197.570 R3=12.886 R4=0.000
+[ScorePlane3SD] REJECT (dir.z <= 0): dir.z=-0.963
+[ScorePlane2SD] REJECT (dir.z <= 0): dir.z=-0.963
+[SpecSD] REJECT (inward/side) dirZ=-0.963
+[PROGRESS] Event 140000 | Transmitted: 88 | Edep(keV): Tot=484.120 R0=64.320 R1=127.894 R2=250.668 R3=41.239 R4=0.000 | Dose(pGy): Tot=82.289 R0=273.317 R1=181.154 R2=213.034 R3=25.035 R4=0.000
+[ScorePlane3SD] REJECT (dir.z <= 0): dir.z=-0.732
+[ScorePlane2SD] REJECT (dir.z <= 0): dir.z=-0.732
+[SpecSD] REJECT (inward/side) dirZ=-0.732
+[PROGRESS] Event 150000 | Transmitted: 85 | Edep(keV): Tot=312.175 R0=48.544 R1=70.391 R2=182.629 R3=0.000 R4=10.611 | Dose(pGy): Tot=53.063 R0=206.278 R1=99.706 R2=155.211 R3=0.000 R4=5.010
+[ScorePlane3SD] REJECT (dir.z <= 0): dir.z=-0.953
+[ScorePlane2SD] REJECT (dir.z <= 0): dir.z=-0.953
+[SpecSD] REJECT (inward/side) dirZ=-0.953
+[PROGRESS] Event 160000 | Transmitted: 72 | Edep(keV): Tot=388.014 R0=92.148 R1=121.328 R2=174.538 R3=0.000 R4=0.000 | Dose(pGy): Tot=65.954 R0=391.569 R1=171.854 R2=148.335 R3=0.000 R4=0.000
+[PROGRESS] Event 170000 | Transmitted: 81 | Edep(keV): Tot=335.467 R0=23.487 R1=141.437 R2=170.543 R3=0.000 R4=0.000 | Dose(pGy): Tot=57.022 R0=99.806 R1=200.338 R2=144.939 R3=0.000 R4=0.000
+[PROGRESS] Event 180000 | Transmitted: 68 | Edep(keV): Tot=344.169 R0=52.535 R1=88.896 R2=188.089 R3=14.649 R4=0.000 | Dose(pGy): Tot=58.501 R0=223.238 R1=125.916 R2=159.851 R3=8.893 R4=0.000
+[PROGRESS] Event 190000 | Transmitted: 76 | Edep(keV): Tot=465.673 R0=74.663 R1=171.305 R2=201.688 R3=18.016 R4=0.000 | Dose(pGy): Tot=79.154 R0=317.268 R1=242.645 R2=171.408 R3=10.937 R4=0.000
+[PROGRESS] Event 200000 | Transmitted: 75 | Edep(keV): Tot=342.808 R0=27.469 R1=117.915 R2=182.699 R3=14.725 R4=0.000 | Dose(pGy): Tot=58.270 R0=116.726 R1=167.021 R2=155.270 R3=8.939 R4=0.000
+[ScorePlane2SD] REJECT (dir.z <= 0): dir.z=-0.867
+[SpecSD] REJECT (inward/side) dirZ=-0.867
+[PROGRESS] Event 210000 | Transmitted: 85 | Edep(keV): Tot=421.311 R0=32.147 R1=144.763 R2=225.567 R3=18.834 R4=0.000 | Dose(pGy): Tot=71.613 R0=136.603 R1=205.048 R2=191.702 R3=11.433 R4=0.000
+[PROGRESS] Event 220000 | Transmitted: 77 | Edep(keV): Tot=356.890 R0=46.435 R1=92.863 R2=217.592 R3=0.000 R4=0.000 | Dose(pGy): Tot=60.663 R0=197.318 R1=131.536 R2=184.924 R3=0.000 R4=0.000
+[PROGRESS] Event 230000 | Transmitted: 90 | Edep(keV): Tot=466.489 R0=38.921 R1=176.849 R2=250.719 R3=0.000 R4=0.000 | Dose(pGy): Tot=79.292 R0=165.386 R1=250.497 R2=213.078 R3=0.000 R4=0.000
+[PROGRESS] Event 240000 | Transmitted: 66 | Edep(keV): Tot=297.717 R0=40.021 R1=51.391 R2=192.534 R3=13.770 R4=0.000 | Dose(pGy): Tot=50.605 R0=170.064 R1=72.793 R2=163.629 R3=8.360 R4=0.000
+[PROGRESS] Event 250000 | Transmitted: 80 | Edep(keV): Tot=387.095 R0=21.484 R1=110.989 R2=239.850 R3=14.772 R4=0.000 | Dose(pGy): Tot=65.797 R0=91.294 R1=157.210 R2=203.840 R3=8.968 R4=0.000
+[ScorePlane2SD] REJECT (dir.z <= 0): dir.z=-0.730
+[SpecSD] REJECT (inward/side) dirZ=-0.730
+[PROGRESS] Event 260000 | Transmitted: 82 | Edep(keV): Tot=290.142 R0=11.827 R1=133.416 R2=136.857 R3=8.041 R4=0.000 | Dose(pGy): Tot=49.317 R0=50.259 R1=188.977 R2=116.310 R3=4.881 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #0 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=6.100 keV | creator_process: phot | vertex_pos(mm)=(1.486, 0.649, 17.957) | vertex_Ekin=6.336 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 270000 | Transmitted: 82 | Edep(keV): Tot=275.483 R0=8.798 R1=88.002 R2=178.683 R3=0.000 R4=0.000 | Dose(pGy): Tot=46.826 R0=37.386 R1=124.650 R2=151.856 R3=0.000 R4=0.000
+[PROGRESS] Event 280000 | Transmitted: 71 | Edep(keV): Tot=338.233 R0=32.616 R1=43.833 R2=242.413 R3=11.178 R4=8.192 | Dose(pGy): Tot=57.492 R0=138.597 R1=62.087 R2=206.019 R3=6.786 R4=3.868
+[PROGRESS] Event 290000 | Transmitted: 77 | Edep(keV): Tot=416.060 R0=50.096 R1=127.357 R2=185.857 R3=52.749 R4=0.000 | Dose(pGy): Tot=70.721 R0=212.876 R1=180.395 R2=157.953 R3=32.023 R4=0.000
+[PROGRESS] Event 300000 | Transmitted: 78 | Edep(keV): Tot=356.637 R0=24.900 R1=144.582 R2=187.155 R3=0.000 R4=0.000 | Dose(pGy): Tot=60.620 R0=105.808 R1=204.792 R2=159.057 R3=0.000 R4=0.000
+[PROGRESS] Event 310000 | Transmitted: 83 | Edep(keV): Tot=483.274 R0=41.369 R1=116.408 R2=318.289 R3=7.208 R4=0.000 | Dose(pGy): Tot=82.146 R0=175.792 R1=164.886 R2=270.503 R3=4.376 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #1 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=18.702 keV | creator_process: phot | vertex_pos(mm)=(-1.248, 0.567, 17.714) | vertex_Ekin=19.371 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 320000 | Transmitted: 71 | Edep(keV): Tot=252.669 R0=18.707 R1=78.242 R2=155.720 R3=0.000 R4=0.000 | Dose(pGy): Tot=42.948 R0=79.492 R1=110.826 R2=132.342 R3=0.000 R4=0.000
+[PROGRESS] Event 330000 | Transmitted: 90 | Edep(keV): Tot=465.365 R0=47.461 R1=186.567 R2=223.766 R3=7.571 R4=0.000 | Dose(pGy): Tot=79.101 R0=201.679 R1=264.262 R2=190.171 R3=4.596 R4=0.000
+[PROGRESS] Event 340000 | Transmitted: 87 | Edep(keV): Tot=425.746 R0=25.297 R1=137.334 R2=253.393 R3=9.722 R4=0.000 | Dose(pGy): Tot=72.367 R0=107.496 R1=194.526 R2=215.350 R3=5.902 R4=0.000
+[PROGRESS] Event 350000 | Transmitted: 78 | Edep(keV): Tot=357.117 R0=63.202 R1=146.977 R2=146.938 R3=0.000 R4=0.000 | Dose(pGy): Tot=60.702 R0=268.567 R1=208.185 R2=124.878 R3=0.000 R4=0.000
+[PROGRESS] Event 360000 | Transmitted: 96 | Edep(keV): Tot=553.513 R0=32.982 R1=188.726 R2=331.804 R3=0.000 R4=0.000 | Dose(pGy): Tot=94.084 R0=140.154 R1=267.320 R2=281.990 R3=0.000 R4=0.000
+[PROGRESS] Event 370000 | Transmitted: 73 | Edep(keV): Tot=397.512 R0=45.377 R1=101.431 R2=240.856 R3=0.000 R4=9.848 | Dose(pGy): Tot=67.568 R0=192.822 R1=143.672 R2=204.696 R3=0.000 R4=4.650
+[PROGRESS] Event 380000 | Transmitted: 92 | Edep(keV): Tot=476.306 R0=49.315 R1=127.877 R2=290.151 R3=8.962 R4=0.000 | Dose(pGy): Tot=80.961 R0=209.557 R1=181.131 R2=246.590 R3=5.441 R4=0.000
+[PROGRESS] Event 390000 | Transmitted: 83 | Edep(keV): Tot=398.040 R0=75.392 R1=72.135 R2=250.512 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.658 R0=320.367 R1=102.176 R2=212.902 R3=0.000 R4=0.000
+[PROGRESS] Event 400000 | Transmitted: 71 | Edep(keV): Tot=262.593 R0=24.474 R1=106.758 R2=105.184 R3=26.177 R4=0.000 | Dose(pGy): Tot=44.635 R0=103.998 R1=151.217 R2=89.393 R3=15.891 R4=0.000
+[PROGRESS] Event 410000 | Transmitted: 76 | Edep(keV): Tot=358.074 R0=27.411 R1=199.578 R2=107.648 R3=23.437 R4=0.000 | Dose(pGy): Tot=60.864 R0=116.480 R1=282.691 R2=91.487 R3=14.228 R4=0.000
+[PROGRESS] Event 420000 | Transmitted: 60 | Edep(keV): Tot=337.498 R0=23.941 R1=110.527 R2=185.971 R3=0.000 R4=17.059 | Dose(pGy): Tot=57.367 R0=101.732 R1=156.555 R2=158.051 R3=0.000 R4=8.055
+[PROGRESS] Event 430000 | Transmitted: 82 | Edep(keV): Tot=413.013 R0=28.018 R1=95.357 R2=276.244 R3=13.394 R4=0.000 | Dose(pGy): Tot=70.203 R0=119.059 R1=135.068 R2=234.770 R3=8.131 R4=0.000
+[PROGRESS] Event 440000 | Transmitted: 78 | Edep(keV): Tot=421.405 R0=79.684 R1=87.936 R2=253.785 R3=0.000 R4=0.000 | Dose(pGy): Tot=71.629 R0=338.603 R1=124.557 R2=215.684 R3=0.000 R4=0.000
+[PROGRESS] Event 450000 | Transmitted: 90 | Edep(keV): Tot=481.749 R0=47.794 R1=139.056 R2=284.824 R3=10.075 R4=0.000 | Dose(pGy): Tot=81.886 R0=203.093 R1=196.965 R2=242.063 R3=6.116 R4=0.000
+[PROGRESS] Event 460000 | Transmitted: 65 | Edep(keV): Tot=344.640 R0=56.481 R1=132.077 R2=142.696 R3=13.386 R4=0.000 | Dose(pGy): Tot=58.581 R0=240.007 R1=187.080 R2=121.273 R3=8.126 R4=0.000
+[PROGRESS] Event 470000 | Transmitted: 75 | Edep(keV): Tot=364.302 R0=52.285 R1=114.137 R2=157.689 R3=40.191 R4=0.000 | Dose(pGy): Tot=61.923 R0=222.178 R1=161.669 R2=134.015 R3=24.399 R4=0.000
+[PROGRESS] Event 480000 | Transmitted: 81 | Edep(keV): Tot=356.443 R0=33.391 R1=98.422 R2=198.597 R3=26.033 R4=0.000 | Dose(pGy): Tot=60.587 R0=141.890 R1=139.410 R2=168.781 R3=15.804 R4=0.000
+[PROGRESS] Event 490000 | Transmitted: 87 | Edep(keV): Tot=407.992 R0=8.452 R1=153.590 R2=238.655 R3=7.295 R4=0.000 | Dose(pGy): Tot=69.349 R0=35.914 R1=217.553 R2=202.825 R3=4.429 R4=0.000
+[PROGRESS] Event 500000 | Transmitted: 93 | Edep(keV): Tot=421.582 R0=29.068 R1=121.934 R2=270.580 R3=0.000 R4=0.000 | Dose(pGy): Tot=71.659 R0=123.521 R1=172.713 R2=229.957 R3=0.000 R4=0.000
+[PROGRESS] Event 510000 | Transmitted: 87 | Edep(keV): Tot=367.510 R0=44.444 R1=73.423 R2=227.301 R3=22.342 R4=0.000 | Dose(pGy): Tot=62.468 R0=188.857 R1=104.000 R2=193.176 R3=13.563 R4=0.000
+[PROGRESS] Event 520000 | Transmitted: 82 | Edep(keV): Tot=382.001 R0=51.189 R1=126.395 R2=204.381 R3=0.035 R4=0.000 | Dose(pGy): Tot=64.931 R0=217.521 R1=179.032 R2=173.697 R3=0.021 R4=0.000
+[PROGRESS] Event 530000 | Transmitted: 84 | Edep(keV): Tot=321.518 R0=47.546 R1=129.316 R2=112.964 R3=19.189 R4=12.504 | Dose(pGy): Tot=54.651 R0=202.038 R1=183.169 R2=96.004 R3=11.649 R4=5.904
+[PROGRESS] Event 540000 | Transmitted: 75 | Edep(keV): Tot=331.151 R0=26.328 R1=89.899 R2=195.660 R3=19.264 R4=0.000 | Dose(pGy): Tot=56.288 R0=111.876 R1=127.337 R2=166.285 R3=11.695 R4=0.000
+[PROGRESS] Event 550000 | Transmitted: 73 | Edep(keV): Tot=288.172 R0=17.675 R1=116.887 R2=153.611 R3=0.000 R4=0.000 | Dose(pGy): Tot=48.983 R0=75.105 R1=165.564 R2=130.549 R3=0.000 R4=0.000
+[PROGRESS] Event 560000 | Transmitted: 76 | Edep(keV): Tot=426.246 R0=23.684 R1=116.650 R2=254.453 R3=31.458 R4=0.000 | Dose(pGy): Tot=72.452 R0=100.641 R1=165.229 R2=216.251 R3=19.097 R4=0.000
+[PROGRESS] Event 570000 | Transmitted: 88 | Edep(keV): Tot=344.819 R0=43.993 R1=77.931 R2=213.434 R3=9.461 R4=0.000 | Dose(pGy): Tot=58.611 R0=186.940 R1=110.385 R2=181.391 R3=5.744 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #2 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=4.247 keV | creator_process: phot | vertex_pos(mm)=(-1.041, 1.000, 17.877) | vertex_Ekin=5.455 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 580000 | Transmitted: 68 | Edep(keV): Tot=307.686 R0=26.159 R1=92.619 R2=188.907 R3=0.000 R4=0.000 | Dose(pGy): Tot=52.300 R0=111.160 R1=131.190 R2=160.546 R3=0.000 R4=0.000
+[PROGRESS] Event 590000 | Transmitted: 82 | Edep(keV): Tot=335.697 R0=79.420 R1=87.512 R2=168.765 R3=0.000 R4=0.000 | Dose(pGy): Tot=57.061 R0=337.482 R1=123.956 R2=143.428 R3=0.000 R4=0.000
+[PROGRESS] Event 600000 | Transmitted: 67 | Edep(keV): Tot=325.422 R0=14.822 R1=140.250 R2=156.678 R3=13.672 R4=0.000 | Dose(pGy): Tot=55.314 R0=62.986 R1=198.656 R2=133.155 R3=8.300 R4=0.000
+[PROGRESS] Event 610000 | Transmitted: 86 | Edep(keV): Tot=428.290 R0=45.098 R1=66.465 R2=284.259 R3=16.212 R4=16.256 | Dose(pGy): Tot=72.800 R0=191.638 R1=94.143 R2=241.583 R3=9.842 R4=7.676
+[ScorePlane1][SECONDARY_ORIGIN] #3 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=18.800 keV | creator_process: phot | vertex_pos(mm)=(-1.369, 0.631, 16.450) | vertex_Ekin=23.788 keV | vertex_volume: MiniX-Assembly-Collimation_3.0mm-CollimatorSubAluminium-Aluminium | vertex_material: Aluminium
+[PROGRESS] Event 620000 | Transmitted: 83 | Edep(keV): Tot=358.337 R0=44.161 R1=102.312 R2=211.864 R3=0.000 R4=0.000 | Dose(pGy): Tot=60.909 R0=187.655 R1=144.920 R2=180.056 R3=0.000 R4=0.000
+[PROGRESS] Event 630000 | Transmitted: 87 | Edep(keV): Tot=310.613 R0=34.690 R1=112.730 R2=163.193 R3=0.000 R4=0.000 | Dose(pGy): Tot=52.797 R0=147.411 R1=159.676 R2=138.692 R3=0.000 R4=0.000
+[PROGRESS] Event 640000 | Transmitted: 68 | Edep(keV): Tot=319.987 R0=34.636 R1=135.866 R2=149.485 R3=0.000 R4=0.000 | Dose(pGy): Tot=54.390 R0=147.181 R1=192.447 R2=127.042 R3=0.000 R4=0.000
+[PROGRESS] Event 650000 | Transmitted: 74 | Edep(keV): Tot=338.015 R0=21.758 R1=99.179 R2=217.077 R3=0.000 R4=0.000 | Dose(pGy): Tot=57.455 R0=92.459 R1=140.481 R2=184.487 R3=0.000 R4=0.000
+[PROGRESS] Event 660000 | Transmitted: 72 | Edep(keV): Tot=416.189 R0=52.451 R1=124.622 R2=226.985 R3=12.130 R4=0.000 | Dose(pGy): Tot=70.743 R0=222.882 R1=176.521 R2=192.907 R3=7.364 R4=0.000
+[PROGRESS] Event 670000 | Transmitted: 84 | Edep(keV): Tot=371.897 R0=58.111 R1=109.987 R2=203.800 R3=0.000 R4=0.000 | Dose(pGy): Tot=63.214 R0=246.931 R1=155.790 R2=173.203 R3=0.000 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #4 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=3.289 keV | creator_process: phot | vertex_pos(mm)=(1.396, -0.672, 17.775) | vertex_Ekin=5.694 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 680000 | Transmitted: 78 | Edep(keV): Tot=388.342 R0=40.406 R1=94.524 R2=240.444 R3=10.825 R4=2.143 | Dose(pGy): Tot=66.009 R0=171.700 R1=133.889 R2=204.345 R3=6.572 R4=1.012
+[PROGRESS] Event 690000 | Transmitted: 73 | Edep(keV): Tot=372.128 R0=67.124 R1=95.299 R2=165.121 R3=9.970 R4=34.615 | Dose(pGy): Tot=63.253 R0=285.232 R1=134.986 R2=140.331 R3=6.052 R4=16.344
+[PROGRESS] Event 700000 | Transmitted: 89 | Edep(keV): Tot=464.251 R0=46.027 R1=218.905 R2=168.131 R3=22.633 R4=8.555 | Dose(pGy): Tot=78.912 R0=195.586 R1=310.068 R2=142.889 R3=13.740 R4=4.039
+[PROGRESS] Event 710000 | Transmitted: 70 | Edep(keV): Tot=422.798 R0=21.219 R1=143.917 R2=239.735 R3=17.927 R4=0.000 | Dose(pGy): Tot=71.866 R0=90.168 R1=203.850 R2=203.743 R3=10.883 R4=0.000
+[PROGRESS] Event 720000 | Transmitted: 89 | Edep(keV): Tot=384.270 R0=58.451 R1=142.373 R2=183.446 R3=0.000 R4=0.000 | Dose(pGy): Tot=65.317 R0=248.379 R1=201.664 R2=155.905 R3=0.000 R4=0.000
+[PROGRESS] Event 730000 | Transmitted: 88 | Edep(keV): Tot=429.283 R0=31.432 R1=211.216 R2=178.426 R3=8.210 R4=0.000 | Dose(pGy): Tot=72.968 R0=133.563 R1=299.176 R2=151.638 R3=4.984 R4=0.000
+[PROGRESS] Event 740000 | Transmitted: 81 | Edep(keV): Tot=282.959 R0=20.072 R1=100.724 R2=155.092 R3=7.071 R4=0.000 | Dose(pGy): Tot=48.097 R0=85.294 R1=142.669 R2=131.808 R3=4.293 R4=0.000
+[PROGRESS] Event 750000 | Transmitted: 79 | Edep(keV): Tot=334.418 R0=31.252 R1=149.639 R2=139.302 R3=14.225 R4=0.000 | Dose(pGy): Tot=56.843 R0=132.802 R1=211.955 R2=118.388 R3=8.636 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #5 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=1.680 keV | creator_process: phot | vertex_pos(mm)=(1.350, -0.081, 17.922) | vertex_Ekin=3.787 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 760000 | Transmitted: 99 | Edep(keV): Tot=433.292 R0=39.054 R1=141.297 R2=239.492 R3=13.449 R4=0.000 | Dose(pGy): Tot=73.650 R0=165.955 R1=200.139 R2=203.536 R3=8.165 R4=0.000
+[PROGRESS] Event 770000 | Transmitted: 91 | Edep(keV): Tot=464.815 R0=0.064 R1=158.626 R2=306.125 R3=0.000 R4=0.000 | Dose(pGy): Tot=79.008 R0=0.270 R1=224.685 R2=260.166 R3=0.000 R4=0.000
+[PROGRESS] Event 780000 | Transmitted: 85 | Edep(keV): Tot=362.135 R0=8.772 R1=100.891 R2=252.472 R3=0.000 R4=0.000 | Dose(pGy): Tot=61.555 R0=37.276 R1=142.906 R2=214.568 R3=0.000 R4=0.000
+[PROGRESS] Event 790000 | Transmitted: 80 | Edep(keV): Tot=363.761 R0=30.773 R1=146.234 R2=186.754 R3=0.000 R4=0.000 | Dose(pGy): Tot=61.831 R0=130.763 R1=207.133 R2=158.716 R3=0.000 R4=0.000
+[PROGRESS] Event 800000 | Transmitted: 61 | Edep(keV): Tot=283.540 R0=24.168 R1=90.221 R2=152.302 R3=16.848 R4=0.000 | Dose(pGy): Tot=48.195 R0=102.700 R1=127.794 R2=129.437 R3=10.228 R4=0.000
+[PROGRESS] Event 810000 | Transmitted: 83 | Edep(keV): Tot=417.699 R0=16.884 R1=120.945 R2=257.933 R3=21.937 R4=0.000 | Dose(pGy): Tot=70.999 R0=71.746 R1=171.313 R2=219.209 R3=13.317 R4=0.000
+[PROGRESS] Event 820000 | Transmitted: 76 | Edep(keV): Tot=346.712 R0=40.740 R1=93.548 R2=212.424 R3=0.000 R4=0.000 | Dose(pGy): Tot=58.933 R0=173.116 R1=132.505 R2=180.532 R3=0.000 R4=0.000
+[PROGRESS] Event 830000 | Transmitted: 66 | Edep(keV): Tot=327.282 R0=31.355 R1=84.027 R2=211.901 R3=0.000 R4=0.000 | Dose(pGy): Tot=55.631 R0=133.237 R1=119.020 R2=180.087 R3=0.000 R4=0.000
+[PROGRESS] Event 840000 | Transmitted: 92 | Edep(keV): Tot=342.915 R0=52.601 R1=80.211 R2=197.366 R3=12.738 R4=0.000 | Dose(pGy): Tot=58.288 R0=223.518 R1=113.614 R2=167.735 R3=7.733 R4=0.000
+[PROGRESS] Event 850000 | Transmitted: 64 | Edep(keV): Tot=287.044 R0=24.202 R1=78.484 R2=174.672 R3=9.686 R4=0.000 | Dose(pGy): Tot=48.791 R0=102.842 R1=111.168 R2=148.448 R3=5.880 R4=0.000
+[PROGRESS] Event 860000 | Transmitted: 64 | Edep(keV): Tot=250.172 R0=29.846 R1=74.639 R2=136.424 R3=9.262 R4=0.000 | Dose(pGy): Tot=42.523 R0=126.827 R1=105.722 R2=115.943 R3=5.623 R4=0.000
+[PROGRESS] Event 870000 | Transmitted: 86 | Edep(keV): Tot=433.096 R0=38.931 R1=148.336 R2=234.278 R3=11.551 R4=0.000 | Dose(pGy): Tot=73.616 R0=165.432 R1=210.110 R2=199.105 R3=7.012 R4=0.000
+[PROGRESS] Event 880000 | Transmitted: 80 | Edep(keV): Tot=444.375 R0=40.661 R1=131.541 R2=272.173 R3=0.000 R4=0.000 | Dose(pGy): Tot=75.534 R0=172.781 R1=186.321 R2=231.311 R3=0.000 R4=0.000
+[PROGRESS] Event 890000 | Transmitted: 58 | Edep(keV): Tot=290.552 R0=13.969 R1=105.776 R2=170.808 R3=0.000 R4=0.000 | Dose(pGy): Tot=49.387 R0=59.358 R1=149.825 R2=145.164 R3=0.000 R4=0.000
+[PROGRESS] Event 900000 | Transmitted: 91 | Edep(keV): Tot=480.719 R0=26.711 R1=126.773 R2=309.505 R3=17.730 R4=0.000 | Dose(pGy): Tot=81.711 R0=113.504 R1=179.567 R2=263.038 R3=10.763 R4=0.000
+[PROGRESS] Event 910000 | Transmitted: 86 | Edep(keV): Tot=427.247 R0=30.714 R1=163.349 R2=225.457 R3=7.728 R4=0.000 | Dose(pGy): Tot=72.622 R0=130.512 R1=231.375 R2=191.609 R3=4.691 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #6 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=8.685 keV | creator_process: phot | vertex_pos(mm)=(1.420, 0.685, 17.898) | vertex_Ekin=9.178 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 920000 | Transmitted: 69 | Edep(keV): Tot=392.003 R0=3.989 R1=101.712 R2=279.591 R3=0.000 R4=6.711 | Dose(pGy): Tot=66.632 R0=16.950 R1=144.069 R2=237.615 R3=0.000 R4=3.169
+[PROGRESS] Event 930000 | Transmitted: 72 | Edep(keV): Tot=412.678 R0=31.553 R1=115.713 R2=245.308 R3=20.105 R4=0.000 | Dose(pGy): Tot=70.146 R0=134.079 R1=163.901 R2=208.479 R3=12.205 R4=0.000
+[PROGRESS] Event 940000 | Transmitted: 76 | Edep(keV): Tot=375.799 R0=10.931 R1=162.994 R2=201.874 R3=0.000 R4=0.000 | Dose(pGy): Tot=63.877 R0=46.451 R1=230.871 R2=171.566 R3=0.000 R4=0.000
+[PROGRESS] Event 950000 | Transmitted: 74 | Edep(keV): Tot=386.992 R0=36.913 R1=141.582 R2=201.400 R3=7.097 R4=0.000 | Dose(pGy): Tot=65.780 R0=156.856 R1=200.544 R2=171.163 R3=4.308 R4=0.000
+[PROGRESS] Event 960000 | Transmitted: 74 | Edep(keV): Tot=261.500 R0=15.804 R1=98.353 R2=147.343 R3=0.000 R4=0.000 | Dose(pGy): Tot=44.449 R0=67.155 R1=139.311 R2=125.222 R3=0.000 R4=0.000
+[PROGRESS] Event 970000 | Transmitted: 82 | Edep(keV): Tot=432.187 R0=44.796 R1=206.010 R2=165.626 R3=15.754 R4=0.000 | Dose(pGy): Tot=73.462 R0=190.355 R1=291.802 R2=140.760 R3=9.564 R4=0.000
+[PROGRESS] Event 980000 | Transmitted: 66 | Edep(keV): Tot=343.096 R0=11.211 R1=115.374 R2=215.002 R3=1.510 R4=0.000 | Dose(pGy): Tot=58.318 R0=47.639 R1=163.421 R2=182.723 R3=0.916 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #7 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=8.764 keV | creator_process: phot | vertex_pos(mm)=(-0.413, -0.125, 17.233) | vertex_Ekin=11.895 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 990000 | Transmitted: 69 | Edep(keV): Tot=346.771 R0=20.472 R1=108.410 R2=204.251 R3=13.638 R4=0.000 | Dose(pGy): Tot=58.943 R0=86.992 R1=153.557 R2=173.586 R3=8.279 R4=0.000
+[PROGRESS] Event 1000000 | Transmitted: 81 | Edep(keV): Tot=362.205 R0=31.612 R1=131.090 R2=199.504 R3=0.000 R4=0.000 | Dose(pGy): Tot=61.567 R0=134.328 R1=185.682 R2=169.552 R3=0.000 R4=0.000
+[PROGRESS] Event 1010000 | Transmitted: 69 | Edep(keV): Tot=267.234 R0=27.712 R1=129.178 R2=110.345 R3=0.000 R4=0.000 | Dose(pGy): Tot=45.424 R0=117.756 R1=182.973 R2=93.778 R3=0.000 R4=0.000
+[PROGRESS] Event 1020000 | Transmitted: 65 | Edep(keV): Tot=290.544 R0=24.682 R1=103.619 R2=162.130 R3=0.113 R4=0.000 | Dose(pGy): Tot=49.386 R0=104.884 R1=146.770 R2=137.789 R3=0.068 R4=0.000
+[PROGRESS] Event 1030000 | Transmitted: 81 | Edep(keV): Tot=329.292 R0=40.132 R1=99.541 R2=189.618 R3=0.000 R4=0.000 | Dose(pGy): Tot=55.972 R0=170.534 R1=140.995 R2=161.151 R3=0.000 R4=0.000
+[PROGRESS] Event 1040000 | Transmitted: 83 | Edep(keV): Tot=414.778 R0=21.440 R1=179.340 R2=203.961 R3=10.037 R4=0.000 | Dose(pGy): Tot=70.503 R0=91.105 R1=254.025 R2=173.340 R3=6.093 R4=0.000
+[PROGRESS] Event 1050000 | Transmitted: 70 | Edep(keV): Tot=376.484 R0=48.740 R1=121.315 R2=196.305 R3=10.124 R4=0.000 | Dose(pGy): Tot=63.994 R0=207.111 R1=171.836 R2=166.833 R3=6.146 R4=0.000
+[PROGRESS] Event 1060000 | Transmitted: 93 | Edep(keV): Tot=399.158 R0=23.893 R1=123.119 R2=252.146 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.848 R0=101.528 R1=174.391 R2=214.291 R3=0.000 R4=0.000
+[PROGRESS] Event 1070000 | Transmitted: 74 | Edep(keV): Tot=387.478 R0=24.905 R1=204.600 R2=141.586 R3=0.000 R4=16.387 | Dose(pGy): Tot=65.862 R0=105.830 R1=289.804 R2=120.330 R3=0.000 R4=7.737
+[PROGRESS] Event 1080000 | Transmitted: 80 | Edep(keV): Tot=368.438 R0=33.396 R1=100.861 R2=234.181 R3=0.000 R4=0.000 | Dose(pGy): Tot=62.626 R0=141.910 R1=142.865 R2=199.023 R3=0.000 R4=0.000
+[PROGRESS] Event 1090000 | Transmitted: 89 | Edep(keV): Tot=438.537 R0=40.581 R1=118.635 R2=271.877 R3=7.444 R4=0.000 | Dose(pGy): Tot=74.541 R0=172.442 R1=168.041 R2=231.059 R3=4.519 R4=0.000
+[PROGRESS] Event 1100000 | Transmitted: 82 | Edep(keV): Tot=395.968 R0=34.282 R1=80.495 R2=281.192 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.306 R0=145.675 R1=114.017 R2=238.976 R3=0.000 R4=0.000
+[PROGRESS] Event 1110000 | Transmitted: 80 | Edep(keV): Tot=425.125 R0=76.290 R1=148.033 R2=200.802 R3=0.000 R4=0.000 | Dose(pGy): Tot=72.262 R0=324.183 R1=209.680 R2=170.655 R3=0.000 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #8 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=6.492 keV | creator_process: phot | vertex_pos(mm)=(0.746, -0.161, 19.141) | vertex_Ekin=12.022 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 1120000 | Transmitted: 66 | Edep(keV): Tot=299.819 R0=12.576 R1=111.007 R2=176.236 R3=0.000 R4=0.000 | Dose(pGy): Tot=50.962 R0=53.438 R1=157.236 R2=149.777 R3=0.000 R4=0.000
+[PROGRESS] Event 1130000 | Transmitted: 81 | Edep(keV): Tot=296.394 R0=13.320 R1=119.948 R2=163.125 R3=0.000 R4=0.000 | Dose(pGy): Tot=50.380 R0=56.603 R1=169.900 R2=138.635 R3=0.000 R4=0.000
+[PROGRESS] Event 1140000 | Transmitted: 77 | Edep(keV): Tot=354.070 R0=30.126 R1=117.225 R2=195.338 R3=0.000 R4=11.382 | Dose(pGy): Tot=60.184 R0=128.014 R1=166.043 R2=166.011 R3=0.000 R4=5.374
+[PROGRESS] Event 1150000 | Transmitted: 68 | Edep(keV): Tot=370.441 R0=67.616 R1=122.730 R2=180.094 R3=0.000 R4=0.000 | Dose(pGy): Tot=62.966 R0=287.325 R1=173.840 R2=153.056 R3=0.000 R4=0.000
+[PROGRESS] Event 1160000 | Transmitted: 84 | Edep(keV): Tot=411.893 R0=52.858 R1=117.988 R2=241.047 R3=0.000 R4=0.000 | Dose(pGy): Tot=70.012 R0=224.613 R1=167.124 R2=204.858 R3=0.000 R4=0.000
+[PROGRESS] Event 1170000 | Transmitted: 96 | Edep(keV): Tot=464.072 R0=70.855 R1=139.296 R2=236.019 R3=17.902 R4=0.000 | Dose(pGy): Tot=78.882 R0=301.086 R1=197.305 R2=200.585 R3=10.868 R4=0.000
+[PROGRESS] Event 1180000 | Transmitted: 85 | Edep(keV): Tot=376.193 R0=63.609 R1=70.776 R2=219.173 R3=22.636 R4=0.000 | Dose(pGy): Tot=63.944 R0=270.295 R1=100.250 R2=186.268 R3=13.742 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #9 | particle: gamma (pdg=22) | trackID=3 parentID=2 | E_at_plane=16.582 keV | creator_process: eBrem | vertex_pos(mm)=(1.436, 0.459, 11.360) | vertex_Ekin=16.582 keV | vertex_volume: MiniX-Assembly-Collimation_3.0mm-CollimatorSubAluminium-Aluminium | vertex_material: Aluminium
+[PROGRESS] Event 1190000 | Transmitted: 64 | Edep(keV): Tot=294.830 R0=43.646 R1=66.749 R2=167.853 R3=0.000 R4=16.582 | Dose(pGy): Tot=50.114 R0=185.468 R1=94.547 R2=142.653 R3=0.000 R4=7.829
+[PROGRESS] Event 1200000 | Transmitted: 59 | Edep(keV): Tot=283.277 R0=36.604 R1=84.569 R2=162.105 R3=0.000 R4=0.000 | Dose(pGy): Tot=48.151 R0=155.543 R1=119.787 R2=137.767 R3=0.000 R4=0.000
+[PROGRESS] Event 1210000 | Transmitted: 72 | Edep(keV): Tot=336.218 R0=73.342 R1=127.113 R2=135.764 R3=0.000 R4=0.000 | Dose(pGy): Tot=57.149 R0=311.656 R1=180.048 R2=115.381 R3=0.000 R4=0.000
+[PROGRESS] Event 1220000 | Transmitted: 89 | Edep(keV): Tot=356.368 R0=21.937 R1=160.296 R2=141.105 R3=33.030 R4=0.000 | Dose(pGy): Tot=60.574 R0=93.217 R1=227.051 R2=119.920 R3=20.052 R4=0.000
+[PROGRESS] Event 1230000 | Transmitted: 68 | Edep(keV): Tot=300.996 R0=53.561 R1=31.864 R2=215.572 R3=0.000 R4=0.000 | Dose(pGy): Tot=51.162 R0=227.598 R1=45.134 R2=183.207 R3=0.000 R4=0.000
+[PROGRESS] Event 1240000 | Transmitted: 82 | Edep(keV): Tot=359.308 R0=15.970 R1=116.282 R2=212.754 R3=14.302 R4=0.000 | Dose(pGy): Tot=61.074 R0=67.863 R1=164.708 R2=180.813 R3=8.682 R4=0.000
+[PROGRESS] Event 1250000 | Transmitted: 94 | Edep(keV): Tot=504.452 R0=71.971 R1=108.128 R2=285.848 R3=38.505 R4=0.000 | Dose(pGy): Tot=85.745 R0=305.831 R1=153.158 R2=242.933 R3=23.375 R4=0.000
+[PROGRESS] Event 1260000 | Transmitted: 69 | Edep(keV): Tot=326.442 R0=29.895 R1=115.664 R2=165.410 R3=15.472 R4=0.000 | Dose(pGy): Tot=55.488 R0=127.036 R1=163.832 R2=140.577 R3=9.393 R4=0.000
+[PROGRESS] Event 1270000 | Transmitted: 74 | Edep(keV): Tot=283.685 R0=15.247 R1=149.086 R2=119.352 R3=0.000 R4=0.000 | Dose(pGy): Tot=48.220 R0=64.790 R1=211.172 R2=101.434 R3=0.000 R4=0.000
+[PROGRESS] Event 1280000 | Transmitted: 79 | Edep(keV): Tot=337.954 R0=54.762 R1=151.603 R2=111.937 R3=19.653 R4=0.000 | Dose(pGy): Tot=57.444 R0=232.701 R1=214.737 R2=95.131 R3=11.931 R4=0.000
+[PROGRESS] Event 1290000 | Transmitted: 85 | Edep(keV): Tot=385.960 R0=41.297 R1=142.128 R2=194.288 R3=8.248 R4=0.000 | Dose(pGy): Tot=65.604 R0=175.484 R1=201.317 R2=165.119 R3=5.007 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #10 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=21.324 keV | creator_process: phot | vertex_pos(mm)=(0.676, 0.072, 17.143) | vertex_Ekin=22.657 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 1300000 | Transmitted: 78 | Edep(keV): Tot=425.460 R0=36.000 R1=159.036 R2=211.703 R3=5.642 R4=13.079 | Dose(pGy): Tot=72.319 R0=152.976 R1=225.265 R2=179.920 R3=3.425 R4=6.175
+[PROGRESS] Event 1310000 | Transmitted: 84 | Edep(keV): Tot=372.811 R0=54.243 R1=116.317 R2=192.428 R3=9.824 R4=0.000 | Dose(pGy): Tot=63.369 R0=230.495 R1=164.756 R2=163.538 R3=5.964 R4=0.000
+[PROGRESS] Event 1320000 | Transmitted: 84 | Edep(keV): Tot=431.200 R0=30.108 R1=163.251 R2=222.922 R3=14.919 R4=0.000 | Dose(pGy): Tot=73.294 R0=127.940 R1=231.236 R2=189.454 R3=9.057 R4=0.000
+[PROGRESS] Event 1330000 | Transmitted: 73 | Edep(keV): Tot=328.539 R0=42.453 R1=110.514 R2=175.573 R3=0.000 R4=0.000 | Dose(pGy): Tot=55.844 R0=180.397 R1=156.536 R2=149.214 R3=0.000 R4=0.000
+[PROGRESS] Event 1340000 | Transmitted: 77 | Edep(keV): Tot=366.070 R0=48.313 R1=137.568 R2=157.585 R3=22.604 R4=0.000 | Dose(pGy): Tot=62.224 R0=205.298 R1=194.858 R2=133.926 R3=13.722 R4=0.000
+[PROGRESS] Event 1350000 | Transmitted: 87 | Edep(keV): Tot=410.426 R0=57.710 R1=119.080 R2=213.465 R3=20.171 R4=0.000 | Dose(pGy): Tot=69.763 R0=245.228 R1=168.671 R2=181.417 R3=12.245 R4=0.000
+[PROGRESS] Event 1360000 | Transmitted: 68 | Edep(keV): Tot=335.717 R0=18.024 R1=194.275 R2=123.419 R3=0.000 R4=0.000 | Dose(pGy): Tot=57.064 R0=76.588 R1=275.180 R2=104.890 R3=0.000 R4=0.000
+[PROGRESS] Event 1370000 | Transmitted: 77 | Edep(keV): Tot=331.365 R0=29.891 R1=91.521 R2=209.953 R3=0.000 R4=0.000 | Dose(pGy): Tot=56.324 R0=127.016 R1=129.635 R2=178.432 R3=0.000 R4=0.000
+[PROGRESS] Event 1380000 | Transmitted: 93 | Edep(keV): Tot=412.948 R0=51.165 R1=130.759 R2=205.988 R3=25.036 R4=0.000 | Dose(pGy): Tot=70.192 R0=217.419 R1=185.213 R2=175.062 R3=15.199 R4=0.000
+[PROGRESS] Event 1390000 | Transmitted: 77 | Edep(keV): Tot=305.886 R0=26.101 R1=99.209 R2=180.576 R3=0.000 R4=0.000 | Dose(pGy): Tot=51.994 R0=110.912 R1=140.524 R2=153.465 R3=0.000 R4=0.000
+[PROGRESS] Event 1400000 | Transmitted: 65 | Edep(keV): Tot=399.263 R0=36.091 R1=115.946 R2=230.277 R3=0.000 R4=16.948 | Dose(pGy): Tot=67.866 R0=153.364 R1=164.232 R2=195.705 R3=0.000 R4=8.002
+[PROGRESS] Event 1410000 | Transmitted: 67 | Edep(keV): Tot=368.165 R0=27.607 R1=172.680 R2=167.877 R3=0.000 R4=0.000 | Dose(pGy): Tot=62.580 R0=117.313 R1=244.592 R2=142.673 R3=0.000 R4=0.000
+[PROGRESS] Event 1420000 | Transmitted: 79 | Edep(keV): Tot=360.122 R0=36.406 R1=131.530 R2=185.964 R3=6.222 R4=0.000 | Dose(pGy): Tot=61.212 R0=154.700 R1=186.305 R2=158.045 R3=3.777 R4=0.000
+[PROGRESS] Event 1430000 | Transmitted: 56 | Edep(keV): Tot=243.167 R0=19.075 R1=119.283 R2=104.809 R3=0.000 R4=0.000 | Dose(pGy): Tot=41.333 R0=81.056 R1=168.958 R2=89.073 R3=0.000 R4=0.000
+[PROGRESS] Event 1440000 | Transmitted: 69 | Edep(keV): Tot=273.554 R0=64.695 R1=79.795 R2=104.240 R3=21.272 R4=3.553 | Dose(pGy): Tot=46.498 R0=274.912 R1=113.025 R2=88.590 R3=12.913 R4=1.677
+[PROGRESS] Event 1450000 | Transmitted: 90 | Edep(keV): Tot=398.578 R0=57.661 R1=110.493 R2=229.334 R3=1.091 R4=0.000 | Dose(pGy): Tot=67.749 R0=245.019 R1=156.507 R2=194.904 R3=0.662 R4=0.000
+[PROGRESS] Event 1460000 | Transmitted: 80 | Edep(keV): Tot=378.322 R0=21.117 R1=124.804 R2=229.942 R3=1.939 R4=0.520 | Dose(pGy): Tot=64.306 R0=89.732 R1=176.778 R2=195.421 R3=1.177 R4=0.245
+[PROGRESS] Event 1470000 | Transmitted: 86 | Edep(keV): Tot=452.859 R0=23.279 R1=126.763 R2=292.216 R3=10.602 R4=0.000 | Dose(pGy): Tot=76.976 R0=98.920 R1=179.553 R2=248.344 R3=6.436 R4=0.000
+[PROGRESS] Event 1480000 | Transmitted: 74 | Edep(keV): Tot=399.576 R0=70.989 R1=87.545 R2=241.041 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.919 R0=301.656 R1=124.003 R2=204.853 R3=0.000 R4=0.000
+[PROGRESS] Event 1490000 | Transmitted: 74 | Edep(keV): Tot=283.191 R0=43.464 R1=92.806 R2=146.921 R3=0.000 R4=0.000 | Dose(pGy): Tot=48.136 R0=184.695 R1=131.454 R2=124.863 R3=0.000 R4=0.000
+[PROGRESS] Event 1500000 | Transmitted: 83 | Edep(keV): Tot=400.729 R0=21.037 R1=142.878 R2=236.814 R3=0.000 R4=0.000 | Dose(pGy): Tot=68.115 R0=89.393 R1=202.379 R2=201.261 R3=0.000 R4=0.000
+[PROGRESS] Event 1510000 | Transmitted: 71 | Edep(keV): Tot=312.373 R0=23.417 R1=79.421 R2=209.536 R3=0.000 R4=0.000 | Dose(pGy): Tot=53.096 R0=99.507 R1=112.495 R2=178.078 R3=0.000 R4=0.000
+[PROGRESS] Event 1520000 | Transmitted: 71 | Edep(keV): Tot=301.120 R0=43.138 R1=102.118 R2=155.863 R3=0.000 R4=0.000 | Dose(pGy): Tot=51.183 R0=183.309 R1=144.645 R2=132.463 R3=0.000 R4=0.000
+[PROGRESS] Event 1530000 | Transmitted: 76 | Edep(keV): Tot=305.430 R0=26.696 R1=84.261 R2=194.473 R3=0.000 R4=0.000 | Dose(pGy): Tot=51.916 R0=113.439 R1=119.351 R2=165.276 R3=0.000 R4=0.000
+[PROGRESS] Event 1540000 | Transmitted: 99 | Edep(keV): Tot=461.906 R0=78.335 R1=160.030 R2=192.465 R3=31.077 R4=0.000 | Dose(pGy): Tot=78.513 R0=332.874 R1=226.673 R2=163.569 R3=18.866 R4=0.000
+[PROGRESS] Event 1550000 | Transmitted: 74 | Edep(keV): Tot=399.740 R0=55.622 R1=223.327 R2=120.791 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.947 R0=236.356 R1=316.331 R2=102.657 R3=0.000 R4=0.000
+[PROGRESS] Event 1560000 | Transmitted: 81 | Edep(keV): Tot=410.456 R0=58.985 R1=90.907 R2=233.715 R3=26.849 R4=0.000 | Dose(pGy): Tot=69.768 R0=250.646 R1=128.765 R2=198.627 R3=16.299 R4=0.000
+[PROGRESS] Event 1570000 | Transmitted: 81 | Edep(keV): Tot=345.549 R0=21.031 R1=95.179 R2=200.946 R3=12.598 R4=15.794 | Dose(pGy): Tot=58.735 R0=89.369 R1=134.816 R2=170.778 R3=7.648 R4=7.458
+[PROGRESS] Event 1580000 | Transmitted: 81 | Edep(keV): Tot=437.800 R0=72.679 R1=110.457 R2=239.693 R3=14.971 R4=0.000 | Dose(pGy): Tot=74.416 R0=308.840 R1=156.456 R2=203.707 R3=9.088 R4=0.000
+[PROGRESS] Event 1590000 | Transmitted: 70 | Edep(keV): Tot=334.292 R0=30.954 R1=65.981 R2=221.157 R3=16.200 R4=0.000 | Dose(pGy): Tot=56.822 R0=131.535 R1=93.459 R2=187.954 R3=9.835 R4=0.000
+[PROGRESS] Event 1600000 | Transmitted: 95 | Edep(keV): Tot=487.702 R0=41.143 R1=163.260 R2=246.452 R3=36.847 R4=0.000 | Dose(pGy): Tot=82.898 R0=174.829 R1=231.250 R2=209.451 R3=22.369 R4=0.000
+[PROGRESS] Event 1610000 | Transmitted: 77 | Edep(keV): Tot=347.094 R0=6.943 R1=122.637 R2=217.514 R3=0.000 R4=0.000 | Dose(pGy): Tot=58.998 R0=29.501 R1=173.709 R2=184.858 R3=0.000 R4=0.000
+[PROGRESS] Event 1620000 | Transmitted: 88 | Edep(keV): Tot=597.146 R0=132.716 R1=173.734 R2=257.704 R3=18.215 R4=14.776 | Dose(pGy): Tot=101.501 R0=563.955 R1=246.085 R2=219.015 R3=11.058 R4=6.977
+[PROGRESS] Event 1630000 | Transmitted: 88 | Edep(keV): Tot=444.595 R0=37.526 R1=164.889 R2=242.181 R3=0.000 R4=0.000 | Dose(pGy): Tot=75.571 R0=159.460 R1=233.556 R2=205.822 R3=0.000 R4=0.000
+[PROGRESS] Event 1640000 | Transmitted: 75 | Edep(keV): Tot=343.164 R0=14.009 R1=103.452 R2=212.480 R3=13.224 R4=0.000 | Dose(pGy): Tot=58.330 R0=59.529 R1=146.534 R2=180.580 R3=8.028 R4=0.000
+[PROGRESS] Event 1650000 | Transmitted: 80 | Edep(keV): Tot=258.872 R0=18.290 R1=93.673 R2=146.909 R3=0.000 R4=0.000 | Dose(pGy): Tot=44.002 R0=77.719 R1=132.683 R2=124.853 R3=0.000 R4=0.000
+[PROGRESS] Event 1660000 | Transmitted: 64 | Edep(keV): Tot=268.260 R0=10.984 R1=65.168 R2=182.177 R3=9.930 R4=0.000 | Dose(pGy): Tot=45.598 R0=46.677 R1=92.306 R2=154.827 R3=6.028 R4=0.000
+[PROGRESS] Event 1670000 | Transmitted: 82 | Edep(keV): Tot=426.323 R0=52.769 R1=159.872 R2=197.210 R3=16.472 R4=0.000 | Dose(pGy): Tot=72.465 R0=224.232 R1=226.450 R2=167.602 R3=10.000 R4=0.000
+[PROGRESS] Event 1680000 | Transmitted: 73 | Edep(keV): Tot=317.700 R0=49.644 R1=139.681 R2=126.541 R3=1.834 R4=0.000 | Dose(pGy): Tot=54.002 R0=210.956 R1=197.850 R2=107.543 R3=1.113 R4=0.000
+[PROGRESS] Event 1690000 | Transmitted: 91 | Edep(keV): Tot=387.188 R0=56.938 R1=129.453 R2=200.797 R3=0.000 R4=0.000 | Dose(pGy): Tot=65.813 R0=241.948 R1=183.363 R2=170.651 R3=0.000 R4=0.000
+[PROGRESS] Event 1700000 | Transmitted: 94 | Edep(keV): Tot=432.570 R0=23.032 R1=136.787 R2=240.838 R3=22.066 R4=9.847 | Dose(pGy): Tot=73.527 R0=97.870 R1=193.752 R2=204.680 R3=13.395 R4=4.650
+[PROGRESS] Event 1710000 | Transmitted: 71 | Edep(keV): Tot=339.939 R0=40.062 R1=125.990 R2=173.887 R3=0.000 R4=0.000 | Dose(pGy): Tot=57.782 R0=170.239 R1=178.457 R2=147.781 R3=0.000 R4=0.000
+[PROGRESS] Event 1720000 | Transmitted: 72 | Edep(keV): Tot=339.288 R0=24.434 R1=62.933 R2=200.439 R3=51.482 R4=0.000 | Dose(pGy): Tot=57.671 R0=103.829 R1=89.141 R2=170.346 R3=31.253 R4=0.000
+[PROGRESS] Event 1730000 | Transmitted: 97 | Edep(keV): Tot=335.390 R0=32.764 R1=141.458 R2=161.168 R3=0.000 R4=0.000 | Dose(pGy): Tot=57.009 R0=139.226 R1=200.367 R2=136.971 R3=0.000 R4=0.000
+[PROGRESS] Event 1740000 | Transmitted: 76 | Edep(keV): Tot=365.982 R0=34.256 R1=172.695 R2=159.030 R3=0.000 R4=0.000 | Dose(pGy): Tot=62.209 R0=145.567 R1=244.614 R2=135.154 R3=0.000 R4=0.000
+[PROGRESS] Event 1750000 | Transmitted: 84 | Edep(keV): Tot=361.185 R0=27.116 R1=143.841 R2=181.334 R3=8.893 R4=0.000 | Dose(pGy): Tot=61.393 R0=115.224 R1=203.744 R2=154.110 R3=5.399 R4=0.000
+[PROGRESS] Event 1760000 | Transmitted: 71 | Edep(keV): Tot=367.204 R0=49.324 R1=100.189 R2=207.283 R3=10.409 R4=0.000 | Dose(pGy): Tot=62.416 R0=209.595 R1=141.912 R2=176.163 R3=6.319 R4=0.000
+[PROGRESS] Event 1770000 | Transmitted: 80 | Edep(keV): Tot=340.551 R0=57.725 R1=103.246 R2=179.580 R3=0.000 R4=0.000 | Dose(pGy): Tot=57.886 R0=245.292 R1=146.242 R2=152.619 R3=0.000 R4=0.000
+[PROGRESS] Event 1780000 | Transmitted: 69 | Edep(keV): Tot=375.118 R0=42.672 R1=165.886 R2=157.602 R3=8.957 R4=0.000 | Dose(pGy): Tot=63.761 R0=181.328 R1=234.969 R2=133.941 R3=5.438 R4=0.000
+[PROGRESS] Event 1790000 | Transmitted: 67 | Edep(keV): Tot=279.175 R0=14.615 R1=93.787 R2=170.773 R3=0.000 R4=0.000 | Dose(pGy): Tot=47.453 R0=62.104 R1=132.844 R2=145.134 R3=0.000 R4=0.000
+[PROGRESS] Event 1800000 | Transmitted: 81 | Edep(keV): Tot=397.802 R0=28.041 R1=126.941 R2=242.820 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.617 R0=119.154 R1=179.806 R2=206.364 R3=0.000 R4=0.000
+[PROGRESS] Event 1810000 | Transmitted: 68 | Edep(keV): Tot=340.917 R0=24.381 R1=122.174 R2=147.365 R3=46.996 R4=0.000 | Dose(pGy): Tot=57.948 R0=103.604 R1=173.053 R2=125.240 R3=28.530 R4=0.000
+[PROGRESS] Event 1820000 | Transmitted: 82 | Edep(keV): Tot=360.708 R0=30.016 R1=109.605 R2=206.275 R3=14.812 R4=0.000 | Dose(pGy): Tot=61.312 R0=127.549 R1=155.249 R2=175.306 R3=8.992 R4=0.000
+[PROGRESS] Event 1830000 | Transmitted: 97 | Edep(keV): Tot=376.572 R0=32.006 R1=133.137 R2=211.428 R3=0.000 R4=0.000 | Dose(pGy): Tot=64.009 R0=136.005 R1=188.582 R2=179.686 R3=0.000 R4=0.000
+[PROGRESS] Event 1840000 | Transmitted: 80 | Edep(keV): Tot=433.010 R0=63.102 R1=219.505 R2=150.403 R3=0.000 R4=0.000 | Dose(pGy): Tot=73.602 R0=268.143 R1=310.917 R2=127.822 R3=0.000 R4=0.000
+[PROGRESS] Event 1850000 | Transmitted: 81 | Edep(keV): Tot=363.874 R0=63.876 R1=74.710 R2=225.288 R3=0.000 R4=0.000 | Dose(pGy): Tot=61.850 R0=271.431 R1=105.823 R2=191.465 R3=0.000 R4=0.000
+[PROGRESS] Event 1860000 | Transmitted: 66 | Edep(keV): Tot=401.440 R0=26.064 R1=134.977 R2=232.650 R3=7.749 R4=0.000 | Dose(pGy): Tot=68.236 R0=110.756 R1=191.188 R2=197.722 R3=4.704 R4=0.000
+[PROGRESS] Event 1870000 | Transmitted: 85 | Edep(keV): Tot=262.401 R0=29.474 R1=87.806 R2=145.121 R3=0.000 R4=0.000 | Dose(pGy): Tot=44.602 R0=125.245 R1=124.372 R2=123.334 R3=0.000 R4=0.000
+[PROGRESS] Event 1880000 | Transmitted: 92 | Edep(keV): Tot=433.934 R0=23.105 R1=178.956 R2=202.687 R3=29.185 R4=0.000 | Dose(pGy): Tot=73.759 R0=98.181 R1=253.482 R2=172.257 R3=17.717 R4=0.000
+[PROGRESS] Event 1890000 | Transmitted: 87 | Edep(keV): Tot=400.282 R0=34.483 R1=119.626 R2=246.173 R3=0.000 R4=0.000 | Dose(pGy): Tot=68.039 R0=146.529 R1=169.444 R2=209.214 R3=0.000 R4=0.000
+[PROGRESS] Event 1900000 | Transmitted: 80 | Edep(keV): Tot=327.516 R0=34.452 R1=94.967 R2=188.005 R3=10.092 R4=0.000 | Dose(pGy): Tot=55.670 R0=146.399 R1=134.516 R2=159.779 R3=6.126 R4=0.000
+[PROGRESS] Event 1910000 | Transmitted: 73 | Edep(keV): Tot=289.873 R0=13.188 R1=124.068 R2=141.516 R3=11.100 R4=0.000 | Dose(pGy): Tot=49.272 R0=56.042 R1=175.736 R2=120.270 R3=6.739 R4=0.000
+[PROGRESS] Event 1920000 | Transmitted: 70 | Edep(keV): Tot=363.011 R0=50.580 R1=107.896 R2=195.561 R3=8.974 R4=0.000 | Dose(pGy): Tot=61.703 R0=214.929 R1=152.829 R2=166.201 R3=5.448 R4=0.000
+[PROGRESS] Event 1930000 | Transmitted: 81 | Edep(keV): Tot=346.051 R0=30.079 R1=80.776 R2=235.197 R3=0.000 R4=0.000 | Dose(pGy): Tot=58.821 R0=127.815 R1=114.414 R2=199.886 R3=0.000 R4=0.000
+[PROGRESS] Event 1940000 | Transmitted: 88 | Edep(keV): Tot=350.824 R0=78.025 R1=99.175 R2=173.040 R3=0.584 R4=0.000 | Dose(pGy): Tot=59.632 R0=331.557 R1=140.476 R2=147.061 R3=0.354 R4=0.000
+[PROGRESS] Event 1950000 | Transmitted: 54 | Edep(keV): Tot=259.191 R0=29.006 R1=102.146 R2=128.040 R3=0.000 R4=0.000 | Dose(pGy): Tot=44.057 R0=123.256 R1=144.684 R2=108.817 R3=0.000 R4=0.000
+[PROGRESS] Event 1960000 | Transmitted: 91 | Edep(keV): Tot=379.960 R0=55.704 R1=97.650 R2=226.606 R3=0.000 R4=0.000 | Dose(pGy): Tot=64.584 R0=236.707 R1=138.315 R2=192.585 R3=0.000 R4=0.000
+[PROGRESS] Event 1970000 | Transmitted: 77 | Edep(keV): Tot=375.963 R0=48.749 R1=98.653 R2=214.912 R3=13.649 R4=0.000 | Dose(pGy): Tot=63.905 R0=207.152 R1=139.736 R2=182.647 R3=8.286 R4=0.000
+[PROGRESS] Event 1980000 | Transmitted: 74 | Edep(keV): Tot=346.025 R0=9.490 R1=152.009 R2=158.510 R3=26.015 R4=0.000 | Dose(pGy): Tot=58.816 R0=40.327 R1=215.313 R2=134.713 R3=15.793 R4=0.000
+[PROGRESS] Event 1990000 | Transmitted: 74 | Edep(keV): Tot=333.672 R0=25.281 R1=119.531 R2=188.860 R3=0.000 R4=0.000 | Dose(pGy): Tot=56.717 R0=107.428 R1=169.309 R2=160.506 R3=0.000 R4=0.000
+[PROGRESS] Event 2000000 | Transmitted: 62 | Edep(keV): Tot=339.288 R0=41.974 R1=131.486 R2=124.048 R3=41.780 R4=0.000 | Dose(pGy): Tot=57.671 R0=178.362 R1=186.243 R2=105.424 R3=25.363 R4=0.000
+[PROGRESS] Event 2010000 | Transmitted: 82 | Edep(keV): Tot=365.758 R0=17.975 R1=147.857 R2=181.869 R3=18.057 R4=0.000 | Dose(pGy): Tot=62.171 R0=76.383 R1=209.431 R2=154.565 R3=10.962 R4=0.000
+[PROGRESS] Event 2020000 | Transmitted: 73 | Edep(keV): Tot=393.281 R0=55.916 R1=70.404 R2=264.391 R3=2.570 R4=0.000 | Dose(pGy): Tot=66.849 R0=237.606 R1=99.723 R2=224.697 R3=1.560 R4=0.000
+[PROGRESS] Event 2030000 | Transmitted: 85 | Edep(keV): Tot=405.490 R0=49.116 R1=141.455 R2=211.595 R3=3.324 R4=0.000 | Dose(pGy): Tot=68.924 R0=208.711 R1=200.364 R2=179.827 R3=2.018 R4=0.000
+[PROGRESS] Event 2040000 | Transmitted: 85 | Edep(keV): Tot=363.884 R0=43.885 R1=119.438 R2=165.168 R3=35.393 R4=0.000 | Dose(pGy): Tot=61.852 R0=186.484 R1=169.177 R2=140.371 R3=21.486 R4=0.000
+[PROGRESS] Event 2050000 | Transmitted: 74 | Edep(keV): Tot=404.668 R0=61.217 R1=114.879 R2=216.331 R3=12.240 R4=0.000 | Dose(pGy): Tot=68.784 R0=260.131 R1=162.720 R2=183.853 R3=7.431 R4=0.000
+[PROGRESS] Event 2060000 | Transmitted: 74 | Edep(keV): Tot=303.006 R0=36.846 R1=93.176 R2=132.252 R3=40.732 R4=0.000 | Dose(pGy): Tot=51.504 R0=156.572 R1=131.979 R2=112.397 R3=24.727 R4=0.000
+[PROGRESS] Event 2070000 | Transmitted: 91 | Edep(keV): Tot=452.377 R0=47.145 R1=157.959 R2=247.274 R3=0.000 R4=0.000 | Dose(pGy): Tot=76.894 R0=200.334 R1=223.740 R2=210.150 R3=0.000 R4=0.000
+[PROGRESS] Event 2080000 | Transmitted: 88 | Edep(keV): Tot=364.357 R0=84.552 R1=104.310 R2=149.188 R3=26.308 R4=0.000 | Dose(pGy): Tot=61.932 R0=359.288 R1=147.749 R2=126.790 R3=15.971 R4=0.000
+[PROGRESS] Event 2090000 | Transmitted: 83 | Edep(keV): Tot=388.641 R0=112.987 R1=65.607 R2=210.046 R3=0.000 R4=0.000 | Dose(pGy): Tot=66.060 R0=480.121 R1=92.929 R2=178.511 R3=0.000 R4=0.000
+[PROGRESS] Event 2100000 | Transmitted: 106 | Edep(keV): Tot=507.396 R0=31.013 R1=194.216 R2=258.562 R3=23.605 R4=0.000 | Dose(pGy): Tot=86.246 R0=131.785 R1=275.097 R2=219.743 R3=14.330 R4=0.000
+[PROGRESS] Event 2110000 | Transmitted: 89 | Edep(keV): Tot=384.863 R0=71.649 R1=137.527 R2=175.686 R3=0.000 R4=0.000 | Dose(pGy): Tot=65.418 R0=304.462 R1=194.800 R2=149.310 R3=0.000 R4=0.000
+[PROGRESS] Event 2120000 | Transmitted: 101 | Edep(keV): Tot=541.566 R0=37.628 R1=177.090 R2=316.297 R3=10.552 R4=0.000 | Dose(pGy): Tot=92.054 R0=159.893 R1=250.838 R2=268.810 R3=6.406 R4=0.000
+[PROGRESS] Event 2130000 | Transmitted: 85 | Edep(keV): Tot=386.377 R0=48.692 R1=100.895 R2=207.399 R3=29.391 R4=0.000 | Dose(pGy): Tot=65.675 R0=206.908 R1=142.912 R2=176.261 R3=17.843 R4=0.000
+[PROGRESS] Event 2140000 | Transmitted: 73 | Edep(keV): Tot=354.517 R0=4.771 R1=195.184 R2=141.131 R3=13.431 R4=0.000 | Dose(pGy): Tot=60.260 R0=20.272 R1=276.468 R2=119.943 R3=8.154 R4=0.000
+[PROGRESS] Event 2150000 | Transmitted: 77 | Edep(keV): Tot=349.430 R0=29.031 R1=110.171 R2=202.173 R3=8.055 R4=0.000 | Dose(pGy): Tot=59.395 R0=123.362 R1=156.051 R2=171.820 R3=4.890 R4=0.000
+[PROGRESS] Event 2160000 | Transmitted: 86 | Edep(keV): Tot=430.118 R0=55.470 R1=94.609 R2=280.039 R3=0.000 R4=0.000 | Dose(pGy): Tot=73.110 R0=235.709 R1=134.009 R2=237.996 R3=0.000 R4=0.000
+[PROGRESS] Event 2170000 | Transmitted: 61 | Edep(keV): Tot=245.594 R0=28.490 R1=89.706 R2=85.442 R3=25.720 R4=16.236 | Dose(pGy): Tot=41.745 R0=121.062 R1=127.063 R2=72.615 R3=15.614 R4=7.666
+[PROGRESS] Event 2180000 | Transmitted: 74 | Edep(keV): Tot=272.191 R0=37.290 R1=67.856 R2=133.895 R3=33.151 R4=0.000 | Dose(pGy): Tot=46.266 R0=158.456 R1=96.114 R2=113.793 R3=20.125 R4=0.000
+[PROGRESS] Event 2190000 | Transmitted: 73 | Edep(keV): Tot=371.641 R0=58.151 R1=78.281 R2=193.144 R3=42.065 R4=0.000 | Dose(pGy): Tot=63.171 R0=247.104 R1=110.881 R2=164.146 R3=25.537 R4=0.000
+[PROGRESS] Event 2200000 | Transmitted: 90 | Edep(keV): Tot=358.046 R0=50.304 R1=119.786 R2=187.956 R3=0.000 R4=0.000 | Dose(pGy): Tot=60.860 R0=213.759 R1=169.671 R2=159.737 R3=0.000 R4=0.000
+[PROGRESS] Event 2210000 | Transmitted: 71 | Edep(keV): Tot=278.025 R0=34.612 R1=82.113 R2=161.300 R3=0.000 R4=0.000 | Dose(pGy): Tot=47.258 R0=147.079 R1=116.309 R2=137.083 R3=0.000 R4=0.000
+[PROGRESS] Event 2220000 | Transmitted: 77 | Edep(keV): Tot=327.877 R0=29.899 R1=95.171 R2=185.034 R3=17.773 R4=0.000 | Dose(pGy): Tot=55.732 R0=127.050 R1=134.804 R2=157.255 R3=10.790 R4=0.000
+[PROGRESS] Event 2230000 | Transmitted: 66 | Edep(keV): Tot=339.546 R0=9.896 R1=159.801 R2=148.995 R3=20.854 R4=0.000 | Dose(pGy): Tot=57.715 R0=42.051 R1=226.350 R2=126.626 R3=12.660 R4=0.000
+[PROGRESS] Event 2240000 | Transmitted: 73 | Edep(keV): Tot=320.717 R0=46.408 R1=121.073 R2=153.236 R3=0.000 R4=0.000 | Dose(pGy): Tot=54.514 R0=197.202 R1=171.494 R2=130.230 R3=0.000 R4=0.000
+[PROGRESS] Event 2250000 | Transmitted: 61 | Edep(keV): Tot=222.687 R0=43.905 R1=71.406 R2=107.376 R3=0.000 R4=0.000 | Dose(pGy): Tot=37.852 R0=186.568 R1=101.143 R2=91.255 R3=0.000 R4=0.000
+[PROGRESS] Event 2260000 | Transmitted: 88 | Edep(keV): Tot=398.190 R0=62.913 R1=123.130 R2=209.044 R3=3.103 R4=0.000 | Dose(pGy): Tot=67.683 R0=267.339 R1=174.407 R2=177.659 R3=1.884 R4=0.000
+[PROGRESS] Event 2270000 | Transmitted: 87 | Edep(keV): Tot=370.502 R0=47.458 R1=71.476 R2=225.612 R3=25.956 R4=0.000 | Dose(pGy): Tot=62.977 R0=201.664 R1=101.242 R2=191.740 R3=15.757 R4=0.000
+[PROGRESS] Event 2280000 | Transmitted: 93 | Edep(keV): Tot=448.722 R0=57.734 R1=180.646 R2=202.696 R3=7.646 R4=0.000 | Dose(pGy): Tot=76.272 R0=245.330 R1=255.875 R2=172.265 R3=4.642 R4=0.000
+[PROGRESS] Event 2290000 | Transmitted: 72 | Edep(keV): Tot=386.467 R0=54.987 R1=141.752 R2=189.728 R3=0.000 R4=0.000 | Dose(pGy): Tot=65.691 R0=233.659 R1=200.784 R2=161.244 R3=0.000 R4=0.000
+[PROGRESS] Event 2300000 | Transmitted: 76 | Edep(keV): Tot=434.754 R0=62.248 R1=141.531 R2=192.837 R3=38.137 R4=0.000 | Dose(pGy): Tot=73.898 R0=264.515 R1=200.471 R2=163.886 R3=23.152 R4=0.000
+[PROGRESS] Event 2310000 | Transmitted: 87 | Edep(keV): Tot=451.333 R0=32.739 R1=200.193 R2=206.856 R3=11.544 R4=0.000 | Dose(pGy): Tot=76.716 R0=139.119 R1=283.563 R2=175.800 R3=7.008 R4=0.000
+[PROGRESS] Event 2320000 | Transmitted: 76 | Edep(keV): Tot=369.524 R0=21.810 R1=130.854 R2=195.985 R3=20.875 R4=0.000 | Dose(pGy): Tot=62.811 R0=92.678 R1=185.348 R2=166.561 R3=12.673 R4=0.000
+[PROGRESS] Event 2330000 | Transmitted: 81 | Edep(keV): Tot=353.313 R0=17.812 R1=151.610 R2=183.891 R3=0.000 R4=0.000 | Dose(pGy): Tot=60.055 R0=75.690 R1=214.748 R2=156.283 R3=0.000 R4=0.000
+[PROGRESS] Event 2340000 | Transmitted: 76 | Edep(keV): Tot=355.425 R0=20.482 R1=95.113 R2=213.331 R3=26.499 R4=0.000 | Dose(pGy): Tot=60.414 R0=87.037 R1=134.722 R2=181.303 R3=16.087 R4=0.000
+[PROGRESS] Event 2350000 | Transmitted: 87 | Edep(keV): Tot=399.116 R0=20.317 R1=143.583 R2=203.110 R3=19.587 R4=12.518 | Dose(pGy): Tot=67.841 R0=86.334 R1=203.378 R2=172.617 R3=11.891 R4=5.911
+[PROGRESS] Event 2360000 | Transmitted: 82 | Edep(keV): Tot=383.950 R0=24.273 R1=93.760 R2=254.991 R3=10.927 R4=0.000 | Dose(pGy): Tot=65.263 R0=103.142 R1=132.806 R2=216.709 R3=6.633 R4=0.000
+[PROGRESS] Event 2370000 | Transmitted: 86 | Edep(keV): Tot=366.015 R0=72.778 R1=63.245 R2=217.650 R3=12.342 R4=0.000 | Dose(pGy): Tot=62.214 R0=309.260 R1=89.584 R2=184.973 R3=7.492 R4=0.000
+[PROGRESS] Event 2380000 | Transmitted: 81 | Edep(keV): Tot=364.845 R0=85.771 R1=82.151 R2=173.350 R3=23.573 R4=0.000 | Dose(pGy): Tot=62.015 R0=364.471 R1=116.362 R2=147.325 R3=14.310 R4=0.000
+[PROGRESS] Event 2390000 | Transmitted: 81 | Edep(keV): Tot=369.429 R0=18.888 R1=173.067 R2=166.335 R3=11.140 R4=0.000 | Dose(pGy): Tot=62.795 R0=80.260 R1=245.139 R2=141.363 R3=6.763 R4=0.000
+[PROGRESS] Event 2400000 | Transmitted: 70 | Edep(keV): Tot=387.057 R0=48.800 R1=122.568 R2=203.410 R3=12.279 R4=0.000 | Dose(pGy): Tot=65.791 R0=207.370 R1=173.611 R2=172.872 R3=7.454 R4=0.000
+[PROGRESS] Event 2410000 | Transmitted: 71 | Edep(keV): Tot=351.571 R0=5.271 R1=84.458 R2=261.843 R3=0.000 R4=0.000 | Dose(pGy): Tot=59.759 R0=22.396 R1=119.630 R2=222.532 R3=0.000 R4=0.000
+[PROGRESS] Event 2420000 | Transmitted: 84 | Edep(keV): Tot=466.140 R0=48.420 R1=148.497 R2=269.224 R3=0.000 R4=0.000 | Dose(pGy): Tot=79.233 R0=205.751 R1=210.337 R2=228.805 R3=0.000 R4=0.000
+[PROGRESS] Event 2430000 | Transmitted: 86 | Edep(keV): Tot=452.378 R0=35.160 R1=167.615 R2=231.569 R3=18.033 R4=0.000 | Dose(pGy): Tot=76.894 R0=149.407 R1=237.418 R2=196.803 R3=10.947 R4=0.000
+[PROGRESS] Event 2440000 | Transmitted: 79 | Edep(keV): Tot=425.813 R0=13.798 R1=175.715 R2=227.191 R3=9.110 R4=0.000 | Dose(pGy): Tot=72.379 R0=58.630 R1=248.891 R2=193.082 R3=5.530 R4=0.000
+[PROGRESS] Event 2450000 | Transmitted: 71 | Edep(keV): Tot=368.032 R0=28.226 R1=122.374 R2=205.433 R3=11.999 R4=0.000 | Dose(pGy): Tot=62.557 R0=119.942 R1=173.337 R2=174.591 R3=7.284 R4=0.000
+[PROGRESS] Event 2460000 | Transmitted: 83 | Edep(keV): Tot=407.888 R0=51.741 R1=144.915 R2=211.232 R3=0.000 R4=0.000 | Dose(pGy): Tot=69.332 R0=219.867 R1=205.265 R2=179.519 R3=0.000 R4=0.000
+[PROGRESS] Event 2470000 | Transmitted: 73 | Edep(keV): Tot=360.835 R0=46.494 R1=101.282 R2=199.278 R3=13.780 R4=0.000 | Dose(pGy): Tot=61.334 R0=197.571 R1=143.460 R2=169.360 R3=8.366 R4=0.000
+[PROGRESS] Event 2480000 | Transmitted: 67 | Edep(keV): Tot=317.114 R0=22.633 R1=94.930 R2=189.559 R3=9.993 R4=0.000 | Dose(pGy): Tot=53.902 R0=96.174 R1=134.463 R2=161.100 R3=6.067 R4=0.000
+[PROGRESS] Event 2490000 | Transmitted: 83 | Edep(keV): Tot=482.479 R0=27.702 R1=170.814 R2=259.593 R3=24.371 R4=0.000 | Dose(pGy): Tot=82.010 R0=117.715 R1=241.948 R2=220.619 R3=14.795 R4=0.000
+[PROGRESS] Event 2500000 | Transmitted: 71 | Edep(keV): Tot=315.667 R0=21.535 R1=111.476 R2=150.308 R3=32.348 R4=0.000 | Dose(pGy): Tot=53.656 R0=91.508 R1=157.900 R2=127.742 R3=19.638 R4=0.000
+[PROGRESS] Event 2510000 | Transmitted: 67 | Edep(keV): Tot=370.162 R0=32.551 R1=109.734 R2=212.483 R3=15.394 R4=0.000 | Dose(pGy): Tot=62.919 R0=138.322 R1=155.432 R2=180.583 R3=9.345 R4=0.000
+[PROGRESS] Event 2520000 | Transmitted: 80 | Edep(keV): Tot=324.218 R0=36.884 R1=70.532 R2=195.406 R3=21.396 R4=0.000 | Dose(pGy): Tot=55.110 R0=156.734 R1=99.905 R2=166.069 R3=12.989 R4=0.000
+[PROGRESS] Event 2530000 | Transmitted: 69 | Edep(keV): Tot=482.577 R0=67.079 R1=172.152 R2=234.400 R3=8.947 R4=0.000 | Dose(pGy): Tot=82.027 R0=285.039 R1=243.845 R2=199.209 R3=5.431 R4=0.000
+[PROGRESS] Event 2540000 | Transmitted: 67 | Edep(keV): Tot=240.701 R0=16.380 R1=114.082 R2=99.259 R3=0.000 R4=10.980 | Dose(pGy): Tot=40.914 R0=69.605 R1=161.591 R2=84.357 R3=0.000 R4=5.184
+[PROGRESS] Event 2550000 | Transmitted: 78 | Edep(keV): Tot=457.843 R0=25.313 R1=145.503 R2=254.063 R3=32.963 R4=0.000 | Dose(pGy): Tot=77.823 R0=107.562 R1=206.097 R2=215.920 R3=20.011 R4=0.000
+[PROGRESS] Event 2560000 | Transmitted: 79 | Edep(keV): Tot=343.818 R0=34.200 R1=123.432 R2=177.657 R3=8.529 R4=0.000 | Dose(pGy): Tot=58.441 R0=145.327 R1=174.835 R2=150.985 R3=5.178 R4=0.000
+[PROGRESS] Event 2570000 | Transmitted: 84 | Edep(keV): Tot=442.012 R0=69.925 R1=106.988 R2=254.904 R3=10.194 R4=0.000 | Dose(pGy): Tot=75.132 R0=297.136 R1=151.543 R2=216.634 R3=6.189 R4=0.000
+[PROGRESS] Event 2580000 | Transmitted: 70 | Edep(keV): Tot=330.654 R0=64.634 R1=88.686 R2=165.175 R3=12.158 R4=0.000 | Dose(pGy): Tot=56.204 R0=274.653 R1=125.619 R2=140.377 R3=7.381 R4=0.000
+[PROGRESS] Event 2590000 | Transmitted: 68 | Edep(keV): Tot=360.287 R0=5.592 R1=146.149 R2=183.332 R3=25.215 R4=0.000 | Dose(pGy): Tot=61.241 R0=23.762 R1=207.012 R2=155.808 R3=15.307 R4=0.000
+[PROGRESS] Event 2600000 | Transmitted: 72 | Edep(keV): Tot=358.064 R0=6.320 R1=125.671 R2=214.909 R3=11.164 R4=0.000 | Dose(pGy): Tot=60.863 R0=26.855 R1=178.007 R2=182.644 R3=6.777 R4=0.000
+[PROGRESS] Event 2610000 | Transmitted: 77 | Edep(keV): Tot=327.343 R0=33.100 R1=125.087 R2=139.355 R3=29.801 R4=0.000 | Dose(pGy): Tot=55.641 R0=140.651 R1=177.179 R2=118.433 R3=18.091 R4=0.000
+[PROGRESS] Event 2620000 | Transmitted: 66 | Edep(keV): Tot=343.397 R0=34.229 R1=71.286 R2=227.148 R3=10.733 R4=0.000 | Dose(pGy): Tot=58.370 R0=145.453 R1=100.973 R2=193.046 R3=6.516 R4=0.000
+[PROGRESS] Event 2630000 | Transmitted: 71 | Edep(keV): Tot=215.669 R0=22.421 R1=41.182 R2=152.065 R3=0.000 R4=0.000 | Dose(pGy): Tot=36.659 R0=95.276 R1=58.333 R2=129.235 R3=0.000 R4=0.000
+[PROGRESS] Event 2640000 | Transmitted: 89 | Edep(keV): Tot=531.727 R0=100.140 R1=112.637 R2=309.879 R3=9.071 R4=0.000 | Dose(pGy): Tot=90.381 R0=425.528 R1=159.544 R2=263.356 R3=5.507 R4=0.000
+[PROGRESS] Event 2650000 | Transmitted: 63 | Edep(keV): Tot=279.255 R0=19.343 R1=79.579 R2=170.219 R3=10.113 R4=0.000 | Dose(pGy): Tot=47.467 R0=82.197 R1=112.720 R2=144.664 R3=6.139 R4=0.000
+[PROGRESS] Event 2660000 | Transmitted: 84 | Edep(keV): Tot=412.949 R0=22.388 R1=190.928 R2=186.941 R3=12.693 R4=0.000 | Dose(pGy): Tot=70.192 R0=95.132 R1=270.439 R2=158.875 R3=7.705 R4=0.000
+[PROGRESS] Event 2670000 | Transmitted: 77 | Edep(keV): Tot=404.976 R0=32.198 R1=140.121 R2=232.657 R3=0.000 R4=0.000 | Dose(pGy): Tot=68.837 R0=136.819 R1=198.474 R2=197.727 R3=0.000 R4=0.000
+[PROGRESS] Event 2680000 | Transmitted: 81 | Edep(keV): Tot=303.177 R0=31.424 R1=49.323 R2=222.430 R3=0.000 R4=0.000 | Dose(pGy): Tot=51.533 R0=133.533 R1=69.863 R2=189.036 R3=0.000 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #11 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=3.131 keV | creator_process: phot | vertex_pos(mm)=(0.075, -0.111, 17.980) | vertex_Ekin=4.379 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 2690000 | Transmitted: 70 | Edep(keV): Tot=248.454 R0=62.452 R1=78.257 R2=107.744 R3=0.000 R4=0.000 | Dose(pGy): Tot=42.231 R0=265.380 R1=110.847 R2=91.568 R3=0.000 R4=0.000
+[PROGRESS] Event 2700000 | Transmitted: 81 | Edep(keV): Tot=356.599 R0=42.971 R1=144.766 R2=162.552 R3=6.310 R4=0.000 | Dose(pGy): Tot=60.614 R0=182.598 R1=205.054 R2=138.147 R3=3.830 R4=0.000
+[PROGRESS] Event 2710000 | Transmitted: 92 | Edep(keV): Tot=525.025 R0=97.457 R1=123.381 R2=295.285 R3=8.902 R4=0.000 | Dose(pGy): Tot=89.242 R0=414.127 R1=174.763 R2=250.953 R3=5.404 R4=0.000
+[PROGRESS] Event 2720000 | Transmitted: 70 | Edep(keV): Tot=365.810 R0=73.881 R1=120.800 R2=155.777 R3=15.352 R4=0.000 | Dose(pGy): Tot=62.179 R0=313.945 R1=171.107 R2=132.390 R3=9.320 R4=0.000
+[PROGRESS] Event 2730000 | Transmitted: 90 | Edep(keV): Tot=447.161 R0=16.348 R1=156.694 R2=256.878 R3=17.242 R4=0.000 | Dose(pGy): Tot=76.007 R0=69.467 R1=221.948 R2=218.312 R3=10.467 R4=0.000
+[PROGRESS] Event 2740000 | Transmitted: 54 | Edep(keV): Tot=267.778 R0=52.820 R1=80.056 R2=125.470 R3=9.430 R4=0.000 | Dose(pGy): Tot=45.516 R0=224.452 R1=113.396 R2=106.633 R3=5.725 R4=0.000
+[PROGRESS] Event 2750000 | Transmitted: 67 | Edep(keV): Tot=320.194 R0=43.546 R1=127.059 R2=149.589 R3=0.000 R4=0.000 | Dose(pGy): Tot=54.426 R0=185.041 R1=179.973 R2=127.131 R3=0.000 R4=0.000
+[PROGRESS] Event 2760000 | Transmitted: 96 | Edep(keV): Tot=481.661 R0=84.573 R1=203.429 R2=182.197 R3=11.462 R4=0.000 | Dose(pGy): Tot=81.871 R0=359.379 R1=288.146 R2=154.844 R3=6.958 R4=0.000
+[PROGRESS] Event 2770000 | Transmitted: 78 | Edep(keV): Tot=350.005 R0=3.666 R1=120.150 R2=200.748 R3=25.441 R4=0.000 | Dose(pGy): Tot=59.493 R0=15.579 R1=170.186 R2=170.609 R3=15.444 R4=0.000
+[PROGRESS] Event 2780000 | Transmitted: 71 | Edep(keV): Tot=281.129 R0=49.650 R1=75.327 R2=153.849 R3=2.303 R4=0.000 | Dose(pGy): Tot=47.786 R0=210.979 R1=106.697 R2=130.751 R3=1.398 R4=0.000
+[PROGRESS] Event 2790000 | Transmitted: 65 | Edep(keV): Tot=364.590 R0=50.013 R1=148.561 R2=157.132 R3=8.883 R4=0.000 | Dose(pGy): Tot=61.972 R0=212.521 R1=210.429 R2=133.542 R3=5.393 R4=0.000
+[PROGRESS] Event 2800000 | Transmitted: 80 | Edep(keV): Tot=301.941 R0=30.336 R1=106.747 R2=164.858 R3=0.000 R4=0.000 | Dose(pGy): Tot=51.323 R0=128.906 R1=151.202 R2=140.108 R3=0.000 R4=0.000
+[PROGRESS] Event 2810000 | Transmitted: 92 | Edep(keV): Tot=334.010 R0=17.479 R1=132.696 R2=176.270 R3=7.565 R4=0.000 | Dose(pGy): Tot=56.774 R0=74.275 R1=187.956 R2=149.806 R3=4.593 R4=0.000
+[PROGRESS] Event 2820000 | Transmitted: 73 | Edep(keV): Tot=309.095 R0=8.528 R1=94.193 R2=179.110 R3=27.264 R4=0.000 | Dose(pGy): Tot=52.539 R0=36.239 R1=133.419 R2=152.219 R3=16.551 R4=0.000
+[PROGRESS] Event 2830000 | Transmitted: 75 | Edep(keV): Tot=316.384 R0=16.274 R1=121.501 R2=178.608 R3=0.000 R4=0.000 | Dose(pGy): Tot=53.778 R0=69.153 R1=172.100 R2=151.793 R3=0.000 R4=0.000
+[PROGRESS] Event 2840000 | Transmitted: 98 | Edep(keV): Tot=462.796 R0=75.162 R1=114.490 R2=273.145 R3=0.000 R4=0.000 | Dose(pGy): Tot=78.665 R0=319.387 R1=162.169 R2=232.137 R3=0.000 R4=0.000
+[PROGRESS] Event 2850000 | Transmitted: 76 | Edep(keV): Tot=356.445 R0=56.703 R1=130.825 R2=158.364 R3=10.552 R4=0.000 | Dose(pGy): Tot=60.587 R0=240.950 R1=185.307 R2=134.589 R3=6.406 R4=0.000
+[PROGRESS] Event 2860000 | Transmitted: 69 | Edep(keV): Tot=297.336 R0=16.560 R1=87.104 R2=175.176 R3=18.496 R4=0.000 | Dose(pGy): Tot=50.540 R0=70.370 R1=123.378 R2=148.876 R3=11.228 R4=0.000
+[PROGRESS] Event 2870000 | Transmitted: 72 | Edep(keV): Tot=372.506 R0=28.289 R1=71.280 R2=260.546 R3=12.391 R4=0.000 | Dose(pGy): Tot=63.317 R0=120.210 R1=100.964 R2=221.430 R3=7.522 R4=0.000
+[PROGRESS] Event 2880000 | Transmitted: 66 | Edep(keV): Tot=304.343 R0=20.886 R1=139.943 R2=116.992 R3=26.521 R4=0.000 | Dose(pGy): Tot=51.731 R0=88.752 R1=198.222 R2=99.428 R3=16.100 R4=0.000
+[PROGRESS] Event 2890000 | Transmitted: 64 | Edep(keV): Tot=287.103 R0=34.150 R1=74.896 R2=160.015 R3=18.041 R4=0.000 | Dose(pGy): Tot=48.801 R0=145.116 R1=106.087 R2=135.992 R3=10.952 R4=0.000
+[PROGRESS] Event 2900000 | Transmitted: 67 | Edep(keV): Tot=272.511 R0=32.258 R1=98.875 R2=136.826 R3=4.552 R4=0.000 | Dose(pGy): Tot=46.321 R0=137.076 R1=140.051 R2=116.284 R3=2.763 R4=0.000
+[PROGRESS] Event 2910000 | Transmitted: 96 | Edep(keV): Tot=468.902 R0=47.157 R1=131.018 R2=261.872 R3=28.854 R4=0.000 | Dose(pGy): Tot=79.703 R0=200.387 R1=185.580 R2=222.557 R3=17.516 R4=0.000
+[PROGRESS] Event 2920000 | Transmitted: 69 | Edep(keV): Tot=346.239 R0=35.091 R1=100.468 R2=192.134 R3=18.547 R4=0.000 | Dose(pGy): Tot=58.853 R0=149.111 R1=142.308 R2=163.288 R3=11.259 R4=0.000
+[PROGRESS] Event 2930000 | Transmitted: 77 | Edep(keV): Tot=335.074 R0=59.194 R1=121.208 R2=154.672 R3=0.000 R4=0.000 | Dose(pGy): Tot=56.955 R0=251.537 R1=171.684 R2=131.451 R3=0.000 R4=0.000
+[PROGRESS] Event 2940000 | Transmitted: 51 | Edep(keV): Tot=287.317 R0=50.803 R1=111.898 R2=124.615 R3=0.000 R4=0.000 | Dose(pGy): Tot=48.837 R0=215.878 R1=158.498 R2=105.907 R3=0.000 R4=0.000
+[PROGRESS] Event 2950000 | Transmitted: 81 | Edep(keV): Tot=426.420 R0=38.410 R1=110.217 R2=230.875 R3=46.918 R4=0.000 | Dose(pGy): Tot=72.482 R0=163.215 R1=156.117 R2=196.213 R3=28.483 R4=0.000
+[PROGRESS] Event 2960000 | Transmitted: 72 | Edep(keV): Tot=372.643 R0=42.874 R1=199.607 R2=130.163 R3=0.000 R4=0.000 | Dose(pGy): Tot=63.341 R0=182.185 R1=282.732 R2=110.621 R3=0.000 R4=0.000
+[PROGRESS] Event 2970000 | Transmitted: 83 | Edep(keV): Tot=411.076 R0=40.976 R1=125.418 R2=244.682 R3=0.000 R4=0.000 | Dose(pGy): Tot=69.874 R0=174.122 R1=177.648 R2=207.947 R3=0.000 R4=0.000
+[PROGRESS] Event 2980000 | Transmitted: 71 | Edep(keV): Tot=231.778 R0=29.858 R1=43.816 R2=142.181 R3=15.923 R4=0.000 | Dose(pGy): Tot=39.397 R0=126.875 R1=62.063 R2=120.835 R3=9.667 R4=0.000
+[PROGRESS] Event 2990000 | Transmitted: 77 | Edep(keV): Tot=390.824 R0=49.585 R1=148.008 R2=193.231 R3=0.000 R4=0.000 | Dose(pGy): Tot=66.431 R0=210.701 R1=209.645 R2=164.221 R3=0.000 R4=0.000
+[PROGRESS] Event 3000000 | Transmitted: 91 | Edep(keV): Tot=443.473 R0=5.512 R1=186.718 R2=234.513 R3=16.729 R4=0.000 | Dose(pGy): Tot=75.380 R0=23.423 R1=264.476 R2=199.305 R3=10.156 R4=0.000
+[PROGRESS] Event 3010000 | Transmitted: 78 | Edep(keV): Tot=440.493 R0=35.271 R1=174.927 R2=219.805 R3=10.489 R4=0.000 | Dose(pGy): Tot=74.874 R0=149.879 R1=247.774 R2=186.806 R3=6.368 R4=0.000
+[PROGRESS] Event 3020000 | Transmitted: 86 | Edep(keV): Tot=410.186 R0=45.737 R1=181.653 R2=182.795 R3=0.000 R4=0.000 | Dose(pGy): Tot=69.722 R0=194.353 R1=257.302 R2=155.352 R3=0.000 R4=0.000
+[PROGRESS] Event 3030000 | Transmitted: 81 | Edep(keV): Tot=394.292 R0=28.149 R1=63.023 R2=255.422 R3=47.697 R4=0.000 | Dose(pGy): Tot=67.021 R0=119.616 R1=89.269 R2=217.075 R3=28.956 R4=0.000
+[PROGRESS] Event 3040000 | Transmitted: 71 | Edep(keV): Tot=364.412 R0=36.497 R1=111.819 R2=216.096 R3=0.000 R4=0.000 | Dose(pGy): Tot=61.942 R0=155.089 R1=158.385 R2=183.653 R3=0.000 R4=0.000
+[PROGRESS] Event 3050000 | Transmitted: 83 | Edep(keV): Tot=414.133 R0=43.060 R1=128.440 R2=233.080 R3=9.552 R4=0.000 | Dose(pGy): Tot=70.393 R0=182.977 R1=181.929 R2=198.087 R3=5.799 R4=0.000
+[PROGRESS] Event 3060000 | Transmitted: 66 | Edep(keV): Tot=361.918 R0=15.154 R1=84.062 R2=262.701 R3=0.000 R4=0.000 | Dose(pGy): Tot=61.518 R0=64.395 R1=119.070 R2=223.261 R3=0.000 R4=0.000
+[PROGRESS] Event 3070000 | Transmitted: 76 | Edep(keV): Tot=293.210 R0=39.823 R1=74.039 R2=179.347 R3=0.000 R4=0.000 | Dose(pGy): Tot=49.839 R0=169.223 R1=104.872 R2=152.421 R3=0.000 R4=0.000
+[PROGRESS] Event 3080000 | Transmitted: 70 | Edep(keV): Tot=256.227 R0=34.975 R1=86.367 R2=134.884 R3=0.000 R4=0.000 | Dose(pGy): Tot=43.553 R0=148.621 R1=122.335 R2=114.634 R3=0.000 R4=0.000
+[PROGRESS] Event 3090000 | Transmitted: 93 | Edep(keV): Tot=390.647 R0=51.578 R1=147.126 R2=191.944 R3=0.000 R4=0.000 | Dose(pGy): Tot=66.401 R0=219.172 R1=208.395 R2=163.127 R3=0.000 R4=0.000
+[PROGRESS] Event 3100000 | Transmitted: 77 | Edep(keV): Tot=416.847 R0=43.980 R1=182.043 R2=180.593 R3=10.230 R4=0.000 | Dose(pGy): Tot=70.854 R0=186.888 R1=257.854 R2=153.480 R3=6.210 R4=0.000
+[PROGRESS] Event 3110000 | Transmitted: 74 | Edep(keV): Tot=325.669 R0=30.014 R1=128.415 R2=167.240 R3=0.000 R4=0.000 | Dose(pGy): Tot=55.356 R0=127.538 R1=181.893 R2=142.132 R3=0.000 R4=0.000
+[PROGRESS] Event 3120000 | Transmitted: 80 | Edep(keV): Tot=306.549 R0=39.746 R1=91.705 R2=175.098 R3=0.000 R4=0.000 | Dose(pGy): Tot=52.106 R0=168.894 R1=129.895 R2=148.810 R3=0.000 R4=0.000
+[PROGRESS] Event 3130000 | Transmitted: 68 | Edep(keV): Tot=372.053 R0=6.744 R1=155.913 R2=209.396 R3=0.000 R4=0.000 | Dose(pGy): Tot=63.241 R0=28.657 R1=220.843 R2=177.959 R3=0.000 R4=0.000
+[PROGRESS] Event 3140000 | Transmitted: 70 | Edep(keV): Tot=375.286 R0=64.657 R1=145.070 R2=165.182 R3=0.378 R4=0.000 | Dose(pGy): Tot=63.790 R0=274.748 R1=205.483 R2=140.383 R3=0.230 R4=0.000
+[PROGRESS] Event 3150000 | Transmitted: 88 | Edep(keV): Tot=386.427 R0=15.494 R1=174.438 R2=196.495 R3=0.000 R4=0.000 | Dose(pGy): Tot=65.684 R0=65.837 R1=247.082 R2=166.995 R3=0.000 R4=0.000
+[PROGRESS] Event 3160000 | Transmitted: 78 | Edep(keV): Tot=411.847 R0=77.595 R1=132.681 R2=192.822 R3=8.749 R4=0.000 | Dose(pGy): Tot=70.004 R0=329.727 R1=187.935 R2=163.873 R3=5.311 R4=0.000
+[PROGRESS] Event 3170000 | Transmitted: 73 | Edep(keV): Tot=336.194 R0=35.820 R1=125.672 R2=174.703 R3=0.000 R4=0.000 | Dose(pGy): Tot=57.145 R0=152.210 R1=178.007 R2=148.474 R3=0.000 R4=0.000
+[PROGRESS] Event 3180000 | Transmitted: 92 | Edep(keV): Tot=463.308 R0=61.919 R1=124.427 R2=269.595 R3=0.000 R4=7.367 | Dose(pGy): Tot=78.752 R0=263.115 R1=176.244 R2=229.120 R3=0.000 R4=3.478
+[PROGRESS] Event 3190000 | Transmitted: 75 | Edep(keV): Tot=381.230 R0=58.492 R1=114.830 R2=191.721 R3=16.188 R4=0.000 | Dose(pGy): Tot=64.800 R0=248.550 R1=162.650 R2=162.937 R3=9.827 R4=0.000
+[PROGRESS] Event 3200000 | Transmitted: 88 | Edep(keV): Tot=379.822 R0=100.545 R1=86.986 R2=166.150 R3=7.836 R4=18.304 | Dose(pGy): Tot=64.561 R0=427.251 R1=123.212 R2=141.206 R3=4.757 R4=8.643
+[PROGRESS] Event 3210000 | Transmitted: 92 | Edep(keV): Tot=423.470 R0=75.736 R1=146.021 R2=201.713 R3=0.000 R4=0.000 | Dose(pGy): Tot=71.980 R0=321.826 R1=206.831 R2=171.430 R3=0.000 R4=0.000
+[PROGRESS] Event 3220000 | Transmitted: 61 | Edep(keV): Tot=253.945 R0=50.696 R1=71.100 R2=118.141 R3=14.008 R4=0.000 | Dose(pGy): Tot=43.165 R0=215.425 R1=100.709 R2=100.404 R3=8.504 R4=0.000
+[PROGRESS] Event 3230000 | Transmitted: 68 | Edep(keV): Tot=346.959 R0=19.991 R1=148.769 R2=164.904 R3=13.295 R4=0.000 | Dose(pGy): Tot=58.975 R0=84.948 R1=210.723 R2=140.146 R3=8.071 R4=0.000
+[PROGRESS] Event 3240000 | Transmitted: 80 | Edep(keV): Tot=291.579 R0=39.294 R1=80.175 R2=158.920 R3=13.190 R4=0.000 | Dose(pGy): Tot=49.562 R0=166.974 R1=113.563 R2=135.061 R3=8.007 R4=0.000
+[PROGRESS] Event 3250000 | Transmitted: 76 | Edep(keV): Tot=291.907 R0=59.066 R1=49.209 R2=155.245 R3=28.387 R4=0.000 | Dose(pGy): Tot=49.618 R0=250.991 R1=69.702 R2=131.937 R3=17.233 R4=0.000
+[PROGRESS] Event 3260000 | Transmitted: 80 | Edep(keV): Tot=324.082 R0=18.897 R1=63.862 R2=223.442 R3=17.881 R4=0.000 | Dose(pGy): Tot=55.086 R0=80.302 R1=90.457 R2=189.896 R3=10.855 R4=0.000
+[PROGRESS] Event 3270000 | Transmitted: 97 | Edep(keV): Tot=468.088 R0=14.577 R1=132.364 R2=297.529 R3=23.618 R4=0.000 | Dose(pGy): Tot=79.564 R0=61.942 R1=187.487 R2=252.860 R3=14.338 R4=0.000
+[PROGRESS] Event 3280000 | Transmitted: 69 | Edep(keV): Tot=422.431 R0=27.351 R1=137.383 R2=248.649 R3=9.048 R4=0.000 | Dose(pGy): Tot=71.804 R0=116.224 R1=194.595 R2=211.319 R3=5.493 R4=0.000
+[PROGRESS] Event 3290000 | Transmitted: 85 | Edep(keV): Tot=364.809 R0=52.947 R1=150.179 R2=161.683 R3=0.000 R4=0.000 | Dose(pGy): Tot=62.009 R0=224.991 R1=212.721 R2=137.409 R3=0.000 R4=0.000
+[PROGRESS] Event 3300000 | Transmitted: 72 | Edep(keV): Tot=297.315 R0=50.027 R1=91.889 R2=155.399 R3=0.000 R4=0.000 | Dose(pGy): Tot=50.537 R0=212.580 R1=130.155 R2=132.069 R3=0.000 R4=0.000
+[PROGRESS] Event 3310000 | Transmitted: 78 | Edep(keV): Tot=349.258 R0=34.090 R1=122.174 R2=192.994 R3=0.000 R4=0.000 | Dose(pGy): Tot=59.366 R0=144.861 R1=173.052 R2=164.019 R3=0.000 R4=0.000
+[PROGRESS] Event 3320000 | Transmitted: 79 | Edep(keV): Tot=386.392 R0=45.091 R1=102.822 R2=238.479 R3=0.000 R4=0.000 | Dose(pGy): Tot=65.678 R0=191.606 R1=145.642 R2=202.675 R3=0.000 R4=0.000
+[PROGRESS] Event 3330000 | Transmitted: 88 | Edep(keV): Tot=465.327 R0=35.177 R1=214.400 R2=172.609 R3=43.140 R4=0.000 | Dose(pGy): Tot=79.095 R0=149.481 R1=303.686 R2=146.695 R3=26.189 R4=0.000
+[PROGRESS] Event 3340000 | Transmitted: 80 | Edep(keV): Tot=354.320 R0=55.975 R1=141.385 R2=156.960 R3=0.000 R4=0.000 | Dose(pGy): Tot=60.226 R0=237.857 R1=200.264 R2=133.395 R3=0.000 R4=0.000
+[PROGRESS] Event 3350000 | Transmitted: 75 | Edep(keV): Tot=446.614 R0=41.693 R1=155.702 R2=235.309 R3=13.909 R4=0.000 | Dose(pGy): Tot=75.914 R0=177.168 R1=220.544 R2=199.982 R3=8.444 R4=0.000
+[PROGRESS] Event 3360000 | Transmitted: 68 | Edep(keV): Tot=333.681 R0=42.357 R1=122.083 R2=169.240 R3=0.000 R4=0.000 | Dose(pGy): Tot=56.718 R0=179.990 R1=172.925 R2=143.832 R3=0.000 R4=0.000
+[PROGRESS] Event 3370000 | Transmitted: 87 | Edep(keV): Tot=451.548 R0=89.056 R1=142.084 R2=220.408 R3=0.000 R4=0.000 | Dose(pGy): Tot=76.753 R0=378.428 R1=201.254 R2=187.317 R3=0.000 R4=0.000
+[PROGRESS] Event 3380000 | Transmitted: 94 | Edep(keV): Tot=482.309 R0=36.681 R1=157.286 R2=253.959 R3=34.383 R4=0.000 | Dose(pGy): Tot=81.981 R0=155.870 R1=222.787 R2=215.832 R3=20.873 R4=0.000
+[PROGRESS] Event 3390000 | Transmitted: 98 | Edep(keV): Tot=349.339 R0=15.015 R1=104.938 R2=198.162 R3=31.223 R4=0.000 | Dose(pGy): Tot=59.380 R0=63.805 R1=148.639 R2=168.412 R3=18.954 R4=0.000
+[PROGRESS] Event 3400000 | Transmitted: 85 | Edep(keV): Tot=399.036 R0=0.000 R1=168.886 R2=230.150 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.827 R0=0.000 R1=239.219 R2=195.597 R3=0.000 R4=0.000
+[PROGRESS] Event 3410000 | Transmitted: 85 | Edep(keV): Tot=410.946 R0=29.080 R1=137.627 R2=227.904 R3=16.336 R4=0.000 | Dose(pGy): Tot=69.851 R0=123.570 R1=194.941 R2=193.688 R3=9.917 R4=0.000
+[PROGRESS] Event 3420000 | Transmitted: 81 | Edep(keV): Tot=390.062 R0=42.455 R1=182.628 R2=148.310 R3=16.669 R4=0.000 | Dose(pGy): Tot=66.302 R0=180.406 R1=258.682 R2=126.044 R3=10.119 R4=0.000
+[PROGRESS] Event 3430000 | Transmitted: 81 | Edep(keV): Tot=366.294 R0=72.622 R1=126.495 R2=167.176 R3=0.000 R4=0.000 | Dose(pGy): Tot=62.262 R0=308.597 R1=179.174 R2=142.078 R3=0.000 R4=0.000
+[PROGRESS] Event 3440000 | Transmitted: 74 | Edep(keV): Tot=376.589 R0=40.167 R1=163.702 R2=140.179 R3=32.541 R4=0.000 | Dose(pGy): Tot=64.012 R0=170.684 R1=231.875 R2=119.134 R3=19.755 R4=0.000
+[PROGRESS] Event 3450000 | Transmitted: 69 | Edep(keV): Tot=373.785 R0=41.741 R1=92.670 R2=198.918 R3=19.884 R4=20.571 | Dose(pGy): Tot=63.535 R0=177.372 R1=131.262 R2=169.054 R3=12.071 R4=9.713
+[PROGRESS] Event 3460000 | Transmitted: 80 | Edep(keV): Tot=269.460 R0=6.085 R1=97.572 R2=157.739 R3=8.065 R4=0.000 | Dose(pGy): Tot=45.802 R0=25.857 R1=138.205 R2=134.057 R3=4.896 R4=0.000
+[PROGRESS] Event 3470000 | Transmitted: 65 | Edep(keV): Tot=288.705 R0=13.396 R1=86.620 R2=166.898 R3=12.507 R4=9.284 | Dose(pGy): Tot=49.073 R0=56.926 R1=122.693 R2=141.841 R3=7.593 R4=4.383
+[PROGRESS] Event 3480000 | Transmitted: 93 | Edep(keV): Tot=424.538 R0=72.105 R1=114.536 R2=218.172 R3=19.724 R4=0.000 | Dose(pGy): Tot=72.162 R0=306.400 R1=162.234 R2=185.417 R3=11.974 R4=0.000
+[PROGRESS] Event 3490000 | Transmitted: 71 | Edep(keV): Tot=396.704 R0=29.967 R1=146.419 R2=220.319 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.431 R0=127.340 R1=207.394 R2=187.242 R3=0.000 R4=0.000
+[PROGRESS] Event 3500000 | Transmitted: 93 | Edep(keV): Tot=434.538 R0=32.676 R1=140.286 R2=242.250 R3=19.326 R4=0.000 | Dose(pGy): Tot=73.862 R0=138.853 R1=198.707 R2=205.880 R3=11.732 R4=0.000
+[PROGRESS] Event 3510000 | Transmitted: 81 | Edep(keV): Tot=381.669 R0=55.293 R1=170.413 R2=142.476 R3=13.487 R4=0.000 | Dose(pGy): Tot=64.875 R0=234.960 R1=241.381 R2=121.085 R3=8.188 R4=0.000
+[PROGRESS] Event 3520000 | Transmitted: 82 | Edep(keV): Tot=408.359 R0=72.723 R1=146.558 R2=173.349 R3=15.729 R4=0.000 | Dose(pGy): Tot=69.412 R0=309.026 R1=207.591 R2=147.324 R3=9.549 R4=0.000
+[PROGRESS] Event 3530000 | Transmitted: 66 | Edep(keV): Tot=328.216 R0=16.800 R1=125.268 R2=174.834 R3=11.314 R4=0.000 | Dose(pGy): Tot=55.789 R0=71.391 R1=177.435 R2=148.586 R3=6.868 R4=0.000
+[PROGRESS] Event 3540000 | Transmitted: 69 | Edep(keV): Tot=320.363 R0=38.842 R1=116.812 R2=164.710 R3=0.000 R4=0.000 | Dose(pGy): Tot=54.454 R0=165.052 R1=165.457 R2=139.981 R3=0.000 R4=0.000
+[PROGRESS] Event 3550000 | Transmitted: 87 | Edep(keV): Tot=453.505 R0=17.103 R1=159.259 R2=264.873 R3=12.270 R4=0.000 | Dose(pGy): Tot=77.085 R0=72.678 R1=225.582 R2=225.107 R3=7.449 R4=0.000
+[PROGRESS] Event 3560000 | Transmitted: 88 | Edep(keV): Tot=487.739 R0=31.536 R1=138.243 R2=259.164 R3=18.530 R4=40.266 | Dose(pGy): Tot=82.904 R0=134.009 R1=195.813 R2=220.255 R3=11.249 R4=19.012
+[PROGRESS] Event 3570000 | Transmitted: 68 | Edep(keV): Tot=371.790 R0=47.202 R1=120.369 R2=204.220 R3=0.000 R4=0.000 | Dose(pGy): Tot=63.196 R0=200.575 R1=170.496 R2=173.560 R3=0.000 R4=0.000
+[PROGRESS] Event 3580000 | Transmitted: 88 | Edep(keV): Tot=491.441 R0=55.098 R1=197.193 R2=220.334 R3=18.816 R4=0.000 | Dose(pGy): Tot=83.534 R0=234.129 R1=279.314 R2=187.255 R3=11.423 R4=0.000
+[PROGRESS] Event 3590000 | Transmitted: 72 | Edep(keV): Tot=294.257 R0=41.949 R1=83.390 R2=153.039 R3=15.879 R4=0.000 | Dose(pGy): Tot=50.017 R0=178.256 R1=118.118 R2=130.063 R3=9.639 R4=0.000
+[PROGRESS] Event 3600000 | Transmitted: 81 | Edep(keV): Tot=251.032 R0=12.543 R1=105.796 R2=132.693 R3=0.000 R4=0.000 | Dose(pGy): Tot=42.670 R0=53.298 R1=149.855 R2=112.772 R3=0.000 R4=0.000
+[PROGRESS] Event 3610000 | Transmitted: 79 | Edep(keV): Tot=432.897 R0=52.344 R1=138.050 R2=216.697 R3=25.807 R4=0.000 | Dose(pGy): Tot=73.583 R0=222.426 R1=195.540 R2=184.163 R3=15.667 R4=0.000
+[PROGRESS] Event 3620000 | Transmitted: 87 | Edep(keV): Tot=483.096 R0=46.724 R1=143.388 R2=250.881 R3=42.104 R4=0.000 | Dose(pGy): Tot=82.115 R0=198.546 R1=203.101 R2=213.215 R3=25.560 R4=0.000
+[PROGRESS] Event 3630000 | Transmitted: 77 | Edep(keV): Tot=325.499 R0=51.263 R1=99.931 R2=174.305 R3=0.000 R4=0.000 | Dose(pGy): Tot=55.327 R0=217.834 R1=141.547 R2=148.136 R3=0.000 R4=0.000
+[PROGRESS] Event 3640000 | Transmitted: 74 | Edep(keV): Tot=419.359 R0=26.365 R1=134.631 R2=225.294 R3=33.068 R4=0.000 | Dose(pGy): Tot=71.281 R0=112.035 R1=190.698 R2=191.470 R3=20.075 R4=0.000
+[PROGRESS] Event 3650000 | Transmitted: 70 | Edep(keV): Tot=253.598 R0=32.883 R1=34.292 R2=167.272 R3=9.108 R4=10.043 | Dose(pGy): Tot=43.106 R0=139.733 R1=48.573 R2=142.159 R3=5.529 R4=4.742
+[PROGRESS] Event 3660000 | Transmitted: 79 | Edep(keV): Tot=423.066 R0=21.314 R1=192.897 R2=208.855 R3=0.000 R4=0.000 | Dose(pGy): Tot=71.911 R0=90.569 R1=273.228 R2=177.499 R3=0.000 R4=0.000
+[PROGRESS] Event 3670000 | Transmitted: 82 | Edep(keV): Tot=453.077 R0=60.760 R1=105.746 R2=277.412 R3=9.159 R4=0.000 | Dose(pGy): Tot=77.013 R0=258.189 R1=149.784 R2=235.763 R3=5.560 R4=0.000
+[PROGRESS] Event 3680000 | Transmitted: 79 | Edep(keV): Tot=454.934 R0=31.763 R1=110.330 R2=306.806 R3=0.000 R4=6.034 | Dose(pGy): Tot=77.328 R0=134.970 R1=156.277 R2=260.745 R3=0.000 R4=2.849
+[PROGRESS] Event 3690000 | Transmitted: 84 | Edep(keV): Tot=317.478 R0=48.731 R1=96.296 R2=162.613 R3=9.838 R4=0.000 | Dose(pGy): Tot=53.964 R0=207.075 R1=136.397 R2=138.199 R3=5.973 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #12 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=17.671 keV | creator_process: phot | vertex_pos(mm)=(1.488, -0.187, 15.554) | vertex_Ekin=25.281 keV | vertex_volume: MiniX-Assembly-Collimation_3.0mm-CollimatorSubAluminium-Aluminium | vertex_material: Aluminium
+[PROGRESS] Event 3700000 | Transmitted: 78 | Edep(keV): Tot=320.840 R0=10.105 R1=78.317 R2=232.419 R3=0.000 R4=0.000 | Dose(pGy): Tot=54.536 R0=42.939 R1=110.931 R2=197.525 R3=0.000 R4=0.000
+[PROGRESS] Event 3710000 | Transmitted: 77 | Edep(keV): Tot=313.562 R0=48.936 R1=107.627 R2=135.307 R3=21.692 R4=0.000 | Dose(pGy): Tot=53.298 R0=207.948 R1=152.448 R2=114.993 R3=13.168 R4=0.000
+[PROGRESS] Event 3720000 | Transmitted: 83 | Edep(keV): Tot=471.944 R0=37.897 R1=102.887 R2=298.465 R3=24.798 R4=7.897 | Dose(pGy): Tot=80.220 R0=161.038 R1=145.733 R2=253.656 R3=15.054 R4=3.729
+[PROGRESS] Event 3730000 | Transmitted: 81 | Edep(keV): Tot=353.926 R0=22.234 R1=139.492 R2=183.327 R3=8.873 R4=0.000 | Dose(pGy): Tot=60.159 R0=94.478 R1=197.583 R2=155.804 R3=5.387 R4=0.000
+[PROGRESS] Event 3740000 | Transmitted: 74 | Edep(keV): Tot=401.432 R0=10.400 R1=143.267 R2=247.765 R3=0.000 R4=0.000 | Dose(pGy): Tot=68.234 R0=44.193 R1=202.930 R2=210.568 R3=0.000 R4=0.000
+[PROGRESS] Event 3750000 | Transmitted: 82 | Edep(keV): Tot=393.838 R0=33.477 R1=132.798 R2=172.490 R3=55.072 R4=0.000 | Dose(pGy): Tot=66.943 R0=142.254 R1=188.102 R2=146.594 R3=33.433 R4=0.000
+[PROGRESS] Event 3760000 | Transmitted: 69 | Edep(keV): Tot=304.881 R0=83.415 R1=109.479 R2=111.987 R3=0.000 R4=0.000 | Dose(pGy): Tot=51.823 R0=354.458 R1=155.071 R2=95.174 R3=0.000 R4=0.000
+[PROGRESS] Event 3770000 | Transmitted: 87 | Edep(keV): Tot=470.424 R0=84.907 R1=158.540 R2=226.977 R3=0.000 R4=0.000 | Dose(pGy): Tot=79.961 R0=360.799 R1=224.563 R2=192.900 R3=0.000 R4=0.000
+[PROGRESS] Event 3780000 | Transmitted: 95 | Edep(keV): Tot=473.349 R0=38.367 R1=217.731 R2=217.251 R3=0.000 R4=0.000 | Dose(pGy): Tot=80.458 R0=163.033 R1=308.405 R2=184.634 R3=0.000 R4=0.000
+[PROGRESS] Event 3790000 | Transmitted: 64 | Edep(keV): Tot=286.490 R0=50.791 R1=142.180 R2=93.520 R3=0.000 R4=0.000 | Dose(pGy): Tot=48.697 R0=215.828 R1=201.390 R2=79.479 R3=0.000 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #13 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=2.337 keV | creator_process: phot | vertex_pos(mm)=(0.524, -1.506, 17.925) | vertex_Ekin=3.349 keV | vertex_volume: logicEnveloppeGDML | vertex_material: MyAir
+[PROGRESS] Event 3800000 | Transmitted: 82 | Edep(keV): Tot=366.603 R0=28.354 R1=136.329 R2=161.122 R3=40.797 R4=0.000 | Dose(pGy): Tot=62.314 R0=120.488 R1=193.102 R2=136.933 R3=24.767 R4=0.000
+[PROGRESS] Event 3810000 | Transmitted: 91 | Edep(keV): Tot=465.660 R0=43.282 R1=75.747 R2=337.858 R3=8.773 R4=0.000 | Dose(pGy): Tot=79.151 R0=183.920 R1=107.291 R2=287.134 R3=5.326 R4=0.000
+[PROGRESS] Event 3820000 | Transmitted: 71 | Edep(keV): Tot=293.657 R0=43.422 R1=128.757 R2=121.479 R3=0.000 R4=0.000 | Dose(pGy): Tot=49.915 R0=184.514 R1=182.377 R2=103.241 R3=0.000 R4=0.000
+[PROGRESS] Event 3830000 | Transmitted: 73 | Edep(keV): Tot=319.666 R0=31.064 R1=128.943 R2=138.628 R3=21.032 R4=0.000 | Dose(pGy): Tot=54.336 R0=132.000 R1=182.640 R2=117.815 R3=12.768 R4=0.000
+[PROGRESS] Event 3840000 | Transmitted: 85 | Edep(keV): Tot=417.731 R0=76.227 R1=138.806 R2=170.064 R3=14.915 R4=17.719 | Dose(pGy): Tot=71.005 R0=323.914 R1=196.611 R2=144.532 R3=9.054 R4=8.366
+[PROGRESS] Event 3850000 | Transmitted: 85 | Edep(keV): Tot=349.125 R0=15.484 R1=122.836 R2=210.805 R3=0.000 R4=0.000 | Dose(pGy): Tot=59.343 R0=65.797 R1=173.991 R2=179.156 R3=0.000 R4=0.000
+[PROGRESS] Event 3860000 | Transmitted: 67 | Edep(keV): Tot=234.353 R0=29.298 R1=84.622 R2=73.967 R3=46.466 R4=0.000 | Dose(pGy): Tot=39.835 R0=124.496 R1=119.862 R2=62.862 R3=28.208 R4=0.000
+[PROGRESS] Event 3870000 | Transmitted: 71 | Edep(keV): Tot=308.292 R0=17.923 R1=82.895 R2=184.133 R3=23.340 R4=0.000 | Dose(pGy): Tot=52.403 R0=76.162 R1=117.417 R2=156.488 R3=14.169 R4=0.000
+[PROGRESS] Event 3880000 | Transmitted: 69 | Edep(keV): Tot=258.688 R0=45.021 R1=63.988 R2=149.679 R3=0.000 R4=0.000 | Dose(pGy): Tot=43.971 R0=191.310 R1=90.635 R2=127.208 R3=0.000 R4=0.000
+[PROGRESS] Event 3890000 | Transmitted: 79 | Edep(keV): Tot=318.174 R0=24.404 R1=126.859 R2=164.365 R3=2.547 R4=0.000 | Dose(pGy): Tot=54.082 R0=103.700 R1=179.688 R2=139.689 R3=1.546 R4=0.000
+[PROGRESS] Event 3900000 | Transmitted: 89 | Edep(keV): Tot=466.705 R0=77.587 R1=166.497 R2=222.621 R3=0.000 R4=0.000 | Dose(pGy): Tot=79.329 R0=329.695 R1=235.834 R2=189.198 R3=0.000 R4=0.000
+[PROGRESS] Event 3910000 | Transmitted: 85 | Edep(keV): Tot=355.604 R0=15.972 R1=154.530 R2=178.052 R3=7.050 R4=0.000 | Dose(pGy): Tot=60.445 R0=67.868 R1=218.883 R2=151.321 R3=4.280 R4=0.000
+[PROGRESS] Event 3920000 | Transmitted: 63 | Edep(keV): Tot=317.867 R0=31.630 R1=106.455 R2=157.506 R3=22.276 R4=0.000 | Dose(pGy): Tot=54.030 R0=134.407 R1=150.788 R2=133.859 R3=13.523 R4=0.000
+[PROGRESS] Event 3930000 | Transmitted: 76 | Edep(keV): Tot=393.916 R0=16.453 R1=142.988 R2=234.475 R3=0.000 R4=0.000 | Dose(pGy): Tot=66.957 R0=69.916 R1=202.535 R2=199.272 R3=0.000 R4=0.000
+[PROGRESS] Event 3940000 | Transmitted: 84 | Edep(keV): Tot=444.083 R0=39.938 R1=180.176 R2=223.969 R3=0.000 R4=0.000 | Dose(pGy): Tot=75.484 R0=169.709 R1=255.210 R2=190.344 R3=0.000 R4=0.000
+[PROGRESS] Event 3950000 | Transmitted: 73 | Edep(keV): Tot=320.371 R0=43.296 R1=104.404 R2=172.672 R3=0.000 R4=0.000 | Dose(pGy): Tot=54.456 R0=183.978 R1=147.882 R2=146.748 R3=0.000 R4=0.000
+[PROGRESS] Event 3960000 | Transmitted: 89 | Edep(keV): Tot=389.822 R0=43.593 R1=111.812 R2=206.634 R3=27.784 R4=0.000 | Dose(pGy): Tot=66.261 R0=185.241 R1=158.375 R2=175.611 R3=16.867 R4=0.000
+[PROGRESS] Event 3970000 | Transmitted: 82 | Edep(keV): Tot=370.379 R0=33.189 R1=58.554 R2=278.636 R3=0.000 R4=0.000 | Dose(pGy): Tot=62.956 R0=141.030 R1=82.939 R2=236.803 R3=0.000 R4=0.000
+[PROGRESS] Event 3980000 | Transmitted: 93 | Edep(keV): Tot=439.820 R0=42.235 R1=217.771 R2=179.814 R3=0.000 R4=0.000 | Dose(pGy): Tot=74.759 R0=179.471 R1=308.461 R2=152.818 R3=0.000 R4=0.000
+[PROGRESS] Event 3990000 | Transmitted: 77 | Edep(keV): Tot=413.017 R0=23.363 R1=123.815 R2=265.839 R3=0.000 R4=0.000 | Dose(pGy): Tot=70.203 R0=99.279 R1=175.377 R2=225.928 R3=0.000 R4=0.000
+[PROGRESS] Event 4000000 | Transmitted: 98 | Edep(keV): Tot=540.882 R0=30.446 R1=263.093 R2=229.854 R3=17.490 R4=0.000 | Dose(pGy): Tot=91.938 R0=129.374 R1=372.656 R2=195.346 R3=10.618 R4=0.000
+[PROGRESS] Event 4010000 | Transmitted: 88 | Edep(keV): Tot=383.823 R0=69.103 R1=137.493 R2=177.227 R3=0.000 R4=0.000 | Dose(pGy): Tot=65.241 R0=293.644 R1=194.751 R2=150.619 R3=0.000 R4=0.000
+[PROGRESS] Event 4020000 | Transmitted: 78 | Edep(keV): Tot=369.403 R0=22.202 R1=89.654 R2=257.547 R3=0.000 R4=0.000 | Dose(pGy): Tot=62.790 R0=94.343 R1=126.990 R2=218.881 R3=0.000 R4=0.000
+[PROGRESS] Event 4030000 | Transmitted: 70 | Edep(keV): Tot=235.544 R0=29.201 R1=50.495 R2=155.848 R3=0.000 R4=0.000 | Dose(pGy): Tot=40.037 R0=124.083 R1=71.524 R2=132.450 R3=0.000 R4=0.000
+[PROGRESS] Event 4040000 | Transmitted: 79 | Edep(keV): Tot=345.835 R0=28.069 R1=163.875 R2=131.905 R3=17.564 R4=4.422 | Dose(pGy): Tot=58.784 R0=119.275 R1=232.121 R2=112.102 R3=10.663 R4=2.088
+[PROGRESS] Event 4050000 | Transmitted: 79 | Edep(keV): Tot=390.775 R0=43.779 R1=77.731 R2=252.733 R3=0.000 R4=16.532 | Dose(pGy): Tot=66.423 R0=186.031 R1=110.102 R2=214.790 R3=0.000 R4=7.806
+[PROGRESS] Event 4060000 | Transmitted: 84 | Edep(keV): Tot=374.021 R0=26.697 R1=192.286 R2=155.039 R3=0.000 R4=0.000 | Dose(pGy): Tot=63.575 R0=113.443 R1=272.363 R2=131.762 R3=0.000 R4=0.000
+[PROGRESS] Event 4070000 | Transmitted: 88 | Edep(keV): Tot=403.790 R0=24.527 R1=106.059 R2=273.204 R3=0.000 R4=0.000 | Dose(pGy): Tot=68.635 R0=104.225 R1=150.227 R2=232.187 R3=0.000 R4=0.000
+[PROGRESS] Event 4080000 | Transmitted: 88 | Edep(keV): Tot=279.359 R0=25.728 R1=84.107 R2=169.523 R3=0.000 R4=0.000 | Dose(pGy): Tot=47.485 R0=109.326 R1=119.134 R2=144.072 R3=0.000 R4=0.000
+[PROGRESS] Event 4090000 | Transmitted: 83 | Edep(keV): Tot=394.293 R0=26.078 R1=171.742 R2=196.473 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.021 R0=110.814 R1=243.264 R2=166.976 R3=0.000 R4=0.000
+[PROGRESS] Event 4100000 | Transmitted: 62 | Edep(keV): Tot=226.254 R0=22.750 R1=67.410 R2=136.094 R3=0.000 R4=0.000 | Dose(pGy): Tot=38.458 R0=96.674 R1=95.483 R2=115.661 R3=0.000 R4=0.000
+[PROGRESS] Event 4110000 | Transmitted: 68 | Edep(keV): Tot=312.943 R0=25.824 R1=96.020 R2=181.773 R3=9.325 R4=0.000 | Dose(pGy): Tot=53.193 R0=109.737 R1=136.007 R2=154.483 R3=5.661 R4=0.000
+[PROGRESS] Event 4120000 | Transmitted: 78 | Edep(keV): Tot=408.043 R0=79.207 R1=146.728 R2=173.662 R3=8.447 R4=0.000 | Dose(pGy): Tot=69.358 R0=336.578 R1=207.832 R2=147.589 R3=5.128 R4=0.000
+[PROGRESS] Event 4130000 | Transmitted: 80 | Edep(keV): Tot=347.593 R0=61.099 R1=151.370 R2=135.124 R3=0.000 R4=0.000 | Dose(pGy): Tot=59.083 R0=259.630 R1=214.407 R2=114.838 R3=0.000 R4=0.000
+[PROGRESS] Event 4140000 | Transmitted: 69 | Edep(keV): Tot=276.650 R0=26.136 R1=58.636 R2=191.877 R3=0.000 R4=0.000 | Dose(pGy): Tot=47.024 R0=111.063 R1=83.055 R2=163.070 R3=0.000 R4=0.000
+[PROGRESS] Event 4150000 | Transmitted: 71 | Edep(keV): Tot=358.104 R0=33.683 R1=115.161 R2=182.521 R3=26.739 R4=0.000 | Dose(pGy): Tot=60.870 R0=143.132 R1=163.119 R2=155.118 R3=16.233 R4=0.000
+[PROGRESS] Event 4160000 | Transmitted: 85 | Edep(keV): Tot=423.198 R0=34.217 R1=136.760 R2=252.221 R3=0.000 R4=0.000 | Dose(pGy): Tot=71.934 R0=145.399 R1=193.713 R2=214.355 R3=0.000 R4=0.000
+[PROGRESS] Event 4170000 | Transmitted: 59 | Edep(keV): Tot=304.073 R0=0.144 R1=116.381 R2=153.799 R3=33.748 R4=0.000 | Dose(pGy): Tot=51.685 R0=0.614 R1=164.848 R2=130.709 R3=20.487 R4=0.000
+[PROGRESS] Event 4180000 | Transmitted: 77 | Edep(keV): Tot=359.691 R0=32.539 R1=89.374 R2=237.778 R3=0.000 R4=0.000 | Dose(pGy): Tot=61.139 R0=138.270 R1=126.593 R2=202.080 R3=0.000 R4=0.000
+[PROGRESS] Event 4190000 | Transmitted: 74 | Edep(keV): Tot=360.463 R0=21.986 R1=162.066 R2=176.411 R3=0.000 R4=0.000 | Dose(pGy): Tot=61.270 R0=93.424 R1=229.557 R2=149.926 R3=0.000 R4=0.000
+[PROGRESS] Event 4200000 | Transmitted: 70 | Edep(keV): Tot=352.657 R0=43.827 R1=94.388 R2=204.343 R3=10.099 R4=0.000 | Dose(pGy): Tot=59.944 R0=186.235 R1=133.695 R2=173.665 R3=6.131 R4=0.000
+[PROGRESS] Event 4210000 | Transmitted: 58 | Edep(keV): Tot=218.626 R0=20.206 R1=70.035 R2=128.384 R3=0.000 R4=0.000 | Dose(pGy): Tot=37.161 R0=85.863 R1=99.201 R2=109.109 R3=0.000 R4=0.000
+[PROGRESS] Event 4220000 | Transmitted: 80 | Edep(keV): Tot=382.402 R0=87.159 R1=81.065 R2=214.178 R3=0.000 R4=0.000 | Dose(pGy): Tot=65.000 R0=370.367 R1=114.825 R2=182.023 R3=0.000 R4=0.000
+[PROGRESS] Event 4230000 | Transmitted: 67 | Edep(keV): Tot=312.067 R0=30.751 R1=116.195 R2=165.121 R3=0.000 R4=0.000 | Dose(pGy): Tot=53.044 R0=130.669 R1=164.584 R2=140.331 R3=0.000 R4=0.000
+[PROGRESS] Event 4240000 | Transmitted: 81 | Edep(keV): Tot=357.699 R0=44.387 R1=115.625 R2=190.646 R3=7.041 R4=0.000 | Dose(pGy): Tot=60.801 R0=188.615 R1=163.777 R2=162.024 R3=4.275 R4=0.000
+[PROGRESS] Event 4250000 | Transmitted: 76 | Edep(keV): Tot=317.613 R0=34.738 R1=127.070 R2=155.805 R3=0.000 R4=0.000 | Dose(pGy): Tot=53.987 R0=147.614 R1=179.987 R2=132.414 R3=0.000 R4=0.000
+[PROGRESS] Event 4260000 | Transmitted: 71 | Edep(keV): Tot=307.369 R0=46.256 R1=119.282 R2=141.831 R3=0.000 R4=0.000 | Dose(pGy): Tot=52.246 R0=196.556 R1=168.956 R2=120.538 R3=0.000 R4=0.000
+[PROGRESS] Event 4270000 | Transmitted: 82 | Edep(keV): Tot=389.218 R0=43.178 R1=121.985 R2=196.750 R3=27.305 R4=0.000 | Dose(pGy): Tot=66.158 R0=183.479 R1=172.785 R2=167.211 R3=16.576 R4=0.000
+[PROGRESS] Event 4280000 | Transmitted: 86 | Edep(keV): Tot=379.783 R0=12.508 R1=80.260 R2=264.441 R3=22.574 R4=0.000 | Dose(pGy): Tot=64.554 R0=53.149 R1=113.684 R2=224.740 R3=13.704 R4=0.000
+[PROGRESS] Event 4290000 | Transmitted: 62 | Edep(keV): Tot=239.577 R0=35.110 R1=50.777 R2=144.311 R3=9.379 R4=0.000 | Dose(pGy): Tot=40.723 R0=149.195 R1=71.923 R2=122.645 R3=5.694 R4=0.000
+[PROGRESS] Event 4300000 | Transmitted: 67 | Edep(keV): Tot=392.427 R0=31.562 R1=150.877 R2=209.989 R3=0.000 R4=0.000 | Dose(pGy): Tot=66.704 R0=134.116 R1=213.709 R2=178.463 R3=0.000 R4=0.000
+[PROGRESS] Event 4310000 | Transmitted: 74 | Edep(keV): Tot=360.724 R0=51.866 R1=113.917 R2=167.478 R3=27.463 R4=0.000 | Dose(pGy): Tot=61.315 R0=220.395 R1=161.357 R2=142.334 R3=16.672 R4=0.000
+[PROGRESS] Event 4320000 | Transmitted: 75 | Edep(keV): Tot=380.027 R0=11.140 R1=132.648 R2=227.492 R3=8.747 R4=0.000 | Dose(pGy): Tot=64.596 R0=47.338 R1=187.888 R2=193.338 R3=5.310 R4=0.000
+[PROGRESS] Event 4330000 | Transmitted: 70 | Edep(keV): Tot=353.893 R0=7.442 R1=133.392 R2=180.890 R3=32.169 R4=0.000 | Dose(pGy): Tot=60.154 R0=31.622 R1=188.942 R2=153.733 R3=19.529 R4=0.000
+[PROGRESS] Event 4340000 | Transmitted: 90 | Edep(keV): Tot=460.158 R0=49.083 R1=132.241 R2=278.833 R3=0.000 R4=0.000 | Dose(pGy): Tot=78.216 R0=208.572 R1=187.313 R2=236.971 R3=0.000 R4=0.000
+[PROGRESS] Event 4350000 | Transmitted: 83 | Edep(keV): Tot=418.979 R0=14.739 R1=170.703 R2=233.538 R3=0.000 R4=0.000 | Dose(pGy): Tot=71.217 R0=62.629 R1=241.792 R2=198.476 R3=0.000 R4=0.000
+[ScorePlane1][SECONDARY_ORIGIN] #14 | particle: e- (pdg=11) | trackID=2 parentID=1 | E_at_plane=10.031 keV | creator_process: phot | vertex_pos(mm)=(-1.403, 0.543, 16.053) | vertex_Ekin=29.600 keV | vertex_volume: MiniX-Assembly-Collimation_3.0mm-CollimatorSubAluminium-Aluminium | vertex_material: Aluminium
+[PROGRESS] Event 4360000 | Transmitted: 64 | Edep(keV): Tot=303.465 R0=53.750 R1=67.379 R2=182.336 R3=0.000 R4=0.000 | Dose(pGy): Tot=51.582 R0=228.403 R1=95.439 R2=154.961 R3=0.000 R4=0.000
+[PROGRESS] Event 4370000 | Transmitted: 94 | Edep(keV): Tot=413.702 R0=27.942 R1=172.477 R2=190.823 R3=22.460 R4=0.000 | Dose(pGy): Tot=70.320 R0=118.736 R1=244.305 R2=162.174 R3=13.635 R4=0.000
+[PROGRESS] Event 4380000 | Transmitted: 74 | Edep(keV): Tot=379.935 R0=86.952 R1=116.088 R2=164.378 R3=12.517 R4=0.000 | Dose(pGy): Tot=64.580 R0=369.489 R1=164.432 R2=139.699 R3=7.599 R4=0.000
+[PROGRESS] Event 4390000 | Transmitted: 93 | Edep(keV): Tot=399.901 R0=20.803 R1=124.226 R2=241.887 R3=12.986 R4=0.000 | Dose(pGy): Tot=67.974 R0=88.398 R1=175.959 R2=205.572 R3=7.884 R4=0.000
+[PROGRESS] Event 4400000 | Transmitted: 82 | Edep(keV): Tot=442.107 R0=26.199 R1=111.434 R2=269.641 R3=34.833 R4=0.000 | Dose(pGy): Tot=75.148 R0=111.327 R1=157.840 R2=229.159 R3=21.146 R4=0.000
+[PROGRESS] Event 4410000 | Transmitted: 75 | Edep(keV): Tot=358.476 R0=29.281 R1=62.008 R2=265.275 R3=1.912 R4=0.000 | Dose(pGy): Tot=60.933 R0=124.426 R1=87.831 R2=225.448 R3=1.161 R4=0.000
+[PROGRESS] Event 4420000 | Transmitted: 88 | Edep(keV): Tot=371.685 R0=38.612 R1=109.396 R2=215.511 R3=8.166 R4=0.000 | Dose(pGy): Tot=63.178 R0=164.077 R1=154.954 R2=183.155 R3=4.957 R4=0.000
+[PROGRESS] Event 4430000 | Transmitted: 93 | Edep(keV): Tot=379.484 R0=69.103 R1=154.432 R2=155.949 R3=0.000 R4=0.000 | Dose(pGy): Tot=64.504 R0=293.641 R1=218.744 R2=132.536 R3=0.000 R4=0.000
+[PROGRESS] Event 4440000 | Transmitted: 83 | Edep(keV): Tot=329.754 R0=28.742 R1=113.439 R2=187.573 R3=0.000 R4=0.000 | Dose(pGy): Tot=56.051 R0=122.135 R1=160.680 R2=159.412 R3=0.000 R4=0.000
+[PROGRESS] Event 4450000 | Transmitted: 72 | Edep(keV): Tot=345.932 R0=52.725 R1=61.045 R2=221.545 R3=10.617 R4=0.000 | Dose(pGy): Tot=58.801 R0=224.046 R1=86.467 R2=188.284 R3=6.445 R4=0.000
+[PROGRESS] Event 4460000 | Transmitted: 86 | Edep(keV): Tot=397.746 R0=39.179 R1=116.369 R2=228.347 R3=13.851 R4=0.000 | Dose(pGy): Tot=67.608 R0=166.486 R1=164.830 R2=194.064 R3=8.409 R4=0.000
+[PROGRESS] Event 4470000 | Transmitted: 71 | Edep(keV): Tot=417.726 R0=35.285 R1=100.647 R2=281.794 R3=0.000 R4=0.000 | Dose(pGy): Tot=71.004 R0=149.939 R1=142.561 R2=239.488 R3=0.000 R4=0.000
+[PROGRESS] Event 4480000 | Transmitted: 87 | Edep(keV): Tot=520.273 R0=76.964 R1=144.867 R2=289.918 R3=8.523 R4=0.000 | Dose(pGy): Tot=88.434 R0=327.047 R1=205.196 R2=246.392 R3=5.174 R4=0.000
+[PROGRESS] Event 4490000 | Transmitted: 78 | Edep(keV): Tot=367.328 R0=62.315 R1=119.908 R2=171.601 R3=13.504 R4=0.000 | Dose(pGy): Tot=62.437 R0=264.796 R1=169.843 R2=145.838 R3=8.198 R4=0.000
+[PROGRESS] Event 4500000 | Transmitted: 76 | Edep(keV): Tot=346.062 R0=28.615 R1=103.198 R2=209.798 R3=4.450 R4=0.000 | Dose(pGy): Tot=58.823 R0=121.596 R1=146.175 R2=178.301 R3=2.702 R4=0.000
+[PROGRESS] Event 4510000 | Transmitted: 70 | Edep(keV): Tot=351.947 R0=64.949 R1=129.093 R2=145.050 R3=12.855 R4=0.000 | Dose(pGy): Tot=59.823 R0=275.989 R1=182.854 R2=123.273 R3=7.804 R4=0.000
+[PROGRESS] Event 4520000 | Transmitted: 86 | Edep(keV): Tot=376.850 R0=17.123 R1=148.630 R2=187.585 R3=23.512 R4=0.000 | Dose(pGy): Tot=64.056 R0=72.762 R1=210.526 R2=159.423 R3=14.273 R4=0.000
+[PROGRESS] Event 4530000 | Transmitted: 89 | Edep(keV): Tot=464.059 R0=95.138 R1=137.717 R2=204.591 R3=26.613 R4=0.000 | Dose(pGy): Tot=78.879 R0=404.273 R1=195.069 R2=173.876 R3=16.156 R4=0.000
+[PROGRESS] Event 4540000 | Transmitted: 78 | Edep(keV): Tot=427.710 R0=41.364 R1=144.252 R2=230.425 R3=11.669 R4=0.000 | Dose(pGy): Tot=72.701 R0=175.771 R1=204.324 R2=195.831 R3=7.084 R4=0.000
+[PROGRESS] Event 4550000 | Transmitted: 72 | Edep(keV): Tot=312.479 R0=34.932 R1=104.107 R2=163.756 R3=9.683 R4=0.000 | Dose(pGy): Tot=53.114 R0=148.440 R1=147.462 R2=139.171 R3=5.878 R4=0.000
+[PROGRESS] Event 4560000 | Transmitted: 82 | Edep(keV): Tot=430.832 R0=34.553 R1=139.179 R2=257.100 R3=0.000 R4=0.000 | Dose(pGy): Tot=73.232 R0=146.827 R1=197.140 R2=218.501 R3=0.000 R4=0.000
+[PROGRESS] Event 4570000 | Transmitted: 75 | Edep(keV): Tot=345.217 R0=8.538 R1=144.523 R2=171.198 R3=0.000 R4=20.958 | Dose(pGy): Tot=58.679 R0=36.279 R1=204.709 R2=145.496 R3=0.000 R4=9.895
+[PROGRESS] Event 4580000 | Transmitted: 74 | Edep(keV): Tot=392.587 R0=25.630 R1=113.567 R2=253.390 R3=0.000 R4=0.000 | Dose(pGy): Tot=66.731 R0=108.912 R1=160.861 R2=215.348 R3=0.000 R4=0.000
+[PROGRESS] Event 4590000 | Transmitted: 85 | Edep(keV): Tot=453.969 R0=86.561 R1=149.724 R2=216.529 R3=1.156 R4=0.000 | Dose(pGy): Tot=77.164 R0=367.825 R1=212.076 R2=184.021 R3=0.702 R4=0.000
+[PROGRESS] Event 4600000 | Transmitted: 84 | Edep(keV): Tot=403.620 R0=75.267 R1=79.136 R2=225.765 R3=13.521 R4=9.931 | Dose(pGy): Tot=68.606 R0=319.833 R1=112.092 R2=191.871 R3=8.208 R4=4.689
+[PROGRESS] Event 4610000 | Transmitted: 68 | Edep(keV): Tot=270.183 R0=15.218 R1=48.494 R2=206.471 R3=0.000 R4=0.000 | Dose(pGy): Tot=45.925 R0=64.666 R1=68.688 R2=175.473 R3=0.000 R4=0.000
+[PROGRESS] Event 4620000 | Transmitted: 86 | Edep(keV): Tot=455.067 R0=56.121 R1=139.247 R2=259.700 R3=0.000 R4=0.000 | Dose(pGy): Tot=77.351 R0=238.479 R1=197.235 R2=220.710 R3=0.000 R4=0.000
+[PROGRESS] Event 4630000 | Transmitted: 91 | Edep(keV): Tot=410.633 R0=43.376 R1=215.415 R2=151.843 R3=0.000 R4=0.000 | Dose(pGy): Tot=69.798 R0=184.319 R1=305.123 R2=129.046 R3=0.000 R4=0.000
+[PROGRESS] Event 4640000 | Transmitted: 81 | Edep(keV): Tot=470.737 R0=34.627 R1=134.401 R2=262.738 R3=24.696 R4=14.276 | Dose(pGy): Tot=80.014 R0=147.140 R1=190.371 R2=223.292 R3=14.992 R4=6.740
+[PROGRESS] Event 4650000 | Transmitted: 94 | Edep(keV): Tot=470.270 R0=70.784 R1=96.889 R2=278.997 R3=23.600 R4=0.000 | Dose(pGy): Tot=79.935 R0=300.785 R1=137.238 R2=237.111 R3=14.327 R4=0.000
+[PROGRESS] Event 4660000 | Transmitted: 87 | Edep(keV): Tot=345.761 R0=56.307 R1=161.553 R2=127.901 R3=0.000 R4=0.000 | Dose(pGy): Tot=58.771 R0=239.267 R1=228.831 R2=108.698 R3=0.000 R4=0.000
+[PROGRESS] Event 4670000 | Transmitted: 88 | Edep(keV): Tot=420.732 R0=56.517 R1=166.852 R2=197.362 R3=0.000 R4=0.000 | Dose(pGy): Tot=71.515 R0=240.161 R1=236.337 R2=167.732 R3=0.000 R4=0.000
+[PROGRESS] Event 4680000 | Transmitted: 79 | Edep(keV): Tot=392.312 R0=30.253 R1=102.231 R2=221.431 R3=38.397 R4=0.000 | Dose(pGy): Tot=66.684 R0=128.555 R1=144.804 R2=188.187 R3=23.310 R4=0.000
+[PROGRESS] Event 4690000 | Transmitted: 90 | Edep(keV): Tot=389.470 R0=31.943 R1=121.507 R2=217.329 R3=18.691 R4=0.000 | Dose(pGy): Tot=66.201 R0=135.737 R1=172.108 R2=184.701 R3=11.347 R4=0.000
+[PROGRESS] Event 4700000 | Transmitted: 82 | Edep(keV): Tot=400.865 R0=45.729 R1=182.257 R2=159.951 R3=12.927 R4=0.000 | Dose(pGy): Tot=68.138 R0=194.320 R1=258.157 R2=135.937 R3=7.848 R4=0.000
+[PROGRESS] Event 4710000 | Transmitted: 87 | Edep(keV): Tot=397.038 R0=59.461 R1=123.252 R2=214.324 R3=0.000 R4=0.000 | Dose(pGy): Tot=67.487 R0=252.670 R1=174.580 R2=182.147 R3=0.000 R4=0.000
+[PROGRESS] Event 4720000 | Transmitted: 70 | Edep(keV): Tot=395.772 R0=8.478 R1=134.729 R2=243.006 R3=9.558 R4=0.000 | Dose(pGy): Tot=67.272 R0=36.028 R1=190.837 R2=206.523 R3=5.803 R4=0.000
+[PROGRESS] Event 4730000 | Transmitted: 85 | Edep(keV): Tot=363.312 R0=17.263 R1=103.212 R2=221.798 R3=21.039 R4=0.000 | Dose(pGy): Tot=61.755 R0=73.355 R1=146.195 R2=188.498 R3=12.772 R4=0.000
+[PROGRESS] Event 4740000 | Transmitted: 97 | Edep(keV): Tot=521.069 R0=30.430 R1=133.561 R2=334.764 R3=22.315 R4=0.000 | Dose(pGy): Tot=88.570 R0=129.307 R1=189.182 R2=284.505 R3=13.547 R4=0.000
+[PROGRESS] Event 4750000 | Transmitted: 75 | Edep(keV): Tot=379.616 R0=25.394 R1=160.730 R2=182.577 R3=10.915 R4=0.000 | Dose(pGy): Tot=64.526 R0=107.907 R1=227.665 R2=155.166 R3=6.626 R4=0.000
+[PROGRESS] Event 4760000 | Transmitted: 74 | Edep(keV): Tot=318.697 R0=35.039 R1=94.735 R2=176.702 R3=12.221 R4=0.000 | Dose(pGy): Tot=54.171 R0=148.892 R1=134.187 R2=150.173 R3=7.419 R4=0.000
+[PROGRESS] Event 4770000 | Transmitted: 67 | Edep(keV): Tot=341.160 R0=32.328 R1=107.512 R2=189.332 R3=11.989 R4=0.000 | Dose(pGy): Tot=57.989 R0=137.372 R1=152.285 R2=160.907 R3=7.278 R4=0.000
+[PROGRESS] Event 4780000 | Transmitted: 65 | Edep(keV): Tot=337.779 R0=36.468 R1=84.878 R2=202.133 R3=14.300 R4=0.000 | Dose(pGy): Tot=57.415 R0=154.965 R1=120.225 R2=171.786 R3=8.681 R4=0.000
+[PROGRESS] Event 4790000 | Transmitted: 78 | Edep(keV): Tot=380.494 R0=13.645 R1=191.722 R2=175.128 R3=0.000 R4=0.000 | Dose(pGy): Tot=64.675 R0=57.981 R1=271.563 R2=148.836 R3=0.000 R4=0.000
+[PROGRESS] Event 4800000 | Transmitted: 88 | Edep(keV): Tot=411.950 R0=31.964 R1=57.049 R2=280.837 R3=42.100 R4=0.000 | Dose(pGy): Tot=70.022 R0=135.824 R1=80.807 R2=238.674 R3=25.558 R4=0.000
+[PROGRESS] Event 4810000 | Transmitted: 98 | Edep(keV): Tot=463.449 R0=86.534 R1=187.626 R2=181.077 R3=8.213 R4=0.000 | Dose(pGy): Tot=78.776 R0=367.710 R1=265.762 R2=153.892 R3=4.986 R4=0.000
+[PROGRESS] Event 4820000 | Transmitted: 75 | Edep(keV): Tot=347.197 R0=29.823 R1=145.108 R2=151.781 R3=20.485 R4=0.000 | Dose(pGy): Tot=59.015 R0=126.728 R1=205.537 R2=128.994 R3=12.436 R4=0.000
+[PROGRESS] Event 4830000 | Transmitted: 73 | Edep(keV): Tot=306.141 R0=22.936 R1=83.172 R2=180.928 R3=19.105 R4=0.000 | Dose(pGy): Tot=52.037 R0=97.464 R1=117.808 R2=153.765 R3=11.598 R4=0.000
+[PROGRESS] Event 4840000 | Transmitted: 77 | Edep(keV): Tot=425.805 R0=74.727 R1=114.675 R2=236.403 R3=0.000 R4=0.000 | Dose(pGy): Tot=72.377 R0=317.539 R1=162.431 R2=200.911 R3=0.000 R4=0.000
+[PROGRESS] Event 4850000 | Transmitted: 82 | Edep(keV): Tot=376.562 R0=12.384 R1=164.785 R2=199.393 R3=0.000 R4=0.000 | Dose(pGy): Tot=64.007 R0=52.624 R1=233.409 R2=169.457 R3=0.000 R4=0.000
+[PROGRESS] Event 4860000 | Transmitted: 91 | Edep(keV): Tot=419.538 R0=7.659 R1=199.051 R2=212.828 R3=0.000 R4=0.000 | Dose(pGy): Tot=71.312 R0=32.548 R1=281.944 R2=180.876 R3=0.000 R4=0.000
+[PROGRESS] Event 4870000 | Transmitted: 73 | Edep(keV): Tot=251.487 R0=27.635 R1=104.779 R2=119.074 R3=0.000 R4=0.000 | Dose(pGy): Tot=42.747 R0=117.431 R1=148.413 R2=101.197 R3=0.000 R4=0.000
+[PROGRESS] Event 4880000 | Transmitted: 76 | Edep(keV): Tot=251.120 R0=23.107 R1=52.373 R2=167.059 R3=8.581 R4=0.000 | Dose(pGy): Tot=42.685 R0=98.191 R1=74.183 R2=141.978 R3=5.209 R4=0.000
+[PROGRESS] Event 4890000 | Transmitted: 82 | Edep(keV): Tot=429.300 R0=46.599 R1=130.968 R2=239.290 R3=12.443 R4=0.000 | Dose(pGy): Tot=72.971 R0=198.015 R1=185.509 R2=203.365 R3=7.554 R4=0.000
+[PROGRESS] Event 4900000 | Transmitted: 75 | Edep(keV): Tot=341.668 R0=25.221 R1=155.133 R2=161.315 R3=0.000 R4=0.000 | Dose(pGy): Tot=58.076 R0=107.171 R1=219.738 R2=137.096 R3=0.000 R4=0.000
+[PROGRESS] Event 4910000 | Transmitted: 75 | Edep(keV): Tot=367.116 R0=56.047 R1=105.121 R2=205.948 R3=0.000 R4=0.000 | Dose(pGy): Tot=62.401 R0=238.163 R1=148.898 R2=175.029 R3=0.000 R4=0.000
+[PROGRESS] Event 4920000 | Transmitted: 74 | Edep(keV): Tot=312.753 R0=27.137 R1=109.384 R2=175.601 R3=0.632 R4=0.000 | Dose(pGy): Tot=53.161 R0=115.313 R1=154.936 R2=149.238 R3=0.384 R4=0.000
+[PROGRESS] Event 4930000 | Transmitted: 64 | Edep(keV): Tot=267.762 R0=8.348 R1=90.853 R2=167.820 R3=0.742 R4=0.000 | Dose(pGy): Tot=45.513 R0=35.472 R1=128.688 R2=142.625 R3=0.451 R4=0.000
+[PROGRESS] Event 4940000 | Transmitted: 80 | Edep(keV): Tot=385.620 R0=29.280 R1=160.733 R2=178.345 R3=17.262 R4=0.000 | Dose(pGy): Tot=65.547 R0=124.421 R1=227.670 R2=151.569 R3=10.479 R4=0.000
+[PROGRESS] Event 4950000 | Transmitted: 68 | Edep(keV): Tot=322.211 R0=58.609 R1=87.540 R2=143.725 R3=18.706 R4=13.631 | Dose(pGy): Tot=54.768 R0=249.049 R1=123.995 R2=122.147 R3=11.356 R4=6.436
+[PROGRESS] Event 4960000 | Transmitted: 94 | Edep(keV): Tot=394.206 R0=40.220 R1=120.573 R2=189.468 R3=17.241 R4=26.704 | Dose(pGy): Tot=67.006 R0=170.906 R1=170.785 R2=161.023 R3=10.466 R4=12.609
+[PROGRESS] Event 4970000 | Transmitted: 75 | Edep(keV): Tot=440.007 R0=95.651 R1=171.216 R2=161.437 R3=11.703 R4=0.000 | Dose(pGy): Tot=74.791 R0=406.455 R1=242.518 R2=137.200 R3=7.104 R4=0.000
+[PROGRESS] Event 4980000 | Transmitted: 71 | Edep(keV): Tot=326.248 R0=51.359 R1=68.937 R2=194.782 R3=11.170 R4=0.000 | Dose(pGy): Tot=55.455 R0=218.243 R1=97.645 R2=165.539 R3=6.781 R4=0.000
+[PROGRESS] Event 4990000 | Transmitted: 83 | Edep(keV): Tot=395.009 R0=10.823 R1=181.782 R2=186.306 R3=16.098 R4=0.000 | Dose(pGy): Tot=67.143 R0=45.990 R1=257.484 R2=158.336 R3=9.773 R4=0.000
+
+====================[ RUN SUMMARY ]====================
+Primaries generated = 5000000
+========== Résumé Béryllium ==========
+Total particules entrées dans Be    : 5005637
+Total interactions dans le Be       : 633273
+======================================
+================= Résumé WaterSphere ==========
+Total particules entrées dans WaterSphere    : 0
+Total interactions dans le WaterSphereB      : 0
+===============================================
+========== Résumé spectre emission ==========
+Total particules inferieure a 3.5 keV      : 0
+Total particules superieure a 3.5 keV      : 5000000
+=============================================
+[STEP][SUMMARY] enter_plane_prim=39446 leave_plane_prim=39446
+[SpecSD][SUMMARY] enter=0 leave=0 outward=39218 rows_written=39218 unique_primary_events_counted=39203
+[LOSS][BY-PROC]
+  phot : 4963401
+[LOSS][BY-MAT]
+  Aluminium : 1637121
+  Beryllium : 276383
+  Brass : 3000877
+  DialuminiumTrioxide : 7009
+  MyAir : 27527
+  StainlessSteel304 : 6478
+  Tungsten : 8006
+=======================================================
+
+================================================================================
+FIN DU SUIVI STEP PAR STEP - 10 evenements suivis (max=10)
+================================================================================
+
+
+==================== RÉSUMÉ DOSE ====================
+Énergie totale déposée dans l'eau : 184914.398 keV
+Dose totale dans l'eau (run)      : 31431.210 pGy = 31.431 nGy
+Dose par anneau (run) :
+  Anneau 0 (r=0-2mm) : 19389.631 keV -> 82393.075 pGy = 82.393 nGy
+  Anneau 1 (r=2-4mm) : 61000.916 keV -> 86404.480 pGy = 86.404 nGy
+  Anneau 2 (r=4-6mm) : 98893.051 keV -> 84045.978 pGy = 84.046 nGy
+  Anneau 3 (r=6-8mm) : 5074.490 keV -> 3080.576 pGy = 3.081 nGy
+  Anneau 4 (r=8-10mm) : 556.310 keV -> 262.669 pGy = 0.263 nGy
+=====================================================
+[MT-MASTER] [RUN] EndOfRunAction: about to Write()
+... write file : output.root - done
+[MT-MASTER] [RUN] EndOfRunAction: Write() done
+[MT-MASTER] [RUN] EndOfRunAction: about to CloseFile(false)
+... close file : output.root - done
+[MT-MASTER] [RUN] EndOfRunAction: CloseFile(false) done

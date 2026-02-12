@@ -1,0 +1,20 @@
+/vis/open OGL
+/vis/scene/create
+/vis/scene/add/volume
+/vis/scene/add/trajectories
+/vis/modeling/trajectories/create/drawByCharge
+
+/vis/viewer/set/viewpointVector 1 1 1
+/vis/viewer/zoom 40.0
+/vis/scene/add/hits
+
+/vis/sceneHandler/attach
+/vis/enable
+
+/vis/scene/add/scale 1 cm
+#/vis/scene/add/axes
+/vis/scene/add/eventID
+#/run/initialize
+
+/vis/scene/endOfEventAction accumulate 10000
+/primariesgenerator/selectsource 2

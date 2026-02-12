@@ -1,0 +1,159 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{enumitem}
+
+\geometry{margin=2.2cm}
+\hypersetup{colorlinks=true, linkcolor=blue!60!black, urlcolor=blue!60!black}
+
+\newcommand{\ntuple}{\texttt{compton\_cone\_events}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\title{\vspace{-1.5cm}\textbf{Ntuple \ntuple{}}\\[4pt]
+\large Enregistrement des diffusions Compton individuelles\\
+dans le c\^one graphite --- Simulation Geant4 Mini~X}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+\vspace{-0.8cm}
+
+%======================================================================
+\section{Objectif}
+%======================================================================
+
+Le ntuple \ntuple{} enregistre \emph{chaque} diffusion Compton subie par un
+photon primaire (parentID\,=\,0) dans le volume logique
+\code{logicConeCompton} (c\^one graphite, $z \in [1.9,\;16.95]$~mm).
+Il permet de tracer~:
+%
+\begin{itemize}[nosep]
+  \item la carte $(z,\,r)$ des interactions Compton dans le c\^one,
+  \item l'histogramme 2D $\theta_\text{in}$ \emph{vs} $\theta_\text{out}$,
+  \item l'angle de diffusion $\theta_s$ en fonction de l'\'energie incidente,
+  \item la perte d'\'energie $\Delta E$ \emph{vs} $E_\text{in}$,
+  \item la v\'erification de la formule Compton
+        $\Delta E = \dfrac{E_\text{in}^2\,(1 - \cos\theta_s)}
+                          {m_e c^2 + E_\text{in}\,(1-\cos\theta_s)}$.
+\end{itemize}
+
+%======================================================================
+\section{Structure du ntuple}
+%======================================================================
+
+Le ntuple est cr\'e\'e dans \code{AnalysisManagerSetup.cc} et rempli dans
+\code{SteppingAction.cc} au sein du bloc de d\'etection Compton
+(\code{procDefined->GetProcessName() == "compt"} dans
+\code{logicConeCompton}). Il contient 16~colonnes~:
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{@{}clcl@{}}
+\toprule
+\textbf{Col.} & \textbf{Nom} & \textbf{Type} & \textbf{Description} \\
+\midrule
+ 0 & \code{eventID}           & \code{int}    & Identifiant de l'\'ev\'enement \\
+ 1 & \code{trackID}           & \code{int}    & Identifiant du track (photon primaire) \\
+ 2 & \code{n\_compton\_seq}   & \code{int}    & $n$-i\`eme Compton de ce track dans le c\^one \\
+\midrule
+ 3 & \code{ekin\_before\_keV} & \code{double} & $E_\text{in}$ : \'energie cin\'etique avant (keV) \\
+ 4 & \code{ekin\_after\_keV}  & \code{double} & $E_\text{out}$ : \'energie cin\'etique apr\`es (keV) \\
+ 5 & \code{delta\_ekin\_keV}  & \code{double} & $\Delta E = E_\text{in} - E_\text{out}$ (keV) \\
+\midrule
+ 6 & \code{x\_mm}             & \code{double} & Position $x$ de l'interaction (mm) \\
+ 7 & \code{y\_mm}             & \code{double} & Position $y$ (mm) \\
+ 8 & \code{z\_mm}             & \code{double} & Position $z$ (mm) \\
+ 9 & \code{r\_mm}             & \code{double} & $r = \sqrt{x^2 + y^2}$ (mm) \\
+\midrule
+10 & \code{theta\_in\_deg}    & \code{double} & $\theta_\text{in}$ : angle polaire incident (${}^\circ$, r\'ef. $+Z$) \\
+11 & \code{phi\_in\_deg}      & \code{double} & $\varphi_\text{in}$ : angle azimutal incident (${}^\circ$) \\
+12 & \code{theta\_out\_deg}   & \code{double} & $\theta_\text{out}$ : angle polaire sortant (${}^\circ$) \\
+13 & \code{phi\_out\_deg}     & \code{double} & $\varphi_\text{out}$ : angle azimutal sortant (${}^\circ$) \\
+14 & \code{scatter\_angle\_deg} & \code{double} & $\theta_s = \arccos(\hat{d}_\text{in}\cdot\hat{d}_\text{out})$ (${}^\circ$) \\
+15 & \code{cos\_scatter}      & \code{double} & $\cos\theta_s$ \\
+\bottomrule
+\end{tabular}
+\caption{Colonnes du ntuple \ntuple{}.}
+\label{tab:columns}
+\end{table}
+
+%======================================================================
+\section{Notes d'impl\'ementation}
+%======================================================================
+
+\begin{itemize}[nosep]
+  \item Les directions incidente et sortante sont lues directement sur les
+        \code{G4StepPoint}~:\\[2pt]
+        \code{prePoint->GetMomentumDirection()} ($\hat{d}_\text{in}$)\quad et\quad
+        \code{postPoint->GetMomentumDirection()} ($\hat{d}_\text{out}$).
+  \item Dans Geant4, lors d'une diffusion Compton le photon diffus\'e
+        \emph{continue comme le m\^eme track} (m\^eme \code{trackID},
+        \code{parentID}\,=\,0). Seul l'\'electron de recul est cr\'e\'e
+        comme secondaire. Le champ \code{n\_compton\_seq} permet de
+        distinguer les diffusions multiples d'un m\^eme photon.
+  \item Le marquage \code{MyTrackInfo} existant (flag
+        \code{fComptonInCone}, compteur \code{fNComptonInCone}, derni\`ere
+        position/\'energie) est conserv\'e pour le ntuple
+        \code{plane\_passages} au plan $z = 18$~mm.
+\end{itemize}
+
+%======================================================================
+\section{Fichiers modifi\'es}
+%======================================================================
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Fichier} & \textbf{Modification} \\
+\midrule
+\code{include/AnalysisManagerSetup.hh} & D\'eclaration de \code{GetComptonConeNtupleId()} \\
+\code{src/AnalysisManagerSetup.cc}     & Cr\'eation du ntuple (16 colonnes) + getter \\
+\code{src/SteppingAction.cc}           & Remplissage \`a chaque Compton dans \code{logicConeCompton} \\
+\code{analyse\_compton\_cone.C}        & Macro ROOT d'analyse (9 figures) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%======================================================================
+\section{Exploitation avec ROOT}
+%======================================================================
+
+Apr\`es recompilation et ex\'ecution du run~:
+\begin{verbatim}
+  root -l -b -q 'analyse_compton_cone.C("output.root")'
+\end{verbatim}
+
+Exemples de commandes interactives~:
+\begin{verbatim}
+  // Carte (z, r) des Compton
+  compton_cone_events->Draw("r_mm:z_mm","","COLZ");
+
+  // theta_in vs theta_out
+  compton_cone_events->Draw("theta_out_deg:theta_in_deg","","COLZ");
+
+  // DeltaE vs E_incident
+  compton_cone_events->Draw("delta_ekin_keV:ekin_before_keV","","COLZ");
+
+  // Perte relative
+  compton_cone_events->Draw(
+    "100*delta_ekin_keV/ekin_before_keV:ekin_before_keV",
+    "ekin_before_keV>0","COLZ");
+\end{verbatim}
+
+\vfill
+\noindent\rule{\textwidth}{0.4pt}
+{\footnotesize Volume de donn\'ees estim\'e : $\sim$\,10\,000 entr\'ees / 1\,M
+d'\'ev\'enements primaires ($\sim$\,1--2~MB dans \code{output.root}).}
+
+\end{document}

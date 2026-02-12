@@ -1,0 +1,14 @@
+# Macro file for the initialization in interactive session
+#
+# Set some default verbose
+#/tracking/verbose 1
+/control/verbose 2
+/control/saveHistory
+/run/verbose 2
+#
+# Initialize kernel
+/run/numberOfThreads 1
+/run/initialize
+#
+# Visualization setting
+/control/execute vis.mac

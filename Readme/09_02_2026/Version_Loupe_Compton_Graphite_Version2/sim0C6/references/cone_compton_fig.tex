@@ -1,0 +1,359 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=1.0cm, landscape]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, calc, decorations.markings, backgrounds}
+\usepackage{siunitx}
+\sisetup{locale=FR, per-mode=symbol}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{caption}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  xscale=0.97,
+  yscale=0.97,
+]
+
+% ---- Couleurs fidèles à la figure de référence ----
+\definecolor{cInox}{RGB}{60,65,75}       % gris-bleu foncé pour inox
+\definecolor{cInoxFill}{RGB}{140,150,165} % remplissage inox
+\definecolor{cGraphite}{RGB}{65,80,105}   % bleu-gris foncé graphite
+\definecolor{cGraphFill}{RGB}{90,105,135} % remplissage graphite
+\definecolor{cChannel}{RGB}{255,255,230}  % jaune très pâle (canal)
+\definecolor{cBg}{RGB}{245,248,252}       % fond
+\definecolor{cGreen}{RGB}{0,140,50}       % vert — transmission directe
+\definecolor{cRed}{RGB}{210,60,60}        % rouge — γ incident
+\definecolor{cBlue}{RGB}{50,120,210}      % bleu — Compton redirigé
+\definecolor{cCyan}{RGB}{0,210,220}       % cyan — annotations cotes
+\definecolor{cScore}{RGB}{210,35,35}      % rouge ScorePlane
+
+% ==================================================================
+%  FOND
+% ==================================================================
+\fill[cBg] (-1.5,-7.5) rectangle (22.5, 7.5);
+
+% ==================================================================
+%  GRILLE LÉGÈRE (optionnel, comme fond matplotlib)
+% ==================================================================
+\foreach \z in {0,5,10,15,20} {
+  \draw[gray!15, thin] (\z,-7) -- (\z,7);
+}
+\foreach \r in {-6,-4,-2,0,2,4,6} {
+  \draw[gray!15, thin] (-1,\r) -- (22,\r);
+}
+
+% ==================================================================
+%  INOX 304 — blocs extérieurs (porte-collimateur)
+% ==================================================================
+% Bloc supérieur : z=0.5..17, r=3.17..6.5
+\fill[cInoxFill]
+  (0.5, 3.17) rectangle (17, 6.5);
+\draw[cInox, thick]
+  (0.5, 3.17) -- (17, 3.17) -- (17, 6.5) -- (0.5, 6.5) -- cycle;
+
+% Bloc inférieur
+\fill[cInoxFill]
+  (0.5,-6.5) rectangle (17,-3.17);
+\draw[cInox, thick]
+  (0.5,-6.5) -- (17,-6.5) -- (17,-3.17) -- (0.5,-3.17) -- cycle;
+
+% Labels inox
+\node[font=\normalsize\bfseries, text=white, opacity=0.85]
+  at (8.5, 5.0) {Inox 304};
+\node[font=\small, text=white, opacity=0.7]
+  at (8.5, 4.2) {(inchang\'e)};
+\node[font=\normalsize\bfseries, text=white, opacity=0.85]
+  at (8.5,-5.0) {Inox 304};
+\node[font=\small, text=white, opacity=0.7]
+  at (8.5,-4.2) {(inchang\'e)};
+
+% ==================================================================
+%  GRAPHITE — cône concentrateur
+% ==================================================================
+% Géométrie du cône :
+%   Face source  (z=1.90) : R_in = 3.00, R_out = 3.15
+%   Face sortie  (z=16.95): R_in = 1.00, R_out = 3.15
+% En coupe (z,r), le graphite est un trapèze
+
+% Moitié supérieure (r > 0)
+\fill[cGraphFill]
+  (1.90, 3.15) -- (16.95, 3.15) -- (16.95, 1.00) -- (1.90, 3.00) -- cycle;
+\draw[cGraphite, semithick]
+  (1.90, 3.15) -- (16.95, 3.15) -- (16.95, 1.00) -- (1.90, 3.00) -- cycle;
+
+% Moitié inférieure (r < 0)
+\fill[cGraphFill]
+  (1.90,-3.15) -- (16.95,-3.15) -- (16.95,-1.00) -- (1.90,-3.00) -- cycle;
+\draw[cGraphite, semithick]
+  (1.90,-3.15) -- (16.95,-3.15) -- (16.95,-1.00) -- (1.90,-3.00) -- cycle;
+
+% Labels graphite
+\node[font=\large\bfseries, text=white]
+  at (8.5, 2.3) {GRAPHITE};
+\node[font=\normalsize, text=white]
+  at (8.5, 1.6) {($\rho=2.26$)};
+
+% ==================================================================
+%  CANAL CENTRAL — rempli en jaune pâle
+% ==================================================================
+\fill[cChannel, opacity=0.5]
+  (0, 0) -- (1.90, 3.00) -- (16.95, 1.00)
+  -- (22, 1.00*22/16.95) -- (22, -1.00*22/16.95)
+  -- (16.95,-1.00) -- (1.90,-3.00) -- cycle;
+% Petite zone avant le cône
+\fill[cChannel, opacity=0.3]
+  (0,-3.17) rectangle (1.90, 3.17);
+
+% ==================================================================
+%  TRAJECTOIRES — TRANSMISSION DIRECTE (vert, θ < 3.2°)
+% ==================================================================
+% Angles directs : passent à travers le canal sans toucher le cône
+% Max angle pour passer : atan(1.0/16.95) ≈ 3.38°
+% À z=18, r = 18*tan(θ)
+
+% Rayons positifs
+\foreach \angle in {0.3, 0.7, 1.2, 1.7, 2.2, 2.7, 3.1} {
+  \pgfmathsetmacro{\rend}{18*tan(\angle)}
+  \draw[cGreen, thick, opacity=0.85]
+    (0,0) -- (18, \rend);
+}
+% Rayons négatifs (symétrique)
+\foreach \angle in {-0.3, -0.7, -1.2, -1.7, -2.2, -2.7, -3.1} {
+  \pgfmathsetmacro{\rend}{18*tan(\angle)}
+  \draw[cGreen, thick, opacity=0.85]
+    (0,0) -- (18, \rend);
+}
+% Rayon axial
+\draw[cGreen, thick] (0,0) -- (18, 0);
+
+% ==================================================================
+%  TRAJECTOIRES — γ INCIDENT SUR CÔNE (rouge/rose)
+%  puis γ COMPTON REDIRIGÉ (bleu)
+% ==================================================================
+% Surface intérieure du cône : r(z) = 3.0 - (2.0/15.05)*(z - 1.9)
+% Rayon depuis (0,0) à angle θ : r = z*tan(θ)
+% Intersection : z_hit = 3.2525 / (tan(θ) + 0.13289)
+
+% --- Moitié supérieure (r > 0) ---
+% Hit points computed:
+%   θ=7°   → z=12.72, r=1.56
+%   θ=10°  → z=10.52, r=1.85
+%   θ=13°  → z=8.58,  r=1.98
+%   θ=17°  → z=7.01,  r=2.14
+%   θ=22°  → z=5.72,  r=2.31
+%   θ=28°  → z=4.73,  r=2.52
+%   θ=35°  → z=3.90,  r=2.73
+%   θ=45°  → z=3.04,  r=3.04 (near entrance, likely absorbed)
+
+% Hit point 1: θ≈7°, z=12.72, r=1.56
+\draw[cRed, thin, opacity=0.7] (0,0) -- (12.72, 1.56);
+\fill[cBlue] (12.72, 1.56) circle (0.08);
+\draw[cBlue, semithick, opacity=0.8] (12.72, 1.56) -- (18, 1.0);
+
+% Hit point 2: θ≈10°, z=10.52, r=1.85
+\draw[cRed, thin, opacity=0.7] (0,0) -- (10.52, 1.85);
+\fill[cBlue] (10.52, 1.85) circle (0.08);
+\draw[cBlue, semithick, opacity=0.8] (10.52, 1.85) -- (18, 0.9);
+
+% Hit point 3: θ≈14°, z=8.20, r=2.05
+\draw[cRed, thin, opacity=0.7] (0,0) -- (8.20, 2.05);
+\fill[cBlue] (8.20, 2.05) circle (0.08);
+\draw[cBlue, semithick, opacity=0.8] (8.20, 2.05) -- (18, 0.7);
+
+% Hit point 4: θ≈18°, z=6.75, r=2.19
+\draw[cRed, thin, opacity=0.7] (0,0) -- (6.75, 2.19);
+\fill[cBlue] (6.75, 2.19) circle (0.08);
+\draw[cBlue, semithick, opacity=0.8] (6.75, 2.19) -- (18, 0.5);
+
+% Hit point 5: θ≈23°, z=5.55, r=2.36
+\draw[cRed, thin, opacity=0.7] (0,0) -- (5.55, 2.36);
+\fill[cBlue] (5.55, 2.36) circle (0.08);
+\draw[cBlue, semithick, opacity=0.8] (5.55, 2.36) -- (18, 0.3);
+
+% Hit point 6: θ≈30°, z=4.58, r=2.64
+\draw[cRed, thin, opacity=0.7] (0,0) -- (4.58, 2.64);
+\fill[cBlue] (4.58, 2.64) circle (0.08);
+\draw[cBlue, semithick, opacity=0.8] (4.58, 2.64) -- (18, 0.1);
+
+% Absorbed in graphite (red X): θ≈40° → near entrance
+\draw[cRed, thin, opacity=0.7] (0,0) -- (3.20, 2.68);
+\node[cRed, font=\large\bfseries] at (3.20, 2.68) {$\times$};
+
+% Absorbed (red X) near z=2.5 — photon absorbed deep in cone
+\draw[cRed, thin, opacity=0.5] (0,0) -- (2.3, 2.1);
+\node[cRed, font=\large\bfseries] at (2.3, 2.1) {$\times$};
+
+% --- Moitié inférieure (r < 0) ---
+% Hit point 1: z=10.52, r=-1.85
+\draw[cRed, thin, opacity=0.7] (0,0) -- (10.52,-1.85);
+\fill[cBlue] (10.52,-1.85) circle (0.08);
+\draw[cBlue, semithick, opacity=0.8] (10.52,-1.85) -- (18,-0.8);
+
+% Hit point 2: z=7.5, r=-2.10
+\draw[cRed, thin, opacity=0.7] (0,0) -- (7.5,-2.10);
+\fill[cBlue] (7.5,-2.10) circle (0.08);
+\draw[cBlue, semithick, opacity=0.8] (7.5,-2.10) -- (18,-0.4);
+
+% Hit point 3: z=5.2, r=-2.40
+\draw[cRed, thin, opacity=0.7] (0,0) -- (5.2,-2.40);
+\fill[cBlue] (5.2,-2.40) circle (0.08);
+\draw[cBlue, semithick, opacity=0.8] (5.2,-2.40) -- (18,-0.2);
+
+% Hit point 4: z=4.3, r=-2.55
+\draw[cRed, thin, opacity=0.7] (0,0) -- (4.3,-2.55);
+\fill[cBlue] (4.3,-2.55) circle (0.08);
+\draw[cBlue, semithick, opacity=0.8] (4.3,-2.55) -- (18, 0.1);
+
+% Absorbed in cone (lower)
+\draw[cRed, thin, opacity=0.5] (0,0) -- (3.5,-2.90);
+\node[cRed, font=\large\bfseries] at (3.5,-2.90) {$\times$};
+
+% ==================================================================
+%  SOURCE γ — étoile rouge à l'origine
+% ==================================================================
+\node[cRed, font=\huge] at (0,0) {$\bigstar$};
+\node[cRed, font=\normalsize\bfseries, anchor=east] at (-0.5, 0.6) {Source $\gamma$};
+
+% ==================================================================
+%  SCOREPLANE — z = 18 mm (ligne tiretée rouge)
+% ==================================================================
+\draw[cScore, very thick, dashed] (18,-7) -- (18, 7);
+\node[cScore, font=\small\bfseries, rotate=90, anchor=south]
+  at (18.3, 4) {ScorePlane};
+
+% ==================================================================
+%  ANNOTATIONS DIMENSIONNELLES (cyan)
+% ==================================================================
+
+% R = 3.0 mm (entrée) — flèche verticale
+\draw[cCyan, thick, {Stealth}-{Stealth}]
+  (1.90, 0.3) -- (1.90, 3.00);
+\node[cCyan, font=\small\bfseries, anchor=east] at (1.6, 1.6) {3.0};
+\node[cCyan, font=\small\bfseries, anchor=east] at (1.6, 1.0) {mm};
+% Label "R=3.0mm (entrée)"
+\node[cCyan, font=\scriptsize, anchor=north west, text opacity=0.9]
+  at (2.1, 3.2) {$R\!=\!3.0$\,mm};
+\node[cCyan, font=\scriptsize, anchor=north west, text opacity=0.9]
+  at (2.1, 2.7) {(entr\'ee)};
+
+% R = 1.0 mm (sortie) — flèche verticale
+\draw[cCyan, thick, {Stealth}-{Stealth}]
+  (16.95, -0.3) -- (16.95, 1.00);
+\node[cCyan, font=\small\bfseries, anchor=west] at (17.15, 0.35) {1.0 mm};
+% Label
+\node[cCyan, font=\scriptsize, anchor=south west, text opacity=0.9]
+  at (15.3, 1.15) {$R\!=\!1.0$\,mm};
+\node[cCyan, font=\scriptsize, anchor=north west, text opacity=0.9]
+  at (15.3, 1.0) {(sortie)};
+
+% ==================================================================
+%  LÉGENDE (boîte blanche, coin supérieur droit)
+% ==================================================================
+\begin{scope}[shift={(14.5, 5.8)}]
+  \fill[white, opacity=0.92, rounded corners=2pt]
+    (-0.3,-3.8) rectangle (7.8, 1.5);
+  \draw[gray!60, thin, rounded corners=2pt]
+    (-0.3,-3.8) rectangle (7.8, 1.5);
+
+  % Ligne verte — transmis direct
+  \draw[cGreen, thick] (0, 1.0) -- (1.2, 1.0);
+  \node[font=\small, anchor=west] at (1.5, 1.0)
+    {Transmis direct ($\theta < 3.2°$)};
+
+  % Ligne rouge — γ incident
+  \draw[cRed, thin] (0, 0.3) -- (1.2, 0.3);
+  \node[font=\small, anchor=west] at (1.5, 0.3)
+    {$\gamma$ incident sur c\^one};
+
+  % Ligne bleue — Compton redirigé
+  \draw[cBlue, semithick] (0,-0.4) -- (1.2,-0.4);
+  \node[font=\small, anchor=west] at (1.5,-0.4)
+    {$\gamma$ Compton redirig\'e $\to$ avant};
+
+  % Point bleu — interaction Compton
+  \fill[cBlue] (0.6,-1.1) circle (0.08);
+  \node[font=\small, anchor=west] at (1.5,-1.1)
+    {Interaction Compton};
+
+  % Croix rouge — absorbé
+  \node[cRed, font=\large\bfseries] at (0.6,-1.8) {$\times$};
+  \node[font=\small, anchor=west] at (1.5,-1.8)
+    {Absorb\'e (photo)};
+
+  % Étoile source
+  \node[cRed, font=\normalsize] at (0.6,-2.5) {$\bigstar$};
+  \node[font=\small, anchor=west] at (1.5,-2.5)
+    {Source ($z = 0$)};
+
+  % ScorePlane
+  \draw[cScore, thick, dashed] (0,-3.2) -- (1.2,-3.2);
+  \node[font=\small, anchor=west] at (1.5,-3.2)
+    {ScorePlane ($z = 18$\,mm)};
+\end{scope}
+
+% ==================================================================
+%  BOÎTE PRINCIPE PHYSIQUE (jaune pâle, coin inférieur droit)
+% ==================================================================
+\begin{scope}[shift={(14.5, -4.0)}]
+  \fill[yellow!15, rounded corners=2pt]
+    (-0.3,-2.7) rectangle (7.8, 0.5);
+  \draw[cRed, thin, rounded corners=2pt]
+    (-0.3,-2.7) rectangle (7.8, 0.5);
+
+  \node[font=\small\bfseries, text=cRed, anchor=north west]
+    at (0, 0.3) {Principe :};
+  \node[font=\small, anchor=north west, text width=7.2cm]
+    at (0,-0.15)
+    {$\gamma$ \`a grand angle $\to$ Compton
+     dans graphite $\to$ redirig\'e
+     vers l'avant avec
+     $\Delta E/E < 4\,\%$ \`a \SI{10}{\kilo\electronvolt}};
+\end{scope}
+
+% ==================================================================
+%  AXES
+% ==================================================================
+\draw[->, >=Stealth, thick] (-1,0) -- (22, 0)
+  node[below right, font=\normalsize\bfseries] {$z$ (mm)};
+\draw[->, >=Stealth, thick] (0,-7) -- (0, 7.3)
+  node[above left, font=\normalsize\bfseries] {$r$ (mm)};
+
+% Graduations z
+\foreach \z in {0, 5, 10, 15, 20} {
+  \draw[thick] (\z,-0.12) -- (\z, 0.12);
+  \node[below, font=\small] at (\z,-0.25) {\z};
+}
+
+% Graduations r
+\foreach \r in {-6,-4,-2, 2, 4, 6} {
+  \draw[thick] (-0.12,\r) -- (0.12,\r);
+  \node[left, font=\small] at (-0.25,\r) {\r};
+}
+
+% ==================================================================
+%  TITRE
+% ==================================================================
+\node[font=\Large\bfseries, anchor=south]
+  at (10, 7.6)
+  {Configuration propos\'ee --- C\^one concentrateur en graphite + Inox};
+
+\end{tikzpicture}
+
+\caption{Coupe $(z, r)$ du c\^one Compton en graphite + Inox~304.
+Vert : transmission directe ($\theta < 3.2°$).
+Rouge : $\gamma$ incident sur le c\^one.
+Bleu : $\gamma$ redirig\'e vers l'avant apr\`es diffusion Compton
+($\Delta E/E < 4\,\%$ \`a 10\,keV).
+Croix : absorption photo\'electrique.}
+\label{fig:cone_compton}
+\end{figure}
+
+\end{document}

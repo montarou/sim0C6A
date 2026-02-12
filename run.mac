@@ -1,0 +1,7 @@
+/run/numberOfThreads 1
+/run/initialize
+/stepping/verbose 0
+/event/verbose 0
+/run/verbose 0
+/primariesgenerator/selectsource 2
+/run/beamOn 5000000
